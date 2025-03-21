@@ -26,6 +26,13 @@
 - [Software and Data Integrity Failures](#software-and-data-integrity-failures)
 - [Security Logging and Monitoring Failures](#security-logging-and-monitoring-failures)
 - [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
+- [Supply Chain Security](#supply-chain-security)
+- [Supply Chain Defenses](#supply-chain-defenses)
+- [SCA (Software Composition Analysis)](#sca-software-composition-analysis)
+- [SLSA (Supply Chain Levels for Software Artifacts)](#slsa-supply-chain-levels-for-software-artifacts)
+- [SBOM (Software Bill of Materials)](#sbom-software-bill-of-materials)
+- [Dependency-Track ve CycloneDX](#dependency-track-ve-cyclonedx)
+- [CycloneDX](#cyclonedx)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
