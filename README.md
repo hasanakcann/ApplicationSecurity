@@ -1,5 +1,33 @@
 Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Bir Zorunluluktur!
 
+İçerik:
+-> OWASP Top 10 (Open Web Application Security Project Top 10)
+-> CIA (Confidentiality, Integrity, Availability)
+-> NIST (National Institute of Standards and Technology)
+-> SSDF (Secure Software Development Framework)
+-> CSF (Cybersecurity Framework)
+-> RMF (Risk Management Framework)
+-> CSA (Cloud Security Alliance) 
+-> CCM (Cloud Controls Matrix) 
+-> Defense in Depth
+-> Roles and Terms in Cyber ​​Security
+-> CVE (Common Vulnerabilities and Exposures)
+-> EPiCIS (Exploit Prediction Scoring System)
+-> CWE (Common Weakness Enumeration)
+-> Api Security
+-> CSP (Content Security Policy)
+-> SSRF (Server Side Request Forgery)
+-> Vulnerability Management
+-> Sql Injection
+-> Insecure Design
+-> Security Misconfiguration
+-> Vulnerable and Outdated
+-> Identification and Authentication Failures
+-> MFA (Multi-Factor Authentication)
+-> Software and Data Integrity Failures
+-> Security Logging and Monitoring Failures
+-> XSS (Cross-Site Scripting)
+
 ************************************************************************************************************
 
 OWASP Top 10 (Open Web Application Security Project Top 10)
@@ -9,7 +37,7 @@ Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir re
 
 ************************************************************************************************************
 
-CIA Üçlüsü (Confidentiality, Integrity, Availability)
+CIA (Confidentiality, Integrity, Availability)
 Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
 ![image](https://github.com/user-attachments/assets/bf40136a-70ee-452a-97c3-3b10054b215a)
@@ -104,7 +132,7 @@ CCM (Cloud Controls Matrix)
 
 ************************************************************************************************************
 
-Defense in Depth (Derinlemesine Savunma)
+Defense in Depth 
 
 ![image](https://github.com/user-attachments/assets/13be0a06-d3bb-4ba3-b603-f66b3efa963e)
 
@@ -116,7 +144,7 @@ Defense in Depth (Derinlemesine Savunma)
 
 ************************************************************************************************************
 
-Siber Güvenlikte Rol ve Terimler
+Roles and Terms in Cyber ​​Security
 
 ![image](https://github.com/user-attachments/assets/4044af5b-89f8-45f4-a69b-3c5548c8b23e)
 
@@ -186,7 +214,7 @@ Sonuç olarak, CWE yazılım güvenliğini iyileştirmek için yaygın olarak ku
 
 ************************************************************************************************************
 
-API Security 
+Api Security 
 
 ![image](https://github.com/user-attachments/assets/93c3ac8d-36fc-42fc-904a-d057e635d388)
 
@@ -202,7 +230,7 @@ API güvenliğine yönelik doğru önlemleri almak, uygulama sahiplerinin güven
 
 ************************************************************************************************************
 
-Content Security Policy (CSP)
+CSP (Content Security Policy)
 
 Content Security Policy (CSP), web uygulamalarında güvenlik önlemleri sağlamak amacıyla kullanılan bir güvenlik standardıdır. 
 CSP, web sayfalarına eklenen içeriklerin nerelerden yükleneceğini kontrol eden bir politikadır ve potansiyel Cross-Site Scripting (XSS) ve data injection saldırılarını önlemeye yardımcı olur. 
@@ -233,7 +261,7 @@ Ancak, CSP'yi uygularken dikkatli bir planlama ve test süreci gereklidir, çün
 
 ************************************************************************************************************
 
-Server Side Request Forgery (SSRF)
+SSRF (Server Side Request Forgery)
 
 Server Side Request Forgery (SSRF), bir güvenlik açığı türüdür ve kötü niyetli bir saldırganın, 
 hedef sunucunun yerine başka bir sunucuya istek (request) göndermesini sağlar. 
@@ -281,75 +309,185 @@ Ancak bu sürecin etkin bir şekilde yürütülmesi, sürekli izleme ve düzenli
 
 ************************************************************************************************************
 
+Sql Injection
 
+Kötü niyetli kullanıcıların bir uygulamanın veritabanına doğrudan SQL komutları göndererek güvenlik açıklarını istismar etmesi durumudur. 
+Bu saldırı türü, genellikle uygulamanın kullanıcı girdilerini doğru şekilde doğrulamadığı veya temizlemediği zaman meydana gelir. 
+SQL injection, veritabanındaki verilere yetkisiz erişim sağlamak, verileri değiştirmek veya silmek, hatta yönetici hakları elde etmek gibi zararlara yol açabilir.
 
+Örnek olarak, bir web uygulamasında kullanıcı adı ve şifre ile giriş yapmayı sağlayan bir form olduğunu düşünelim. 
+Eğer kullanıcı adı alanına şu şekilde bir girdi yapılırsa:
 
+![image](https://github.com/user-attachments/assets/6601d014-4bf1-4baf-9810-23be8f55c36c)
 
+Bu durumda, eğer uygulama bu girdiyi doğru şekilde temizlemezse, oluşturulan SQL sorgusu şu şekilde olabilir:
 
+![image](https://github.com/user-attachments/assets/7cafb2e7-9cb0-499e-92aa-fc0a00b84d72)
 
+![image](https://github.com/user-attachments/assets/9d81e5df-f13c-4a5a-970f-ef0952fe812f)
 
+SQL komutları, veritabanı yönetim sistemleriyle etkileşim kurmak için kullanılan ifadelerden oluşur.
 
+![image](https://github.com/user-attachments/assets/3f15efa6-2f99-488c-a104-a390626a8195)
 
+![image](https://github.com/user-attachments/assets/d355043c-7eab-4257-9f76-5907638975b5)
 
+![image](https://github.com/user-attachments/assets/6b99f5a5-5eb2-4a12-9d8a-2a7b74531334)
 
+![image](https://github.com/user-attachments/assets/6170e0dd-694e-4861-9007-01be462fde3e)
 
+![image](https://github.com/user-attachments/assets/388c9d98-1470-4367-b4a2-3bf01d46acb6)
 
+![image](https://github.com/user-attachments/assets/9e72582c-bb6d-4fe3-b631-eae6fbe98df1)
 
+![image](https://github.com/user-attachments/assets/5b5d72ee-4d6d-4f4f-8fba-f62a85d6d186)
 
+Bu komutlar SQL dilinin temelini oluşturur. Hangi işlemi yapmak istediğinize bağlı olarak bu komutları kullanabilirsiniz. 
+DDL ile veritabanı nesneleri yönetilir.
+DML ile veriler işlenir.
+DQL ile veri sorgulanır. 
+DCL ile erişim kontrol edilir.
+TCL ile işlemler yönetilir.
 
+************************************************************************************************************
 
+Insecure Design
 
+Insecure Design, bir yazılımın veya sistemin daha tasarım aşamasında güvenlik göz önünde bulundurulmadan geliştirilmesi anlamına gelir. 
+Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güvenlik önlemlerini istismar etmesine olanak tanır.
 
+![image](https://github.com/user-attachments/assets/dfff27b7-99dd-4268-ab7e-b109e155b20c)
 
+![image](https://github.com/user-attachments/assets/6431bec9-9526-4a68-beaf-a4508cbe7e7a)
 
+![image](https://github.com/user-attachments/assets/8b34365a-5833-4384-b048-15d45ca9b064)
 
+************************************************************************************************************
 
+Security Misconfiguration
 
+Sistemlerin, uygulamaların veya altyapının güvenlik açısından hatalı yapılandırılması nedeniyle oluşan güvenlik açıklarını ifade eder. 
+OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırılmış güvenlik ayarları nedeniyle saldırganların sistemlere yetkisiz erişim sağlamasına neden olabilir.
 
+![image](https://github.com/user-attachments/assets/c85748c9-3618-466d-9d84-b40564038f1b)
 
+![image](https://github.com/user-attachments/assets/57649632-766c-4262-ad2e-41853a33c458)
 
+![image](https://github.com/user-attachments/assets/91f8fefd-be04-4555-81d3-2a2b35c201e2)
 
+************************************************************************************************************
 
+Vulnerable and Outdated
 
+Vulnerable and Outdated Components, eski veya güvenlik açıkları barındıran yazılım bileşenlerinin (kütüphaneler, çerçeveler, bağımlılıklar, işletim sistemleri vb.) kullanılmasıyla ortaya çıkan bir güvenlik riskidir. 
+OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik zafiyetlerinden yararlanmasına neden olur.
 
+![image](https://github.com/user-attachments/assets/aa51eb6d-5506-4e6c-96da-d6815ec2744c)
 
+![image](https://github.com/user-attachments/assets/bc4be668-c579-4a06-a6e0-665781a386e9)
 
+![image](https://github.com/user-attachments/assets/d42e0f55-94df-4241-8caf-0ac8db206612)
 
+************************************************************************************************************
 
+Identification and Authentication Failures
 
+Identification and Authentication Failures, bir sistemin kullanıcıları tanımlama (identification) ve kimlik doğrulama (authentication) sürecinde zayıflıkları olduğu anlamına gelir.
 
+Bu tür hatalar, hassas verilere yetkisiz erişime yol açabilir ve saldırganların sistemleri atlatmasına neden olabilir.
 
+![image](https://github.com/user-attachments/assets/f2e78c8e-4e2a-410d-a2c9-75f8f8730c2f)
 
+![image](https://github.com/user-attachments/assets/58c82d84-7236-4cb7-8548-bacc0e6733e0)
 
+![image](https://github.com/user-attachments/assets/536bf514-f37e-4d94-aeb1-5ca3eb40ea20)
 
+************************************************************************************************************
 
+MFA (Multi-Factor Authentication)
 
+Multi-Factor Authentication (Çok Faktörlü Kimlik Doğrulama, MFA), bir kullanıcının kimliğini doğrulamak için birden fazla güvenlik katmanının kullanıldığı bir kimlik doğrulama yöntemidir.
 
+Bu, yalnızca kullanıcı adı ve şifreyle giriş yapmak yerine, ek bir doğrulama adımı ekleyerek güvenliği artırır.
 
+![image](https://github.com/user-attachments/assets/4d42736c-da4e-4f7e-a9e7-e68acda6412b)
 
+![image](https://github.com/user-attachments/assets/87319b70-b27f-42b7-bdcd-84730d065bf6)
 
+![image](https://github.com/user-attachments/assets/41d4cfe9-7d09-4a53-8ff0-e018beb0388e)
 
+![image](https://github.com/user-attachments/assets/81bc8d30-a9cd-4a7e-827d-4bfbbdc408e1)
 
+![image](https://github.com/user-attachments/assets/b35d76a6-ca13-49b4-9871-63014db417ed)
 
+************************************************************************************************************
 
+Software and Data Integrity Failures
 
+Software and Data Integrity Failures, bir uygulamanın güncellemeler, kod bütünlüğü ve hassas veriler üzerinde yeterli güvenlik kontrollerini sağlamaması nedeniyle meydana gelen güvenlik açıklarıdır.
 
+Bu tür hatalar, kodun veya verinin yetkisiz şekilde değiştirilmesine veya manipüle edilmesine izin verebilir, bu da zararlı yazılımların sisteme sızmasına veya verilerin değiştirilmesine yol açabilir.
 
+![image](https://github.com/user-attachments/assets/a7a87804-8700-4b21-860c-6ef3b8826f93)
 
+![image](https://github.com/user-attachments/assets/60202b68-94e7-404f-8421-bb8000ed66fa)
 
+![image](https://github.com/user-attachments/assets/89a860d5-557c-4f80-b3f9-fe5d378ca645)
 
+![image](https://github.com/user-attachments/assets/bf4d9040-8efc-4d16-a06a-5c03652c2b33)
 
+![image](https://github.com/user-attachments/assets/db868845-bef8-4673-b80e-459a2d8171c6)
 
+************************************************************************************************************
 
+Security Logging and Monitoring Failures
 
+Security Logging and Monitoring Failures, bir sistemin güvenlik olaylarını yeterince kaydetmemesi, analiz etmemesi veya saldırıları zamanında tespit edememesi nedeniyle oluşan güvenlik açıklarıdır.
 
+Eğer güvenlik günlükleri doğru tutulmaz veya izlenmezse, saldırganlar sisteminize sızabilir ve bunu uzun süre fark etmeyebilirsiniz. Bu da saldırganların izlerini gizlemesine ve daha fazla zarar vermesine yol açabilir.
 
+![image](https://github.com/user-attachments/assets/0ebfad42-430b-49e8-8c3a-4f57b46fc713)
 
+![image](https://github.com/user-attachments/assets/5362af56-1ce9-4efc-a199-2c85b3c8b891)
 
+![image](https://github.com/user-attachments/assets/d3fb848d-9496-4c71-87cc-2c4da2102a00)
 
+![image](https://github.com/user-attachments/assets/ea7aaff9-ff35-4e04-ae54-00acc99fbae9)
 
+![image](https://github.com/user-attachments/assets/6d5d33d1-cd3d-424e-959f-e6e177cc70d4)
 
+************************************************************************************************************
 
+XSS (Cross-Site Scripting)
 
+XSS (Cross-Site Scripting), web uygulamalarında bir güvenlik açığı türüdür. Bu açık, saldırganların kötü amaçlı JavaScript kodlarını, güvenli olarak görünen web sayfalarına enjekte etmesine olanak tanır. Bu şekilde saldırganlar, web sitesi kullanıcılarının tarayıcılarında zararlı kod çalıştırabilirler.
 
+XSS, genellikle kullanıcı tarafından sağlanan verilerin doğru şekilde doğrulanmaması ve filtrelenmemesi sonucu ortaya çıkar. Bu sayede, kullanıcıdan gelen bir veri, sayfa içeriğine doğrudan yerleştirilir ve bu veri kötü amaçlı bir betik (script) içerebilir.
 
+![image](https://github.com/user-attachments/assets/84460195-ac53-430a-ad65-f9432de8f770)
+
+![image](https://github.com/user-attachments/assets/be85cc42-cb24-46a1-bb74-62c7e6ab4ecc)
+
+![image](https://github.com/user-attachments/assets/37d51f42-dab5-41a2-b3b2-39ef70cfdd2f)
+
+![image](https://github.com/user-attachments/assets/6c55579d-fec1-491f-b630-d4c719d2d5e6)
+
+![image](https://github.com/user-attachments/assets/f2934a2c-a3f3-4d06-bc6a-f791862ecf31)
+
+![image](https://github.com/user-attachments/assets/9b307ba4-9ef2-4dc1-b123-49b030d51f42)
+
+![image](https://github.com/user-attachments/assets/6fc8ffee-4d3d-4575-bc40-9e4cdfe40ac9)
+
+Örnek CSP:
+
+![image](https://github.com/user-attachments/assets/a01a8d28-d78e-4476-928e-77049c5dff2a)
+
+![image](https://github.com/user-attachments/assets/619133f8-4220-49ee-9573-96251f9b2ab2)
+
+![image](https://github.com/user-attachments/assets/6bd70637-a024-45a0-8356-d9e3a270a3b3)
+
+![image](https://github.com/user-attachments/assets/b68d5dce-e8e8-46b8-80c5-d2a3fc36277e)
+
+![image](https://github.com/user-attachments/assets/656afb3a-519c-4d1a-be8b-2556783a35a2)
+
+************************************************************************************************************
