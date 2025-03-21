@@ -441,3 +441,118 @@ XSS, genellikle kullanıcı tarafından sağlanan verilerin doğru şekilde doğ
 ![image](https://github.com/user-attachments/assets/b68d5dce-e8e8-46b8-80c5-d2a3fc36277e)
 
 ![image](https://github.com/user-attachments/assets/656afb3a-519c-4d1a-be8b-2556783a35a2)
+
+## Supply Chain Security
+
+Supply Chain Security (Tedarik Zinciri Güvenliği), bir ürünün veya hizmetin üretiminden son kullanıcıya ulaşana kadar geçen süreçte karşılaşabileceği tehditleri minimize etmek için alınan önlemleri ifade eder. Bu güvenlik önlemleri, fiziksel güvenlikten siber güvenliğe kadar geniş bir alanı kapsar.
+
+![image](https://github.com/user-attachments/assets/5155b617-8742-4f80-ba77-c351f916971c)
+
+![image](https://github.com/user-attachments/assets/2abc7b79-d06b-4c61-ab4a-8d471f9f484b)
+
+![image](https://github.com/user-attachments/assets/0a3c876b-abfb-497d-aba5-cca64cad0408)
+
+## Supply Chain Defenses
+
+Supply Chain Defenses, tedarik zincirindeki güvenlik tehditlerine karşı alınan önlemler ve uygulanan stratejiler bütünüdür.
+
+![image](https://github.com/user-attachments/assets/dad2b589-8609-4071-8cb6-21bd2ac92dfe)
+
+![image](https://github.com/user-attachments/assets/375d2a59-08b0-4c46-9c5a-fca7669eb263)
+
+## SCA (Software Composition Analysis)
+
+Software Composition Analysis (SCA), yazılımlarda kullanılan açık kaynak kodlu (open-source) ve üçüncü taraf bileşenlerin analiz edilerek güvenlik açıklarının, lisans uyumluluğunun ve olası risklerin belirlenmesini sağlayan bir süreçtir.
+
+Günümüzde çoğu yazılım, farklı kütüphaneler, çerçeveler (frameworks) ve bağımlılıklar içerir. SCA araçları, bu bileşenleri analiz ederek bilinen güvenlik açıklarını (CVE - Common Vulnerabilities and Exposures), lisans ihlallerini ve güncellenmemiş bağımlılıkları tespit eder.
+
+![image](https://github.com/user-attachments/assets/745ad731-a96c-4315-a2fa-f0c77b60d890)
+
+![image](https://github.com/user-attachments/assets/b5d287ea-8f7a-423c-805a-af877999b6a6)
+
+![image](https://github.com/user-attachments/assets/6726fae2-241f-4bb2-abc5-8f11ecf11db7)
+
+![image](https://github.com/user-attachments/assets/67ff51ef-b382-4d1d-bdb1-ca290ff5c02d)
+
+## SLSA (Supply Chain Levels for Software Artifacts)
+
+SLSA (Supply Chain Levels for Software Artifacts), yazılım tedarik zincirini daha güvenli hale getirmek için Google tarafından başlatılan ve OpenSSF (Open Source Security Foundation) tarafından desteklenen bir çerçevedir.
+
+SLSA, yazılım geliştirme süreçlerinde güvenliği artırmayı ve tedarik zinciri saldırılarını önlemeyi amaçlayan bir güvenlik standardıdır. SolarWinds ve Log4j gibi yazılım tedarik zinciri saldırıları sonrasında, yazılım bileşenlerinin güvenilir ve izlenebilir olmasını sağlamak için geliştirilmiştir.
+
+![image](https://github.com/user-attachments/assets/c60aaa39-2cbd-4f45-ab20-7e9ff0560723)
+
+![image](https://github.com/user-attachments/assets/3a1d011b-88e8-4634-bea6-a4861d4db454)
+
+![image](https://github.com/user-attachments/assets/8969af46-6cbf-4405-b4e8-b105050f66e2)
+
+![image](https://github.com/user-attachments/assets/a23a1576-3893-4b5d-88bb-16a1a9b51793)
+
+![image](https://github.com/user-attachments/assets/35c293b0-18f6-4c0f-914d-e970acbb1918)
+
+![image](https://github.com/user-attachments/assets/5c9e17fb-5014-44bb-8dc1-fb9201ca212a)
+
+SLSA, yazılım tedarik zinciri saldırılarını önlemek için geliştirilen katmanlı bir güvenlik çerçevesidir. Kuruluşların yazılım geliştirme süreçlerini daha güvenli, izlenebilir ve şeffaf hale getirmelerine yardımcı olur. Özellikle açık kaynak ve kurumsal yazılım geliştirme süreçlerinde büyük bir öneme sahiptir.
+
+## SBOM (Software Bill of Materials)
+
+SBOM (Software Bill of Materials), bir yazılımın içinde yer alan tüm bileşenlerin, bağımlılıkların ve ilişkili meta verilerin detaylı bir listesidir.
+
+SBOM, bir yazılımın hangi açık kaynak veya üçüncü taraf bileşenleri içerdiğini ve bunların sürüm bilgilerini, lisans türlerini ve güvenlik açıklarını tespit etmeye yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/c6fc8da9-c3fc-481e-909a-132add8081d6)
+
+![image](https://github.com/user-attachments/assets/2ff59925-b3bf-443c-85ad-fed872aa2c0e)
+
+![image](https://github.com/user-attachments/assets/f81fe828-b8b5-446d-9ee8-2e1f4f134f37)
+
+![image](https://github.com/user-attachments/assets/bfa5acf6-8fd7-4de3-99fb-b442834a9708)
+
+![image](https://github.com/user-attachments/assets/58af0ac5-0be1-4bc2-9c6b-170348b1842c)
+
+## Dependency-Track ve CycloneDX
+
+Dependency-Track, yazılım bileşenlerini yönetmek ve güvenlik açıklarını izlemek için kullanılan açık kaynaklı bir yazılım güvenliği platformudur.
+
+![image](https://github.com/user-attachments/assets/f115eb90-8a98-44da-a19c-811ae08112d6)
+
+Dependency-Track, OWASP (Open Web Application Security Project) tarafından geliştirilmiştir ve özellikle büyük ölçekli yazılım projelerinde güvenlik açıklarını yönetmek için kullanılır.
+
+![image](https://github.com/user-attachments/assets/1b4d5723-9d26-4cc9-8944-7c0560cb29cc)
+
+![image](https://github.com/user-attachments/assets/15d4ac94-3701-499c-96b0-1a503b5d9089)
+
+## CycloneDX
+
+CycloneDX, SBOM (Software Bill of Materials) oluşturmak için kullanılan bir açık standarttır. Dependency-Track ve birçok güvenlik aracı, CycloneDX formatını destekler.
+
+![image](https://github.com/user-attachments/assets/edfae067-bd2c-4f92-9faf-aad2c60e0ac6)
+
+![image](https://github.com/user-attachments/assets/8050c34e-9060-479e-a588-41ee8b5f7c16)
+
+![image](https://github.com/user-attachments/assets/95a585e3-15d7-4540-b9e3-d00634812e3f)
+
+![image](https://github.com/user-attachments/assets/c4428ebc-dd2c-4216-a97b-96b22dd354b4)
+
+![image](https://github.com/user-attachments/assets/7921de42-5ef7-4d68-b570-3f0585003385)
+
+![image](https://github.com/user-attachments/assets/8463338a-c6d3-4a9e-8ccd-cbe797bf508c)
+
+## Application Security 6 ile Devam Edilecek.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
