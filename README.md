@@ -1,4 +1,4 @@
-## Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Bir Zorunluluktur!
+## Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Zorunluluktur!
 
 ## İçerik:
 
