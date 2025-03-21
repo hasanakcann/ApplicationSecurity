@@ -1,4 +1,4 @@
-Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Bir Zorunluluktur!
+## Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Bir Zorunluluktur!
 
 ## İçerik:
 
@@ -29,14 +29,10 @@ Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil,
 - [Security Logging and Monitoring Failures](#security-logging-and-monitoring-failures)
 - [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
 
-************************************************************************************************************
-
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
 
 ![image](https://github.com/user-attachments/assets/a1595f6e-1212-4be3-a2c6-972b36b0aa9a)
-
-************************************************************************************************************
 
 ## CIA (Confidentiality, Integrity, Availability)
 Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
@@ -48,8 +44,6 @@ Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 ![image](https://github.com/user-attachments/assets/7ee18609-58fb-4b5d-a46a-faecf995c7a4)
 
 ![image](https://github.com/user-attachments/assets/7fb7b997-4d17-427f-b042-0391ab3fd70a)
-
-************************************************************************************************************
 
 ## NIST (National Institute of Standards and Technology)
 
@@ -65,8 +59,6 @@ Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
 ![image](https://github.com/user-attachments/assets/91ad246c-b514-424b-8b9c-453039db004f)
 
-************************************************************************************************************
-
 ## SSDF (Secure Software Development Framework) 
 
 ![image](https://github.com/user-attachments/assets/1950fc22-82e2-4e62-9648-24bc2d21aa82)
@@ -81,8 +73,6 @@ Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
 Sonuç olarak SSDF, modern yazılım geliştirme süreçlerinde güvenliği temel alan bir metodolojidir ve güvenli kod üretimini teşvik eder.
 
-************************************************************************************************************
-
 ## CSF (Cybersecurity Framework)
 
 ![image](https://github.com/user-attachments/assets/f7f3c718-1c71-4863-b4ac-fb95a72179da)
@@ -91,8 +81,6 @@ Sonuç olarak SSDF, modern yazılım geliştirme süreçlerinde güvenliği teme
 
 ![image](https://github.com/user-attachments/assets/92d5e12b-c0de-4d5e-a870-ac59e195250c)
 
-************************************************************************************************************
-
 ## RMF (Risk Management Framework)
 
 ![image](https://github.com/user-attachments/assets/e802e571-3c79-4229-9d2a-077b11e15919)
@@ -100,8 +88,6 @@ Sonuç olarak SSDF, modern yazılım geliştirme süreçlerinde güvenliği teme
 RMF'nin 7 Temel Adımı
 
 ![image](https://github.com/user-attachments/assets/34f76e38-d765-41c9-85c4-4403dacaf9b1)
-
-************************************************************************************************************
 
 ## CSA (Cloud Security Alliance) 
 
@@ -112,8 +98,6 @@ RMF'nin 7 Temel Adımı
 ![image](https://github.com/user-attachments/assets/03185d9f-5bc4-47d5-9d10-4fc36d7ba7d3)
 
 ![image](https://github.com/user-attachments/assets/330cfcf5-5644-42d6-8843-0dd2387b8795)
-
-************************************************************************************************************
 
 ## CCM (Cloud Controls Matrix)
 
@@ -131,8 +115,6 @@ RMF'nin 7 Temel Adımı
 
 ![image](https://github.com/user-attachments/assets/2c4f7f9b-0612-46c9-8fc5-0620de9ed662)
 
-************************************************************************************************************
-
 ## Defense in Depth
 
 ![image](https://github.com/user-attachments/assets/13be0a06-d3bb-4ba3-b603-f66b3efa963e)
@@ -142,8 +124,6 @@ RMF'nin 7 Temel Adımı
 ![image](https://github.com/user-attachments/assets/7606f717-9861-4a46-b925-b4c6b1f5a158)
 
 ![image](https://github.com/user-attachments/assets/ef1862fe-5dc7-4678-a054-38dcdec2f947)
-
-************************************************************************************************************
 
 ## Roles and Terms in Cyber Security
 
@@ -177,13 +157,9 @@ RMF'nin 7 Temel Adımı
 
 ![image](https://github.com/user-attachments/assets/05337794-50be-4c29-927b-d89957948371)
 
-************************************************************************************************************
-
 ## CVE (Common Vulnerabilities and Exposures)
 
 ![image](https://github.com/user-attachments/assets/4569e2e6-099f-4b56-aca7-f2b46f11b5d8)
-
-************************************************************************************************************
 
 ## EPiCIS (Exploit Prediction Scoring System)
 
@@ -196,8 +172,6 @@ RMF'nin 7 Temel Adımı
 ![image](https://github.com/user-attachments/assets/eb7e0702-1b3f-4006-8477-9d7eaceb413c)
 
 Bu sistem, özellikle organizasyonların güvenlik önceliklerini belirlerken daha etkili olmalarını sağlar ve güvenlik açıklarına karşı hızlı bir şekilde tepki vermelerine yardımcı olur.
-
-************************************************************************************************************
 
 ## CWE (Common Weakness Enumeration)
 
@@ -213,8 +187,6 @@ Bu sistem, özellikle organizasyonların güvenlik önceliklerini belirlerken da
 
 Sonuç olarak, CWE yazılım güvenliğini iyileştirmek için yaygın olarak kullanılan bir referans kaynağıdır ve organizasyonların güvenlik açıklarına karşı daha etkili stratejiler geliştirmelerine yardımcı olur.
 
-************************************************************************************************************
-
 ## API Security 
 
 ![image](https://github.com/user-attachments/assets/93c3ac8d-36fc-42fc-904a-d057e635d388)
@@ -228,8 +200,6 @@ Sonuç olarak, CWE yazılım güvenliğini iyileştirmek için yaygın olarak ku
 API güvenliği, web uygulamaları ve hizmetler için kritik öneme sahiptir. 
 API'lerin doğru bir şekilde güvence altına alınması, verilerin güvenliğini ve uygulamaların bütünlüğünü korumak için gereklidir. 
 API güvenliğine yönelik doğru önlemleri almak, uygulama sahiplerinin güvenlik açıklarını en aza indirmelerine yardımcı olur ve kötüye kullanımı engeller.
-
-************************************************************************************************************
 
 ## CSP (Content Security Policy)
 
@@ -260,8 +230,6 @@ Content Security Policy (CSP), web uygulamalarındaki güvenliği artırmak içi
 Web geliştiricileri, CSP'yi doğru şekilde yapılandırarak XSS ve veri enjeksiyon saldırılarına karşı önemli bir koruma sağlayabilirler. 
 Ancak, CSP'yi uygularken dikkatli bir planlama ve test süreci gereklidir, çünkü yanlış yapılandırmalar, sayfa işlevselliğini olumsuz etkileyebilir.
 
-************************************************************************************************************
-
 ## SSRF (Server Side Request Forgery)
 
 Server Side Request Forgery (SSRF), bir güvenlik açığı türüdür ve kötü niyetli bir saldırganın, 
@@ -285,8 +253,6 @@ SSRF, web uygulamaları için ciddi bir güvenlik açığı olabilir. Saldırgan
 iç ağdaki hassas verilere veya servislerine erişim sağlayabilirler. Bu tür saldırılara karşı korunmak için doğru güvenlik önlemleri, 
 girdi doğrulama ve ağ segmentasyonu gibi yöntemlerle uygulamalar güvence altına alınabilir.
 
-************************************************************************************************************
-
 ## Vulnerability Management
 
 Bir organizasyonun bilgi sistemlerinde bulunan güvenlik açıklarını (vulnerabilities) tanımlamak, 
@@ -307,8 +273,6 @@ sürekli olarak izleyerek mevcut ve yeni güvenlik açıklarını tespit eder ve
 Vulnerability management, bir organizasyonun bilgi sistemlerini korumak için kritik bir süreçtir. 
 Güvenlik açıklarının tespit edilmesi, sınıflandırılması ve düzeltilmesi, hem iç hem de dış tehditlere karşı güçlü bir savunma sağlar. 
 Ancak bu sürecin etkin bir şekilde yürütülmesi, sürekli izleme ve düzenli iyileştirme gerektirir.
-
-************************************************************************************************************
 
 ## SQL Injection
 
@@ -355,8 +319,6 @@ Bu komutlar SQL dilinin temelini oluşturur. Hangi işlemi yapmak istediğinize 
 
 -> TCL ile işlemler yönetilir.
 
-************************************************************************************************************
-
 ## Insecure Design
 
 Insecure Design, bir yazılımın veya sistemin daha tasarım aşamasında güvenlik göz önünde bulundurulmadan geliştirilmesi anlamına gelir. 
@@ -367,8 +329,6 @@ Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güve
 ![image](https://github.com/user-attachments/assets/6431bec9-9526-4a68-beaf-a4508cbe7e7a)
 
 ![image](https://github.com/user-attachments/assets/8b34365a-5833-4384-b048-15d45ca9b064)
-
-************************************************************************************************************
 
 ## Security Misconfiguration
 
@@ -381,8 +341,6 @@ OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırı
 
 ![image](https://github.com/user-attachments/assets/91f8fefd-be04-4555-81d3-2a2b35c201e2)
 
-************************************************************************************************************
-
 ## Vulnerable and Outdated
 
 Vulnerable and Outdated Components, eski veya güvenlik açıkları barındıran yazılım bileşenlerinin (kütüphaneler, çerçeveler, bağımlılıklar, işletim sistemleri vb.) kullanılmasıyla ortaya çıkan bir güvenlik riskidir. 
@@ -393,8 +351,6 @@ OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik z
 ![image](https://github.com/user-attachments/assets/bc4be668-c579-4a06-a6e0-665781a386e9)
 
 ![image](https://github.com/user-attachments/assets/d42e0f55-94df-4241-8caf-0ac8db206612)
-
-************************************************************************************************************
 
 ## Identification and Authentication Failures
 
@@ -407,8 +363,6 @@ Bu tür hatalar, hassas verilere yetkisiz erişime yol açabilir ve saldırganla
 ![image](https://github.com/user-attachments/assets/58c82d84-7236-4cb7-8548-bacc0e6733e0)
 
 ![image](https://github.com/user-attachments/assets/536bf514-f37e-4d94-aeb1-5ca3eb40ea20)
-
-************************************************************************************************************
 
 ## MFA (Multi-Factor Authentication)
 
@@ -426,8 +380,6 @@ Bu, yalnızca kullanıcı adı ve şifreyle giriş yapmak yerine, ek bir doğrul
 
 ![image](https://github.com/user-attachments/assets/b35d76a6-ca13-49b4-9871-63014db417ed)
 
-************************************************************************************************************
-
 ## Software and Data Integrity Failures
 
 Software and Data Integrity Failures, bir uygulamanın güncellemeler, kod bütünlüğü ve hassas veriler üzerinde yeterli güvenlik kontrollerini sağlamaması nedeniyle meydana gelen güvenlik açıklarıdır.
@@ -444,8 +396,6 @@ Bu tür hatalar, kodun veya verinin yetkisiz şekilde değiştirilmesine veya ma
 
 ![image](https://github.com/user-attachments/assets/db868845-bef8-4673-b80e-459a2d8171c6)
 
-************************************************************************************************************
-
 ## Security Logging and Monitoring Failures
 
 Security Logging and Monitoring Failures, bir sistemin güvenlik olaylarını yeterince kaydetmemesi, analiz etmemesi veya saldırıları zamanında tespit edememesi nedeniyle oluşan güvenlik açıklarıdır.
@@ -461,8 +411,6 @@ Eğer güvenlik günlükleri doğru tutulmaz veya izlenmezse, saldırganlar sist
 ![image](https://github.com/user-attachments/assets/ea7aaff9-ff35-4e04-ae54-00acc99fbae9)
 
 ![image](https://github.com/user-attachments/assets/6d5d33d1-cd3d-424e-959f-e6e177cc70d4)
-
-************************************************************************************************************
 
 ## XSS (Cross-Site Scripting)
 
@@ -495,5 +443,3 @@ XSS, genellikle kullanıcı tarafından sağlanan verilerin doğru şekilde doğ
 ![image](https://github.com/user-attachments/assets/b68d5dce-e8e8-46b8-80c5-d2a3fc36277e)
 
 ![image](https://github.com/user-attachments/assets/656afb3a-519c-4d1a-be8b-2556783a35a2)
-
-************************************************************************************************************
