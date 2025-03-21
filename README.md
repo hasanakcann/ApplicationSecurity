@@ -1,43 +1,44 @@
 Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Bir Zorunluluktur!
 
-İçerik:
--> OWASP Top 10 (Open Web Application Security Project Top 10)
--> CIA (Confidentiality, Integrity, Availability)
--> NIST (National Institute of Standards and Technology)
--> SSDF (Secure Software Development Framework)
--> CSF (Cybersecurity Framework)
--> RMF (Risk Management Framework)
--> CSA (Cloud Security Alliance) 
--> CCM (Cloud Controls Matrix) 
--> Defense in Depth
--> Roles and Terms in Cyber ​​Security
--> CVE (Common Vulnerabilities and Exposures)
--> EPiCIS (Exploit Prediction Scoring System)
--> CWE (Common Weakness Enumeration)
--> Api Security
--> CSP (Content Security Policy)
--> SSRF (Server Side Request Forgery)
--> Vulnerability Management
--> Sql Injection
--> Insecure Design
--> Security Misconfiguration
--> Vulnerable and Outdated
--> Identification and Authentication Failures
--> MFA (Multi-Factor Authentication)
--> Software and Data Integrity Failures
--> Security Logging and Monitoring Failures
--> XSS (Cross-Site Scripting)
+## İçerik:
+
+- [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
+- [CIA (Confidentiality, Integrity, Availability)](#cia-confidentiality-integrity-availability)
+- [NIST (National Institute of Standards and Technology)](#nist-national-institute-of-standards-and-technology)
+- [SSDF (Secure Software Development Framework)](#ssdf-secure-software-development-framework)
+- [CSF (Cybersecurity Framework)](#csf-cybersecurity-framework)
+- [RMF (Risk Management Framework)](#rmf-risk-management-framework)
+- [CSA (Cloud Security Alliance)](#csa-cloud-security-alliance)
+- [CCM (Cloud Controls Matrix)](#ccm-cloud-controls-matrix)
+- [Defense in Depth](#defense-in-depth)
+- [Roles and Terms in Cyber Security](#roles-and-terms-in-cyber-security)
+- [CVE (Common Vulnerabilities and Exposures)](#cve-common-vulnerabilities-and-exposures)
+- [EPiCIS (Exploit Prediction Scoring System)](#epicis-exploit-prediction-scoring-system)
+- [CWE (Common Weakness Enumeration)](#cwe-common-weakness-enumeration)
+- [API Security](#api-security)
+- [CSP (Content Security Policy)](#csp-content-security-policy)
+- [SSRF (Server Side Request Forgery)](#ssrf-server-side-request-forgery)
+- [Vulnerability Management](#vulnerability-management)
+- [SQL Injection](#sql-injection)
+- [Insecure Design](#insecure-design)
+- [Security Misconfiguration](#security-misconfiguration)
+- [Vulnerable and Outdated](#vulnerable-and-outdated)
+- [Identification and Authentication Failures](#identification-and-authentication-failures)
+- [MFA (Multi-Factor Authentication)](#mfa-multi-factor-authentication)
+- [Software and Data Integrity Failures](#software-and-data-integrity-failures)
+- [Security Logging and Monitoring Failures](#security-logging-and-monitoring-failures)
+- [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
 
 ************************************************************************************************************
 
-OWASP Top 10 (Open Web Application Security Project Top 10)
+## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
 
 ![image](https://github.com/user-attachments/assets/a1595f6e-1212-4be3-a2c6-972b36b0aa9a)
 
 ************************************************************************************************************
 
-CIA (Confidentiality, Integrity, Availability)
+## CIA (Confidentiality, Integrity, Availability)
 Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
 ![image](https://github.com/user-attachments/assets/bf40136a-70ee-452a-97c3-3b10054b215a)
@@ -50,7 +51,7 @@ Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
 ************************************************************************************************************
 
-NIST (National Institute of Standards and Technology)
+## NIST (National Institute of Standards and Technology)
 
 ![image](https://github.com/user-attachments/assets/079f9467-6415-4021-bd91-757bd95c36e8)
 
@@ -66,7 +67,7 @@ NIST (National Institute of Standards and Technology)
 
 ************************************************************************************************************
 
-SSDF (Secure Software Development Framework) 
+## SSDF (Secure Software Development Framework) 
 
 ![image](https://github.com/user-attachments/assets/1950fc22-82e2-4e62-9648-24bc2d21aa82)
 
@@ -82,7 +83,7 @@ Sonuç olarak SSDF, modern yazılım geliştirme süreçlerinde güvenliği teme
 
 ************************************************************************************************************
 
-CSF (Cybersecurity Framework)
+## CSF (Cybersecurity Framework)
 
 ![image](https://github.com/user-attachments/assets/f7f3c718-1c71-4863-b4ac-fb95a72179da)
 
@@ -92,7 +93,7 @@ CSF (Cybersecurity Framework)
 
 ************************************************************************************************************
 
-RMF (Risk Management Framework)
+## RMF (Risk Management Framework)
 
 ![image](https://github.com/user-attachments/assets/e802e571-3c79-4229-9d2a-077b11e15919)
 
@@ -102,7 +103,7 @@ RMF'nin 7 Temel Adımı
 
 ************************************************************************************************************
 
-CSA (Cloud Security Alliance) 
+## CSA (Cloud Security Alliance) 
 
 ![image](https://github.com/user-attachments/assets/7a0c130d-59a5-4b6e-aad1-4c328d35231b)
 
@@ -114,7 +115,7 @@ CSA (Cloud Security Alliance)
 
 ************************************************************************************************************
 
-CCM (Cloud Controls Matrix) 
+## CCM (Cloud Controls Matrix)
 
 ![image](https://github.com/user-attachments/assets/8e83ad5f-77ac-4245-8a5b-372021d1fb82)
 
@@ -132,7 +133,7 @@ CCM (Cloud Controls Matrix)
 
 ************************************************************************************************************
 
-Defense in Depth 
+## Defense in Depth
 
 ![image](https://github.com/user-attachments/assets/13be0a06-d3bb-4ba3-b603-f66b3efa963e)
 
@@ -144,7 +145,7 @@ Defense in Depth
 
 ************************************************************************************************************
 
-Roles and Terms in Cyber ​​Security
+## Roles and Terms in Cyber Security
 
 ![image](https://github.com/user-attachments/assets/4044af5b-89f8-45f4-a69b-3c5548c8b23e)
 
@@ -178,13 +179,13 @@ Roles and Terms in Cyber ​​Security
 
 ************************************************************************************************************
 
-CVE (Common Vulnerabilities and Exposures)
+## CVE (Common Vulnerabilities and Exposures)
 
 ![image](https://github.com/user-attachments/assets/4569e2e6-099f-4b56-aca7-f2b46f11b5d8)
 
 ************************************************************************************************************
 
-EPiCIS (Exploit Prediction Scoring System)
+## EPiCIS (Exploit Prediction Scoring System)
 
 ![image](https://github.com/user-attachments/assets/ece0e90f-8baf-4ca6-9415-0c018dbda1fb)
 
@@ -198,7 +199,7 @@ Bu sistem, özellikle organizasyonların güvenlik önceliklerini belirlerken da
 
 ************************************************************************************************************
 
-CWE (Common Weakness Enumeration)
+## CWE (Common Weakness Enumeration)
 
 ![image](https://github.com/user-attachments/assets/34c4ee07-7af5-4643-9b84-1d0e46a057ea)
 
@@ -214,7 +215,7 @@ Sonuç olarak, CWE yazılım güvenliğini iyileştirmek için yaygın olarak ku
 
 ************************************************************************************************************
 
-Api Security 
+## API Security 
 
 ![image](https://github.com/user-attachments/assets/93c3ac8d-36fc-42fc-904a-d057e635d388)
 
@@ -230,7 +231,7 @@ API güvenliğine yönelik doğru önlemleri almak, uygulama sahiplerinin güven
 
 ************************************************************************************************************
 
-CSP (Content Security Policy)
+## CSP (Content Security Policy)
 
 Content Security Policy (CSP), web uygulamalarında güvenlik önlemleri sağlamak amacıyla kullanılan bir güvenlik standardıdır. 
 CSP, web sayfalarına eklenen içeriklerin nerelerden yükleneceğini kontrol eden bir politikadır ve potansiyel Cross-Site Scripting (XSS) ve data injection saldırılarını önlemeye yardımcı olur. 
@@ -261,7 +262,7 @@ Ancak, CSP'yi uygularken dikkatli bir planlama ve test süreci gereklidir, çün
 
 ************************************************************************************************************
 
-SSRF (Server Side Request Forgery)
+## SSRF (Server Side Request Forgery)
 
 Server Side Request Forgery (SSRF), bir güvenlik açığı türüdür ve kötü niyetli bir saldırganın, 
 hedef sunucunun yerine başka bir sunucuya istek (request) göndermesini sağlar. 
@@ -286,7 +287,7 @@ girdi doğrulama ve ağ segmentasyonu gibi yöntemlerle uygulamalar güvence alt
 
 ************************************************************************************************************
 
-Vulnerability Management
+## Vulnerability Management
 
 Bir organizasyonun bilgi sistemlerinde bulunan güvenlik açıklarını (vulnerabilities) tanımlamak, 
 değerlendirmek, önceliklendirmek, düzeltmek ve izlemek için uygulanan bir süreçtir. 
@@ -309,7 +310,7 @@ Ancak bu sürecin etkin bir şekilde yürütülmesi, sürekli izleme ve düzenli
 
 ************************************************************************************************************
 
-Sql Injection
+## SQL Injection
 
 Kötü niyetli kullanıcıların bir uygulamanın veritabanına doğrudan SQL komutları göndererek güvenlik açıklarını istismar etmesi durumudur. 
 Bu saldırı türü, genellikle uygulamanın kullanıcı girdilerini doğru şekilde doğrulamadığı veya temizlemediği zaman meydana gelir. 
@@ -343,15 +344,20 @@ SQL komutları, veritabanı yönetim sistemleriyle etkileşim kurmak için kulla
 ![image](https://github.com/user-attachments/assets/5b5d72ee-4d6d-4f4f-8fba-f62a85d6d186)
 
 Bu komutlar SQL dilinin temelini oluşturur. Hangi işlemi yapmak istediğinize bağlı olarak bu komutları kullanabilirsiniz. 
-DDL ile veritabanı nesneleri yönetilir.
-DML ile veriler işlenir.
-DQL ile veri sorgulanır. 
-DCL ile erişim kontrol edilir.
-TCL ile işlemler yönetilir.
+
+-> DDL ile veritabanı nesneleri yönetilir.
+
+-> DML ile veriler işlenir.
+
+-> DQL ile veri sorgulanır. 
+
+-> DCL ile erişim kontrol edilir.
+
+-> TCL ile işlemler yönetilir.
 
 ************************************************************************************************************
 
-Insecure Design
+## Insecure Design
 
 Insecure Design, bir yazılımın veya sistemin daha tasarım aşamasında güvenlik göz önünde bulundurulmadan geliştirilmesi anlamına gelir. 
 Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güvenlik önlemlerini istismar etmesine olanak tanır.
@@ -364,7 +370,7 @@ Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güve
 
 ************************************************************************************************************
 
-Security Misconfiguration
+## Security Misconfiguration
 
 Sistemlerin, uygulamaların veya altyapının güvenlik açısından hatalı yapılandırılması nedeniyle oluşan güvenlik açıklarını ifade eder. 
 OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırılmış güvenlik ayarları nedeniyle saldırganların sistemlere yetkisiz erişim sağlamasına neden olabilir.
@@ -377,7 +383,7 @@ OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırı
 
 ************************************************************************************************************
 
-Vulnerable and Outdated
+## Vulnerable and Outdated
 
 Vulnerable and Outdated Components, eski veya güvenlik açıkları barındıran yazılım bileşenlerinin (kütüphaneler, çerçeveler, bağımlılıklar, işletim sistemleri vb.) kullanılmasıyla ortaya çıkan bir güvenlik riskidir. 
 OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik zafiyetlerinden yararlanmasına neden olur.
@@ -390,7 +396,7 @@ OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik z
 
 ************************************************************************************************************
 
-Identification and Authentication Failures
+## Identification and Authentication Failures
 
 Identification and Authentication Failures, bir sistemin kullanıcıları tanımlama (identification) ve kimlik doğrulama (authentication) sürecinde zayıflıkları olduğu anlamına gelir.
 
@@ -404,7 +410,7 @@ Bu tür hatalar, hassas verilere yetkisiz erişime yol açabilir ve saldırganla
 
 ************************************************************************************************************
 
-MFA (Multi-Factor Authentication)
+## MFA (Multi-Factor Authentication)
 
 Multi-Factor Authentication (Çok Faktörlü Kimlik Doğrulama, MFA), bir kullanıcının kimliğini doğrulamak için birden fazla güvenlik katmanının kullanıldığı bir kimlik doğrulama yöntemidir.
 
@@ -422,7 +428,7 @@ Bu, yalnızca kullanıcı adı ve şifreyle giriş yapmak yerine, ek bir doğrul
 
 ************************************************************************************************************
 
-Software and Data Integrity Failures
+## Software and Data Integrity Failures
 
 Software and Data Integrity Failures, bir uygulamanın güncellemeler, kod bütünlüğü ve hassas veriler üzerinde yeterli güvenlik kontrollerini sağlamaması nedeniyle meydana gelen güvenlik açıklarıdır.
 
@@ -440,7 +446,7 @@ Bu tür hatalar, kodun veya verinin yetkisiz şekilde değiştirilmesine veya ma
 
 ************************************************************************************************************
 
-Security Logging and Monitoring Failures
+## Security Logging and Monitoring Failures
 
 Security Logging and Monitoring Failures, bir sistemin güvenlik olaylarını yeterince kaydetmemesi, analiz etmemesi veya saldırıları zamanında tespit edememesi nedeniyle oluşan güvenlik açıklarıdır.
 
@@ -458,7 +464,7 @@ Eğer güvenlik günlükleri doğru tutulmaz veya izlenmezse, saldırganlar sist
 
 ************************************************************************************************************
 
-XSS (Cross-Site Scripting)
+## XSS (Cross-Site Scripting)
 
 XSS (Cross-Site Scripting), web uygulamalarında bir güvenlik açığı türüdür. Bu açık, saldırganların kötü amaçlı JavaScript kodlarını, güvenli olarak görünen web sayfalarına enjekte etmesine olanak tanır. Bu şekilde saldırganlar, web sitesi kullanıcılarının tarayıcılarında zararlı kod çalıştırabilirler.
 
