@@ -1,6 +1,4 @@
-## Günümüz Dijital Dünyasında Uygulama Güvenliği Artık Bir Seçenek Değil, Zorunluluktur!
-
-## İçerik:
+## Dijital Dünyamızda Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
 
 - [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
 - [CIA (Confidentiality, Integrity, Availability)](#cia-confidentiality-integrity-availability)
