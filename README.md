@@ -33,6 +33,17 @@
 - [SBOM (Software Bill of Materials)](#sbom-software-bill-of-materials)
 - [Dependency-Track ve CycloneDX](#dependency-track-ve-cyclonedx)
 - [CycloneDX](#cyclonedx)
+- [Cloud and Container Security](#cloud-and-container-security)
+- [AWS Well-Architected Framework](#aws-well-architected-framework)
+- [AWS Identity and Access Management](#aws-identity-and-access-management)
+- [AWS Detection Controls](#aws-detection-controls)
+- [AWS Infrastructure](#aws-infrastructure)
+- [AWS Data Protection](#aws-data-protection)
+- [AWS Incident Response](#aws-incident-response)
+- [AWS Application Security](#aws-application-security)
+- [Container Security](#container-security)
+- [CI/CD](#cicd)
+- [AWS - Azure - GCP](#aws---azure---gcp)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
@@ -545,7 +556,231 @@ CycloneDX, SBOM (Software Bill of Materials) oluşturmak için kullanılan bir a
 
 ![image](https://github.com/user-attachments/assets/8463338a-c6d3-4a9e-8ccd-cbe797bf508c)
 
-## Application Security 6 ile Devam Edilecek.
+## Cloud and Container Security 
+
+Cloud security, bulut ortamlarında verilerin, uygulamaların ve altyapının korunmasını sağlayan süreçler, teknolojiler ve politikaları kapsar. Bulut güvenliği, public (genel), private (özel) ve hybrid (karma) bulut ortamlarında verilerin gizliliğini, bütünlüğünü ve erişilebilirliğini sağlamayı hedefler.
+
+![image](https://github.com/user-attachments/assets/60920249-b171-4a30-b067-e8abe3ce1eb1)
+
+Container security, Docker, Kubernetes gibi container teknolojilerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan teknikler ve araçlardan oluşur. Konteyner güvenliği, uygulamaların izolasyonunu, ağ trafiğini, güvenlik açıklarını ve çalışma zamanındaki tehditleri yönetmeyi hedefler.
+
+![image](https://github.com/user-attachments/assets/7c4aab1f-0c23-4f6f-96e7-8e58e77586ba)
+
+![image](https://github.com/user-attachments/assets/436c5372-19f6-40e3-bc67-e6271672148d)
+
+## AWS Well-Architected Framework
+
+AWS Well-Architected Framework, AWS üzerinde güvenli, yüksek performanslı, dayanıklı ve verimli sistemler tasarlamak için en iyi uygulamaları ve prensipleri belirleyen bir kılavuzdur. AWS, bu framework'ü kullanarak sistem mimarilerinin güçlü ve sürdürülebilir olmasını sağlar.
+
+![image](https://github.com/user-attachments/assets/c16a53bb-a628-4879-8763-479fe0d49d14)
+
+![image](https://github.com/user-attachments/assets/cca16985-54c6-4721-88bb-e877d5faf589)
+
+Well-Architected Review:
+
+AWS, sistemlerin Well-Architected Framework prensiplerine uygun olup olmadığını değerlendirmek için Well-Architected Review adında bir inceleme süreci sunar. Bu inceleme sayesinde güvenlik açıkları, maliyet optimizasyonu fırsatları ve performans iyileştirmeleri belirlenebilir.
+
+## AWS Identity and Access Management
+
+AWS Identity and Access Management (IAM), AWS kaynaklarına güvenli erişimi yönetmek için kullanılan bir hizmettir. IAM, kimin (kimlik) hangi kaynaklara (S3, EC2, RDS, Lambda vb.) nasıl erişebileceğini belirlemeye yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/ac3886f5-683b-477d-bc5b-e3b798e23799)
+
+![image](https://github.com/user-attachments/assets/d328b7e2-1b81-4f00-a9b1-4eca1ce87cab)
+
+![image](https://github.com/user-attachments/assets/5de478b0-0fa4-48a3-a478-544a7d94942f)
+
+## AWS Detection Controls
+
+AWS Detection Controls (Algılama Kontrolleri), AWS ortamında güvenlik tehditlerini tespit etmek ve izlemek için kullanılan araçlar, hizmetler ve mekanizmalardır. Bu kontroller, AWS Well-Architected Framework’ün Security Pillar (Güvenlik İlkesi) kapsamında kritik bir bileşendir ve güvenlik ihlallerini erken tespit edip yanıt vermeye yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/3adf59c7-b3b8-4076-9bf3-0537fb0bbbc6)
+
+![image](https://github.com/user-attachments/assets/23d1d1f7-f51c-405a-9242-1fd1de618bde)
+
+![image](https://github.com/user-attachments/assets/96c3981d-9ca7-46d9-946d-ad177654a7d4)
+
+AWS Detection Controls, sisteminizdeki güvenlik tehditlerini proaktif olarak izleyip algılamaya yardımcı olur ve erken müdahale edilmesini sağlar. AWS ortamında güvenliği artırmak ve uyumluluğu sağlamak için bu araçları kullanmak önemlidir! 🚀
+
+## AWS Infrastructure
+
+AWS Infrastructure (Altyapısı), Amazon Web Services’in küresel çapta sunduğu veri merkezleri, ağ bağlantıları, güvenlik katmanları ve hizmetlerden oluşan fiziksel ve sanal yapıdır. AWS altyapısı, yüksek erişilebilirlik, ölçeklenebilirlik ve güvenlik sağlayacak şekilde tasarlanmıştır.
+
+![image](https://github.com/user-attachments/assets/bb6a3817-1977-44ac-addf-cff19813f5a2)
+
+![image](https://github.com/user-attachments/assets/263032b0-7602-4c39-be36-5c9df6997be2)
+
+![image](https://github.com/user-attachments/assets/96902f7b-208e-414d-8b5e-95b0a7db09d2)
+
+AWS Infrastructure (Altyapısı), dünya çapında güçlü bir veri merkezi ağı, yüksek performanslı sunucular, güvenli ağ bağlantıları ve ölçeklenebilir hizmetler sunarak modern uygulamaların güvenli, hızlı ve verimli bir şekilde çalışmasını sağlar. 🚀
+
+## AWS Data Protection
+
+AWS Data Protection (Veri Koruma), AWS üzerindeki verilerin güvenliğini sağlamak, yetkisiz erişimleri önlemek ve veri kaybına karşı önlem almak için kullanılan güvenlik mekanizmalarını ifade eder. Veri şifreleme, erişim kontrolleri, yedekleme ve izleme gibi birçok güvenlik hizmetini içerir.
+
+![image](https://github.com/user-attachments/assets/e99e0bac-1a05-4dc1-b6bb-a47444370296)
+
+![image](https://github.com/user-attachments/assets/fb653d67-e446-4749-9f3a-eef8a3d6c594)
+
+![image](https://github.com/user-attachments/assets/4a1d14f8-e530-4646-8bca-d30f844c4b89)
+
+![image](https://github.com/user-attachments/assets/de4ed677-6157-49b6-ac79-81c9f2e2b415)
+
+AWS Data Protection, verilerin şifrelenmesi, yetkisiz erişime karşı korunması, yedeklenmesi ve sürekli izlenmesi için AWS’in sunduğu güvenlik çözümlerini kapsar. Doğru araçları kullanarak güvenliği artırabilir ve uyumluluk gereksinimlerini karşılayabilirsiniz. 🚀
+
+## AWS Incident Response
+
+AWS Incident Response (Olay Müdahale), AWS ortamında meydana gelen güvenlik olaylarını tespit etme, müdahale etme ve olayın etkilerini azaltma sürecidir. Bu süreç, tehditlerin tespiti, analiz edilmesi, olayın etkisinin en aza indirilmesi ve gelecekte benzer olayların önlenmesi için uygulanan bir dizi en iyi uygulamayı içerir.
+
+![image](https://github.com/user-attachments/assets/7c1e33e0-5943-4f6d-8050-6fc0584a18be)
+
+![image](https://github.com/user-attachments/assets/a397c952-1702-40cd-861f-874f76dd2f4e)
+
+![image](https://github.com/user-attachments/assets/2348e622-10c6-4bcc-9dfc-f6381469e23a)
+
+![image](https://github.com/user-attachments/assets/103db8d5-5a2a-41d5-94a9-2966ddf2b342)
+
+![image](https://github.com/user-attachments/assets/7094b8a2-a30b-4b74-8196-5d960cf19b6c)
+
+![image](https://github.com/user-attachments/assets/fa947135-349a-43b8-9a51-2f40875b5f28)
+
+![image](https://github.com/user-attachments/assets/09b5060f-b61b-4d4c-9660-2ce25f0efbef)
+
+![image](https://github.com/user-attachments/assets/6dee7100-c6fc-4481-951a-bb29d0d40c9f)
+
+AWS Incident Response, bir güvenlik olayı meydana geldiğinde hızlı müdahale etmek ve hasarı en aza indirmek için uygulanması gereken süreçleri kapsar. Güçlü bir izleme ve uyarı mekanizması ile güvenlik tehditlerine karşı proaktif olunabilir. 🚀
+
+## AWS Application Security
+
+AWS Application Security, AWS üzerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan araçları, en iyi uygulamaları ve güvenlik hizmetlerini kapsar. Uygulama katmanındaki güvenlik açıklarını tespit etmek, yetkisiz erişimleri önlemek, verileri korumak ve saldırılara karşı savunma mekanizmaları oluşturmak için çeşitli AWS hizmetleri ve stratejileri kullanılır.
+
+![image](https://github.com/user-attachments/assets/a93d4714-fd26-4e9c-bb6b-18906faa8464)
+
+![image](https://github.com/user-attachments/assets/3e127b40-8f32-4785-bad0-13dca48f760a)
+
+![image](https://github.com/user-attachments/assets/198f8b89-7b8f-4596-b08f-501fc67cf3c7)
+
+![image](https://github.com/user-attachments/assets/e8f4fb75-cc2d-4498-ad50-14455f1533fd)
+
+![image](https://github.com/user-attachments/assets/fe2a31d9-57af-4ccc-9747-ac285f7dd8dd)
+
+![image](https://github.com/user-attachments/assets/f18402d8-cc6b-4524-a442-21be3f8260d1)
+
+![image](https://github.com/user-attachments/assets/031304a3-2018-47bb-a428-c3e55ccca8af)
+
+![image](https://github.com/user-attachments/assets/87739948-4031-4bf0-98a8-bce2daf5d99b)
+
+AWS Application Security, uygulamalarınızı hacker saldırılarından, yetkisiz erişimlerden, veri sızıntılarından ve DDoS saldırılarından korumak için kapsamlı güvenlik çözümleri sunar. IAM, WAF, KMS, API Gateway ve CloudTrail gibi AWS servisleri kullanılarak uygulamalarınızın güvenliği en üst seviyeye çıkarılabilir. 🚀
+
+## Container Security
+
+Container Security, konteyner tabanlı uygulamaların güvenliğini sağlamak için kullanılan yöntem, araç ve en iyi uygulamaların bütünüdür. Konteynerler, Docker, Kubernetes (K8s) ve AWS ECS/EKS gibi platformlar üzerinde çalışırken güvenlik açıkları oluşturabilir. Bu nedenle, görüntü güvenliği, çalışma zamanı koruması, ağ güvenliği ve erişim kontrolü gibi önlemler alınmalıdır.
+
+![image](https://github.com/user-attachments/assets/383ae4ac-6b32-4207-9801-74ffaee4b030)
+
+![image](https://github.com/user-attachments/assets/46a1ad8c-0157-480c-950a-4efec9d3a52c)
+
+![image](https://github.com/user-attachments/assets/141b90c2-f87b-4133-bc30-d627b77ccdb7)
+
+![image](https://github.com/user-attachments/assets/5d776d3f-91de-46e0-9b9e-db079b880d9a)
+
+![image](https://github.com/user-attachments/assets/dde94bda-a8e5-4fdd-8ff0-e019f96c001b)
+
+![image](https://github.com/user-attachments/assets/abd4a9c1-9e6e-48f3-ab0d-2ce3e0ac7486)
+
+![image](https://github.com/user-attachments/assets/9564b5ad-40c8-4581-91e2-11e434e92d78)
+
+![image](https://github.com/user-attachments/assets/7b77cf00-c4da-4599-b7ea-771e8cf095c5)
+
+AWS Container Security, Docker, Kubernetes ve AWS ECS/EKS gibi ortamları güvenli bir şekilde yönetmek için bir dizi en iyi uygulamayı ve hizmeti içerir. Image taraması, IAM politikaları, runtime güvenliği ve ağ güvenliği gibi önlemler alındığında, konteyner tabanlı uygulamalar saldırılara karşı daha dayanıklı hale gelir. 🔐🚀
+
+## CI/CD
+
+CI/CD (Continuous Integration & Continuous Deployment/Delivery), yazılım geliştirme sürecini otomatikleştirmek, hata oranını azaltmak ve hızlı bir şekilde yeni özellikleri canlıya almak için kullanılan modern bir yazılım geliştirme metodolojisidir.
+
+![image](https://github.com/user-attachments/assets/aad5a682-c803-497d-b488-aea9cff74edd)
+
+![image](https://github.com/user-attachments/assets/e3b3501e-8885-4105-a5a2-cd8f09f1c176)
+
+![image](https://github.com/user-attachments/assets/0b7654c4-2d1a-42de-8223-10a28cb24afc)
+
+![image](https://github.com/user-attachments/assets/0f547564-8099-421b-876d-9fd40ec0cd3f)
+
+![image](https://github.com/user-attachments/assets/33ecc9b3-a166-44da-b3b0-070edcd751aa)
+
+![image](https://github.com/user-attachments/assets/0fd23cc3-bf68-4afc-aeeb-3442919a5774)
+
+![image](https://github.com/user-attachments/assets/362e78a4-3c9a-4b9d-a503-af84f8f3751e)
+
+![image](https://github.com/user-attachments/assets/3fe5764d-c75c-4cc6-9667-3a6c7547885f)
+
+![image](https://github.com/user-attachments/assets/8171fb1e-52ef-4dcf-80e6-599d8ea4912b)
+
+## AWS - Azure - GCP
+
+AWS (Amazon Web Services), Azure ve GCP (Google Cloud Platform), bulut bilişim sağlayıcılarıdır ve her biri farklı hizmetler sunarak organizasyonların altyapılarını ve uygulamalarını bulut ortamına taşımasına olanak tanır. Bu sağlayıcılar, bulut tabanlı uygulamalar geliştirmek, verileri depolamak, analiz etmek ve güvenliğini sağlamak için çeşitli hizmetler sunmaktadır.
+
+![image](https://github.com/user-attachments/assets/92895261-7ce1-4f26-b3ab-307a92543703)
+
+![image](https://github.com/user-attachments/assets/2bbd0630-32bd-48f3-a8cb-aed1c75f22c6)
+
+![image](https://github.com/user-attachments/assets/8822d602-903d-4bda-99cc-6f9dd7692472)
+
+![image](https://github.com/user-attachments/assets/da57db4f-f45d-469c-963b-ad65069d545c)
+
+![image](https://github.com/user-attachments/assets/742a9492-4ca4-4231-b1e7-514c2433b3f9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
