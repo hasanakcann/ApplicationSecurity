@@ -62,6 +62,13 @@
 - [PKI](#pki)
 - [Salt](#salt)
 - [DevSecOps](#devsecops)
+- [Kubernetes](#kubernetes)
+- [Jenkins](#jenkins)
+- [DevSecOps Design](#devsecops-design)
+- [SonarQube](#sonarqube)
+- [Pipeline](#pipeline)
+- [Static Analysis](#static-analysis)
+- [Ansible](#ansible)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
@@ -1115,6 +1122,311 @@ Salt, şifreleme veya hashleme işlemlerinde kullanılan rastgele bir değerdir.
 ![image](https://github.com/user-attachments/assets/2aa0a769-4bbb-4e5c-906b-263261f7e587)
 
 ## DevSecOps
+
+DevSecOps (Development, Security, and Operations), güvenliğin yazılım geliştirme ve operasyon süreçlerine baştan sona entegre edilmesini sağlayan bir yaklaşımdır. Geleneksel DevOps modelinde güvenlik genellikle son aşamalarda değerlendirilirken, DevSecOps ile güvenlik en baştan itibaren CI/CD (Continuous Integration / Continuous Deployment) süreçlerine entegre edilir.
+
+![image](https://github.com/user-attachments/assets/e347a0f4-9a04-4bfa-9109-a5d2d87c0e65)
+
+![image](https://github.com/user-attachments/assets/3e37c524-1111-4793-afef-0a50f394c6d2)
+
+![image](https://github.com/user-attachments/assets/5a42b8ad-a6d5-4b15-8541-e962a97ee577)
+
+Özetle
+
+DevSecOps, güvenliği tüm yazılım geliştirme süreçlerine entegre eden bir yaklaşımdır. Secure CI/CD, bu güvenliği CI/CD pipeline’larına taşıyarak kod, pipeline, build, dağıtım ve runtime güvenliğini sağlar. Otomatik tarama araçları, erişim kontrolleri, güvenli yapılandırmalar ve güvenlik politikalarının kod olarak uygulanması bu sürecin temel parçalarıdır.
+
+Bu yaklaşımlar sayesinde erken güvenlik açığı tespiti, daha güvenli kod dağıtımları ve güvenlik ihlallerine karşı proaktif önlemler alınmış olur. 🚀
+
+![image](https://github.com/user-attachments/assets/7f6ab357-2254-4e77-bdbd-fcb9ea0bcd83)
+
+![image](https://github.com/user-attachments/assets/8e99c789-7695-4eb9-9773-76f3f5beeab6)
+
+![image](https://github.com/user-attachments/assets/faede8f4-05b3-4f70-85f9-814eceedce0d)
+
+![image](https://github.com/user-attachments/assets/3456aacb-1d9f-4ad5-86d4-a5fccb631cfd)
+
+![image](https://github.com/user-attachments/assets/695a1b6f-c6b9-4c5b-ba3d-56ebbe13b2a3)
+
+![image](https://github.com/user-attachments/assets/ef3a5bfe-fa62-4479-a4bd-e1300aa1abc2)
+
+## Kubernetes
+
+Kubernetes (K8s), container (kapsayıcı) tabanlı uygulamaları otomatikleştirilmiş bir şekilde dağıtmak, yönetmek ve ölçeklendirmek için kullanılan açık kaynaklı bir container orkestrasyon platformudur.
+
+Google tarafından geliştirilen Kubernetes, Docker gibi container teknolojilerini yönetmek için tasarlanmıştır ve günümüzde büyük ölçekli dağıtımlarda endüstri standardı haline gelmiştir.
+
+![image](https://github.com/user-attachments/assets/aaa5c831-1fd0-4e01-a410-ed7275a53800)
+
+![image](https://github.com/user-attachments/assets/1b65dc8c-4a4a-4b86-9f15-3dc0304fc26b)
+
+![image](https://github.com/user-attachments/assets/6ed84ba2-2bbd-4fdb-86bc-d4ecf3e47d1d)
+
+![image](https://github.com/user-attachments/assets/95879441-4bac-40cd-814b-e136b8f057b7)
+
+![image](https://github.com/user-attachments/assets/d0a7ad79-9053-443d-a6f7-469f04db3c35)
+
+![image](https://github.com/user-attachments/assets/fb70bbd2-d211-4b40-ab01-feef99565ac4)
+
+![image](https://github.com/user-attachments/assets/71687a2e-3130-4495-844e-d5b18a8081b7)
+
+![image](https://github.com/user-attachments/assets/473bcaa4-72eb-4a48-8693-b85568ca9c9d)
+
+## Jenkins
+
+Jenkins, açık kaynaklı bir sürekli entegrasyon (CI) ve sürekli dağıtım (CD) (CI/CD) otomasyon aracıdır. Yazılım geliştirme süreçlerinde build (derleme), test ve deploy (yayınlama) işlemlerini otomatikleştirmek için kullanılır.
+
+Jenkins, Java ile geliştirilmiş ve modüler bir yapıya sahip olduğu için plugin (eklenti) desteği sayesinde farklı araçlarla kolayca entegre edilebilir.
+
+✅ Sürekli Entegrasyon (CI): Kod değişikliklerini otomatik olarak test eder ve entegre eder.
+
+✅ Sürekli Dağıtım (CD): Testleri geçen kodu otomatik olarak canlı ortama (Production) veya test ortamına dağıtır.
+
+![image](https://github.com/user-attachments/assets/da49e512-983c-4142-afcc-516a57cd8320)
+
+![image](https://github.com/user-attachments/assets/d926bd09-e06d-49f4-86b5-44f5bf5f6615)
+
+![image](https://github.com/user-attachments/assets/21a98ecc-7f07-4abe-aeb1-1adcd2b6b3e3)
+
+![image](https://github.com/user-attachments/assets/4c8e9831-4671-474e-9b8d-3b420869bda8)
+
+![image](https://github.com/user-attachments/assets/919306d9-5652-4809-85d5-2575227db068)
+
+![image](https://github.com/user-attachments/assets/03828390-e441-43d1-b315-947c7debe84f)
+
+## DevSecOps Design
+
+DevSecOps Design, güvenliği (Security) yazılım geliştirme (Dev) ve operasyon (Ops) süreçlerine entegre eden bir mimari tasarım yaklaşımıdır.
+Bu yaklaşımda güvenlik, geliştirme sürecinin en başından itibaren dikkate alınır ve sürekli bir güvenlik otomasyonu sağlanır.
+
+![image](https://github.com/user-attachments/assets/847cf902-08d4-4370-89a1-bfcd968767f3)
+
+![image](https://github.com/user-attachments/assets/e3db1583-0675-4c9e-8158-13da0b555efd)
+
+![image](https://github.com/user-attachments/assets/46164f30-b50e-4e1b-85c7-caff044151e6)
+
+![image](https://github.com/user-attachments/assets/92af972b-77af-4c04-b7fa-9bf2e8f457f1)
+
+![image](https://github.com/user-attachments/assets/231846fe-b3bf-450d-b306-69d03b4b1982)
+
+![image](https://github.com/user-attachments/assets/f3a41b59-aef6-4471-b73d-8af79a71ace9)
+
+![image](https://github.com/user-attachments/assets/a20e2d3c-cf4d-43e1-95fd-2c565ec7f824)
+
+![image](https://github.com/user-attachments/assets/b96f37a0-eaad-4f6c-a437-b29f53b54998)
+
+![image](https://github.com/user-attachments/assets/51ff927c-9cf0-41b8-aea9-7e0a1d6c2713)
+
+## DevSecOps Code
+
+DevSecOps Code, güvenlik kontrollerinin kod olarak yönetildiği bir yaklaşımdır.
+Bu yöntemle güvenlik politikaları, testler, erişim kontrolleri ve altyapı yapılandırmaları kod haline getirilir ve CI/CD süreçlerine entegre edilir.
+
+💡 Amaç: Manuel güvenlik denetimlerini azaltmak, süreçleri otomatikleştirmek ve güvenliği "as-code" yaklaşımıyla yönetmek.
+
+![image](https://github.com/user-attachments/assets/81d94485-1a14-4e8f-bb1a-25f0c1d5200b)
+
+![image](https://github.com/user-attachments/assets/e0cb071e-cae5-4aad-801b-a7703719867e)
+
+![image](https://github.com/user-attachments/assets/7cf957b9-0d66-4970-924b-711ef9ec3003)
+
+![image](https://github.com/user-attachments/assets/bfb3d231-faba-4bce-a653-ce2207452dc9)
+
+![image](https://github.com/user-attachments/assets/d23011fe-5a8a-4388-bbfa-b6caaa50b42f)
+
+![image](https://github.com/user-attachments/assets/53b80f2f-648f-4659-936d-46dbea34399a)
+
+![image](https://github.com/user-attachments/assets/a34aac07-d102-4011-aaee-2f84395d8dd7)
+
+📢 Sonuç:
+
+✅ DevSecOps Code, güvenlik kontrollerini kod haline getirerek CI/CD süreçlerine entegre eden bir yaklaşımdır.
+
+✅ Güvenlik otomatikleştirilir, insan hataları azaltılır ve geliştirme sürecine entegre edilir.
+
+✅ Terraform, Open Policy Agent, SonarQube gibi araçlar kullanılarak güvenlik kontrolleri enforce edilir.
+
+🚀 Modern yazılım geliştirme süreçlerinde güvenliğin kod ile yönetilmesi büyük avantaj sağlar!
+
+## SonarQube
+
+SonarQube, yazılım uygulamalarında kod kalitesini ölçen ve iyileştiren bir araçtır. Bu araç, kodu analiz ederek çeşitli kalite metriklerini (kod karmaşıklığı, güvenlik açıkları, hatalar, kod tekrarları vb.) tespit eder ve geliştiricilere geri bildirim sağlar. SonarQube, yazılım geliştirme sürecinde sürekli entegrasyon (CI) ve sürekli teslim (CD) ortamlarında kullanılabilir.
+
+SonarQube, statik kod analizini (Static Analysis) yaparak yazılımın kalitesini artırmayı hedefler. Bu, özellikle büyük ve karmaşık projelerde kodun daha güvenli, verimli ve sürdürülebilir hale gelmesine yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/abdffd8f-07e6-4e59-8a1a-fd6498237ae4)
+
+![image](https://github.com/user-attachments/assets/1068783d-5c83-4e6a-b472-95db7e9c62a3)
+
+![image](https://github.com/user-attachments/assets/fdfa6e9d-3718-4ef8-8508-b1e1a59a4dc0)
+
+![image](https://github.com/user-attachments/assets/ee7eda8d-5539-4d4a-a3d4-f4b1925621dc)
+
+## Pipeline
+
+Pipeline, yazılım geliştirme ve dağıtım sürecini otomatikleştiren ve yapılandıran bir iş akışıdır. Bu iş akışı, yazılımın geliştirilmesinden üretim ortamına dağıtımına kadar olan tüm aşamaları içerir. Genellikle DevOps, CI/CD (Continuous Integration / Continuous Deployment) süreçlerinin bir parçası olarak kullanılır.
+
+Pipeline, her aşamada belirli bir görevi yerine getirir. Bu görevler, genellikle yazılımın derlenmesi, test edilmesi, güvenlik taramalarının yapılması, paketlenmesi ve üretim ortamına dağıtılması gibi adımlardan oluşur.
+
+![image](https://github.com/user-attachments/assets/ce606d3a-6c36-4197-b87a-f975a38d7777)
+
+![image](https://github.com/user-attachments/assets/08632cb4-3f0a-4a43-a0c4-9fbf2de46696)
+
+![image](https://github.com/user-attachments/assets/3acd2333-7a37-4493-959c-3702af329c8f)
+
+![image](https://github.com/user-attachments/assets/7409eb77-373c-4998-a3da-dc12066f36c1)
+
+Sonuç:
+
+Pipeline, modern yazılım geliştirme süreçlerinin vazgeçilmez bir parçasıdır. Otomatikleştirilmiş entegrasyon, test ve dağıtım süreçleriyle yazılım geliştirme sürecini hızlandırır ve kalitesini artırır. Ancak, doğru yapılandırılmadığı takdirde karmaşıklaşabilir ve bakım gerektirebilir. CI/CD süreçlerinin etkin bir şekilde kullanılması için doğru araçlar ve altyapı gereklidir.
+
+Örnek: GitHub Actions Pipeline (CI/CD)
+
+name: .NET Core Build and Deploy
+
+# Trigger the pipeline on push or pull request events to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Define the environment (Linux in this case)
+
+    steps:
+    # Checkout the code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Set up the .NET SDK (make sure the version matches your project)
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '8.0.100'  # Specify .NET Core version
+
+    # Restore the NuGet packages (dependencies)
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build the project
+    - name: Build the project
+      run: dotnet build --configuration Release
+
+    # Run tests
+    - name: Run tests
+      run: dotnet test --configuration Release
+
+    # Publish the application (for deployment)
+    - name: Publish the app
+      run: dotnet publish --configuration Release --output ./publish
+
+    # Optionally, you could deploy your app here (e.g., to Azure, AWS, etc.)
+    # - name: Deploy to Azure
+    #   run: |
+    #     az webapp deploy --resource-group <resource-group> --name <app-name> --src-path ./publish
+
+![image](https://github.com/user-attachments/assets/2dbda964-71a4-4a3e-aab1-bd14b3d04eda)
+
+![image](https://github.com/user-attachments/assets/86b6ba8b-25f9-41ef-94c9-a5ef664719c6)
+
+Bu örnek temel bir CI pipeline’ıdır. Daha karmaşık bir ortamda Docker konteyneri, Güvenlik taramaları, Kapsamlı testler ve deploy işlemleri gibi daha ileri düzey adımlar eklenebilir.
+
+## Static Analysis
+
+Statik analiz, yazılım geliştirme sürecinde, yazılımın çalıştırılmadan kod düzeyinde yapılan bir analiz türüdür. Bu analiz, genellikle kodun kalitesini, güvenliğini, doğruluğunu ve bakım kolaylığını artırmak amacıyla yapılır. Statik analiz, yazılımın çalışmasına gerek kalmadan, sadece kaynak kodu üzerinde yapılan bir incelemedir.
+
+![image](https://github.com/user-attachments/assets/d073f5b8-2b69-4837-8ae5-975960462b4a)
+
+![image](https://github.com/user-attachments/assets/355daf9f-242e-4982-ad84-6e5efcb4ac41)
+
+![image](https://github.com/user-attachments/assets/bdb57bc6-de6c-45f7-b097-caa416687a13)
+
+![image](https://github.com/user-attachments/assets/1734d454-f45c-4af3-a058-7d53af1bb25c)
+
+![image](https://github.com/user-attachments/assets/84f9645c-2e09-4733-9e08-ca38c3bd0d60)
+
+![image](https://github.com/user-attachments/assets/80619df8-8a0e-4a99-baa6-07ce46b954aa)
+
+Sonuç:
+
+Statik analiz, yazılım geliştirme süreçlerinde kodun kalitesini artırmak, hataları önceden tespit etmek ve güvenlik zafiyetlerini azaltmak için çok değerli bir tekniktir. Otomatikleştirilmiş analiz araçları sayesinde, yazılımın daha hızlı, daha güvenli ve daha kaliteli hale gelmesini sağlar.
+
+## Ansible
+
+Ansible, IT otomasyonu, yapılandırma yönetimi, uygulama dağıtımı, ve orkestrasyon için kullanılan açık kaynaklı bir araçtır. Ansible, geliştiricilerin ve sistem yöneticilerinin, altyapıyı yönetmelerini, yapılandırmalarını ve uygulama dağıtımlarını otomatikleştirmelerini sağlar. Python ile yazılmış olup, agentless (ajan gerektirmeyen) bir yapıya sahiptir, yani hedef makinelerde herhangi bir ek yazılım yüklemenize gerek yoktur. SSH üzerinden iletişim kurarak işlemleri gerçekleştirir.
+
+![image](https://github.com/user-attachments/assets/0a3a2abb-2bc3-4a40-8a27-2aea493fe0fe)
+
+![image](https://github.com/user-attachments/assets/ec5d15e6-f876-47a3-8b01-93e37f31be83)
+
+![image](https://github.com/user-attachments/assets/ef84a4b4-aca4-4f95-b20a-c7c0f22c4b67)
+
+![image](https://github.com/user-attachments/assets/fd55cbbf-0ac5-4e8a-932a-76cbc8858b65)
+
+![image](https://github.com/user-attachments/assets/a7e1370b-f034-4fb9-9528-550832864c1b)
+
+![image](https://github.com/user-attachments/assets/83e83e1d-08b9-44fd-80b1-93162d10b7d1)
+
+![image](https://github.com/user-attachments/assets/668f214b-9e98-490c-97c4-e652c54d33d8)
+
+![image](https://github.com/user-attachments/assets/d9d3c3c6-05fd-4ae0-b814-7bfc42643f85)
+
+![image](https://github.com/user-attachments/assets/a8e7f885-2761-496f-ac1d-deb9f977c3fc)
+
+Sonuç:
+
+Ansible, IT otomasyonu için güçlü ve basit bir araçtır. YAML tabanlı playbook’ları ile altyapı yönetimini, yapılandırma yönetimini ve uygulama dağıtımını otomatikleştirebilirsiniz. Özellikle agentless yapısı ve idempotentlik özellikleri, Ansible'ı tercih edilmesi gereken bir araç haline getirir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
