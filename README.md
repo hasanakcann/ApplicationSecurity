@@ -44,6 +44,20 @@
 - [Container Security](#container-security)
 - [CI/CD](#cicd)
 - [AWS - Azure - GCP](#aws---azure---gcp)
+- [Session Management](#session-management)
+- [Web Session](#web-session)
+- [JWT](#jwt)
+- [JWE](#jwe)
+- [OAuth](#oauth)
+- [Token](#token)
+- [OpenID - OpenID Connect](#openid---openid-connect)
+- [Risk Rating - Basic Threat Modelling](#risk-rating---basic-threat-modelling)
+- [Security Controls](#security-controls)
+- [Threat Modeling](#threat-modeling)
+- [Microsoft Threat Modeling](#microsoft-threat-modeling)
+- [Attack Tree](#attack-tree)
+- [YAML](#yaml)
+- [Threagile](#threagile)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
@@ -729,6 +743,318 @@ AWS (Amazon Web Services), Azure ve GCP (Google Cloud Platform), bulut bilişim 
 ![image](https://github.com/user-attachments/assets/da57db4f-f45d-469c-963b-ad65069d545c)
 
 ![image](https://github.com/user-attachments/assets/742a9492-4ca4-4231-b1e7-514c2433b3f9)
+
+## Session Management
+
+Session management, bir kullanıcının web uygulamasına giriş yaptıktan sonra, kullanıcı ile uygulama arasındaki etkileşimlerin yönetilmesi sürecidir. Bu, kullanıcının kimliğinin doğrulanmasından, her bir istek arasındaki durumu izlemeye kadar birçok işlemi kapsar. Session management, kullanıcının oturumunun açılması, sürdürülmesi ve kapatılması sırasında güvenliği sağlamayı amaçlar.
+
+![image](https://github.com/user-attachments/assets/dc1e5728-c76a-4863-9a3b-9b9781520381)
+
+Session management, uygulamaların güvenliğini sağlamak, kullanıcı verilerini korumak ve izinsiz erişimi engellemek için kritik öneme sahiptir. Özellikle kullanıcı kimlik doğrulaması, yetkilendirme, ve kullanıcı verilerinin korunması gibi konularda önemli rol oynar.
+
+## Web Session
+
+Web sessions, bir kullanıcının bir web uygulamasına erişim sağladığı süre boyunca, sunucu tarafından o kullanıcıya ait bilgilerin saklanması ve yönetilmesi sürecini ifade eder. Web uygulamaları, her kullanıcının giriş yaptıktan sonra etkileşimde bulunduğu sayfalar, veriler ve işlemleri takip etmek için bir oturum (session) kullanır.
+
+Web sessions, HTTP protokolünün stateless (durumsuz) doğasına karşılık gelir. Yani HTTP, her istek arasında kullanıcı durumunu saklamaz. Bu nedenle, web session'ları, kullanıcının etkileşimleri arasında durumu korumak için gereklidir.
+
+![image](https://github.com/user-attachments/assets/f9d27589-f75d-495f-9033-0486edcd946e)
+
+![image](https://github.com/user-attachments/assets/199eb017-5ce0-47df-8ba3-9458a43cfb4b)
+
+## JWT
+
+JWT (JSON Web Token), web uygulamalarında kimlik doğrulama ve yetkilendirme işlemleri için yaygın olarak kullanılan bir açık standarttır. JWT, özellikle web servisleri arasında güvenli bir şekilde veri iletmek için tasarlanmış bir JSON formatında token’dır. JWT, kullanıcının kimliğini doğrulamak ve oturum bilgilerini güvenli bir şekilde iletmek amacıyla kullanılır.
+
+![image](https://github.com/user-attachments/assets/449b88ff-e995-4de8-8ec2-ca8ffa918bf3)
+
+JWT'nin Genel Yapısı:
+
+Bir JWT üç bölümden oluşur ve her bölüm . (nokta) ile ayrılır:
+
+![image](https://github.com/user-attachments/assets/a86a8720-d758-494e-a3a6-23de9c0df32e)
+
+Örnek JWT:
+
+![image](https://github.com/user-attachments/assets/ad4fb322-7eef-4066-9007-a6f04801d226)
+
+![image](https://github.com/user-attachments/assets/b6b0c109-f97a-4032-a74a-656ee65ab4e4)
+
+![image](https://github.com/user-attachments/assets/c822dfeb-716b-46c4-bb04-d93c158bfb67)
+
+JWT, özellikle mikroservis mimarileri ve API tabanlı uygulamalarda güvenli ve etkili bir kimlik doğrulama yöntemi olarak kullanılır.
+
+![image](https://github.com/user-attachments/assets/bd7351d0-a207-4d09-939b-d966d13b6238)
+
+![image](https://github.com/user-attachments/assets/c27a1d5b-f82d-44c3-a848-77df7f3bde1c)
+
+![image](https://github.com/user-attachments/assets/a4e84d56-1a95-444d-a462-9ea2846ca739)
+
+![image](https://github.com/user-attachments/assets/353e9c82-7d22-4cc3-b710-396688506dbd)
+
+## JWE
+
+JWE (JSON Web Encryption), hassas bilgileri güvenli bir şekilde şifrelemek için kullanılan bir standarttır. JWT (JSON Web Token) gibi JSON tabanlıdır, ancak JWE'nin temel amacı verileri şifreleyerek yalnızca yetkili tarafların okuyabilmesini sağlamaktır.
+
+JWE, özellikle gizli bilgilerin (örneğin, kimlik doğrulama bilgileri, kişisel veriler veya kredi kartı numaraları) güvenli bir şekilde iletilmesini sağlamak için kullanılır.
+
+![image](https://github.com/user-attachments/assets/f0a1f3ad-8521-4a9a-8248-10a2b3bce39f)
+
+![image](https://github.com/user-attachments/assets/fd8af094-c1bc-4446-9577-8f943385cd01)
+
+![image](https://github.com/user-attachments/assets/12eef8db-3910-4e1c-a415-b10cb62c8cd5)
+
+![image](https://github.com/user-attachments/assets/fab185aa-11cb-40f3-ae3e-a219a4cbbea5)
+
+Eğer bir sistemde sadece kimlik doğrulama yapılacaksa JWT kullanılır. Ancak hassas bilgiler güvenli şekilde taşınacaksa, JWE tercih edilir.
+
+## OAuth
+
+OAuth (Open Authorization), kullanıcıların kimlik bilgilerini paylaşmadan üçüncü taraf uygulamalara yetkilendirme (authorization) vermelerini sağlayan açık bir standarttır.
+
+Örneğin, bir web sitesine Google veya Facebook hesabınızla giriş yaptığınızda, bu süreç OAuth protokolü kullanılarak gerçekleştirilir.
+
+![image](https://github.com/user-attachments/assets/0aa3044f-af9c-4092-8b17-f08a5b0638e0)
+
+![image](https://github.com/user-attachments/assets/36d03765-15a9-48e1-8faf-2902a0ea2093)
+
+![image](https://github.com/user-attachments/assets/aa1d08dd-5b29-4358-a2db-ba7fbef2e698)
+
+![image](https://github.com/user-attachments/assets/8b4af3ca-caa0-4aa4-8c32-4a100011fd66)
+
+![image](https://github.com/user-attachments/assets/1b9865f9-856f-400f-979c-49f7e7bb36cf)
+
+Özetle, OAuth verilere erişim yetkisi verir, OpenID Connect ise kullanıcının kimliğini doğrular.
+
+![image](https://github.com/user-attachments/assets/13614615-76eb-4039-9e62-58f616831ca6)
+
+OAuth, modern web ve mobil uygulamalarda kimlik doğrulama ve yetkilendirme için kritik bir protokoldür.
+
+## Token
+
+Token, bir kullanıcının veya sistemin kimliğini doğrulamak ve yetkilendirmek için kullanılan dijital bir anahtardır. Genellikle güvenli bir şekilde veri aktarımı sağlamak amacıyla kullanılır ve bir kimlik doğrulama (authentication) veya yetkilendirme (authorization) mekanizması olarak görev yapar.
+
+Tokenler, belirli bir süre boyunca geçerli olan ve belirli yetkilere sahip olan dijital kimlik doğrulama nesneleridir.
+
+![image](https://github.com/user-attachments/assets/f11670d7-7855-44e8-ae8f-d35c666a74cb)
+
+![image](https://github.com/user-attachments/assets/86a6e819-caec-4e4d-986e-81e55f1df1db)
+
+Her tokenin kendine özgü bir kullanım amacı ve avantajı vardır. Uygulamanın ihtiyacına göre hangi tokenin kullanılması gerektiği belirlenmelidir.
+
+Access Token:
+
+OAuth 2.0 ve kimlik doğrulama sistemlerinde Access Token ve Refresh Token sıkça kullanılır. Bu tokenler, bir kullanıcının veya istemcinin bir API veya kaynağa güvenli bir şekilde erişmesini sağlar.
+
+![image](https://github.com/user-attachments/assets/e0696bd4-ea64-4f89-ae1f-a256ea860bf6)
+
+Refresh Token:
+
+![image](https://github.com/user-attachments/assets/26fe94c3-b4f6-4ddc-9625-136bbb87f2b2)
+
+![image](https://github.com/user-attachments/assets/009d91fd-dc4e-46f8-8316-8a7ad3e5e0e6)
+
+![image](https://github.com/user-attachments/assets/d0d77809-2a39-4637-9027-779d7794b2db)
+
+![image](https://github.com/user-attachments/assets/1063a876-3180-48a0-93cd-0379c042996c)
+
+![image](https://github.com/user-attachments/assets/755124e2-dea7-42b5-946f-636e96fc9745)
+
+![image](https://github.com/user-attachments/assets/4f8ee566-46a6-4131-b7ee-ee243b52484d)
+
+![image](https://github.com/user-attachments/assets/b05bff7b-5e40-4d30-a4a2-1d884cb10dea)
+
+![image](https://github.com/user-attachments/assets/9486ab71-cecc-4e1d-97ef-2e150a00ea7c)
+
+## OpenID - OpenID Connect
+
+🔹 OpenID ve OpenID Connect (OIDC), kimlik doğrulama (authentication) işlemleri için kullanılan standartlardır.
+
+🔹 OpenID eski bir standarttır, OpenID Connect ise OAuth 2.0 üzerine inşa edilmiş daha güvenli ve modern bir versiyonudur.
+
+![image](https://github.com/user-attachments/assets/7b83ae07-021e-4b38-a6aa-a704fa88adfa)
+
+![image](https://github.com/user-attachments/assets/f7388c27-65a5-4aeb-b38e-95e0966565d4)
+
+![image](https://github.com/user-attachments/assets/70a0f84e-0c39-4b1f-8a24-cb2baba97645)
+
+![image](https://github.com/user-attachments/assets/fa3e0d34-b992-4605-b621-a636fac60d4e)
+
+![image](https://github.com/user-attachments/assets/ed07f925-2196-4e5b-ba97-3f7315d774a0)
+
+## Risk Rating - Basic Threat Modelling
+
+Risk Rating ve Basic Threat Modelling güvenlik yönetimi ve risk değerlendirmesi açısından önemli kavramlardır. 
+
+![image](https://github.com/user-attachments/assets/9839ebca-289e-46d2-8f8a-f29826f1f5d9)
+
+![image](https://github.com/user-attachments/assets/ce68ddf0-7583-40f7-92e8-a495fbf40404)
+
+Tehdit modelleme, genellikle güvenlik testleri, sızma testleri ve zafiyet değerlendirmeleriyle birlikte uygulanır ve sistemin potansiyel risklerini azaltmaya yönelik stratejiler oluşturur.
+
+## Security Controls
+
+Security controls (Güvenlik Kontrolleri), bir organizasyonun bilgi güvenliğini sağlamak, tehditlere karşı korunmak ve riskleri azaltmak amacıyla uyguladığı politikalar, prosedürler, araçlar ve teknolojilerdir. Bu kontroller, sistemlerin, ağların ve verilerin güvenliğini sağlamaya yönelik çeşitli önlemler almayı içerir. Güvenlik kontrolleri, organizasyonların güvenlik açıklarını azaltmasına, veri sızıntılarını engellemesine ve yetkisiz erişimi önlemesine yardımcı olur.
+
+Security controls genellikle şu başlıklar altında sınıflandırılır:
+
+![image](https://github.com/user-attachments/assets/53570c69-00eb-457e-983b-22bfef44ecad)
+
+![image](https://github.com/user-attachments/assets/06e3702c-d665-4790-a423-b240f8274aec)
+
+Güvenlik kontrolleri, organizasyonların siber güvenlik stratejilerini güçlendirmesine yardımcı olur ve potansiyel tehditlere karşı önceden hazırlıklı olmalarını sağlar.
+
+## Threat Modeling
+
+Threat modeling (Tehdit Modelleme), bir sistemin veya uygulamanın güvenliğini sağlamak amacıyla olası tehditleri ve zafiyetleri analiz etme sürecidir. Bu süreç, bir organizasyonun güvenlik açıklarını anlamasına, tehditleri tanımlamasına ve bu tehditlere karşı önleyici tedbirler geliştirmesine yardımcı olur. Threat modeling, güvenlik ihlallerini önceden belirlemeyi ve potansiyel risklere karşı çözüm üretmeyi amaçlar.
+
+![image](https://github.com/user-attachments/assets/e51735b3-0ab9-472d-bb30-b9c634de53e6)
+
+![image](https://github.com/user-attachments/assets/ad9f79b2-9fe3-4474-a306-14101e02a541)
+
+![image](https://github.com/user-attachments/assets/1f48e8cb-0482-4e57-98c7-c8a9ff48249b)
+
+Tehdit modelleme, güvenlik stratejilerinin temel bir parçasıdır ve organizasyonların saldırılara karşı daha güçlü ve dirençli olmasını sağlar.
+
+## Microsoft Threat Modeling
+
+Microsoft Threat Modeling veya Microsoft Threat Modeling Framework, Microsoft tarafından geliştirilen bir tehdit modelleme yaklaşımıdır. Yazılım geliştiricilere ve güvenlik uzmanlarına, sistemlerindeki potansiyel tehditleri belirleme, değerlendirme ve riskleri azaltma konusunda yardımcı olmak için tasarlanmıştır.
+
+Microsoft Threat Modeling, özellikle STRIDE metodolojisini temel alarak tehditleri analiz eder ve bu tehditlere karşı uygun güvenlik önlemlerini belirlemeye odaklanır.
+
+![image](https://github.com/user-attachments/assets/26a24756-64e7-4017-a73a-5b604a262d8b)
+
+![image](https://github.com/user-attachments/assets/7d9032b7-3287-4306-9826-6349f7acb7b9)
+
+![image](https://github.com/user-attachments/assets/33cc5863-4857-4a34-a941-a84b472677e9)
+
+Bu araç, özellikle Microsoft Azure, .NET uygulamaları ve diğer kurumsal sistemler için tehdit modellemesi yaparken kullanılır.
+
+![image](https://github.com/user-attachments/assets/9937a0be-9a36-4222-bf29-fd94a144fbe8)
+
+![image](https://github.com/user-attachments/assets/b668256d-4a41-4bfb-9136-0924147abb0b)
+
+Bu süreç, özellikle yazılım geliştiriciler, güvenlik uzmanları ve sistem mimarları için güvenlik risklerini yönetmek adına kritik bir adımdır.
+
+## Attack Tree
+
+Attack Tree (Saldırı Ağacı), bir güvenlik saldırısını anlamak ve modellemek için kullanılan hiyerarşik bir yapıdır. Bu ağaç, bir hedefe yönelik saldırıların ve zafiyetlerin nasıl gerçekleşebileceğini gösterir. Her dal, saldırının belirli bir adımını veya yöntemini temsil eder ve bu sayede saldırganın amacına nasıl ulaşacağı anlaşılır. Saldırı ağacı, özellikle güvenlik açıklarını keşfetmek, tehditleri tanımlamak ve savunma stratejileri geliştirmek için kullanılır.
+
+![image](https://github.com/user-attachments/assets/a2f677d2-647f-4e2c-a44a-b79f506090f1)
+
+![image](https://github.com/user-attachments/assets/06a7ae9e-02fa-4a40-a4a6-15eb1b0c6dd5)
+
+                           [Web Uygulamasına Yetkisiz Erişim Sağlamak]
+                                       /             |            \
+                         [Kimlik Doğrulama Zafiyetleri]   [Veritabanı Erişimi]   [XSS ve SQL Injection]
+                             /    \                               |                   /       \
+           [Zayıf Parola]    [Çift Kimlik Doğrulama]       [Zayıf Veritabanı Güvenliği]    [SQL Injection] [XSS Exploit]
+
+![image](https://github.com/user-attachments/assets/4a279a21-186b-479b-a5e8-2315c7529083)
+
+![image](https://github.com/user-attachments/assets/d8c548d5-bf6c-4e55-be01-0ef84b5b6191)
+
+![image](https://github.com/user-attachments/assets/ead113e6-35e6-427e-97a5-250edf0dae91)
+
+![image](https://github.com/user-attachments/assets/5dd99062-e142-4804-af46-c6b76755ae1e)
+
+## YAML
+
+YAML (YAML Ain't Markup Language), veri yapılarını insan tarafından okunabilir bir biçimde temsil eden bir dosya formatıdır. Genellikle yapılandırma dosyalarında (configuration files), veri değişiminde ve seri hale getirmede kullanılır. JSON ve XML gibi formatlara alternatif olarak geliştirilmiştir, ancak daha okunabilir ve daha az karmaşık bir yapıya sahiptir.
+
+YAML özellikle Docker, Kubernetes, Ansible, GitHub Actions, CI/CD, OpenAPI, Spring Boot, .NET Core gibi birçok modern teknoloji ve framework'te yapılandırma dosyası olarak kullanılır.
+
+![image](https://github.com/user-attachments/assets/cc8b49f3-a9fc-418a-abf4-2fbf9fbe201f)
+
+![image](https://github.com/user-attachments/assets/c491e74e-86d7-4e1e-8ce8-e0505c87d824)
+
+![image](https://github.com/user-attachments/assets/6ca4b9f8-b285-4016-8252-252727b65c48)
+
+![image](https://github.com/user-attachments/assets/3fc021e0-fd27-46f1-924a-05c12b3c5be6)
+
+![image](https://github.com/user-attachments/assets/eb0aab9a-116d-4df1-9f16-930238eb1d59)
+
+![image](https://github.com/user-attachments/assets/56794385-ccde-4ac1-abf1-c6a730787a74)
+
+![image](https://github.com/user-attachments/assets/5fa11b8a-f625-49b5-be1f-a35f259fbd70)
+
+![image](https://github.com/user-attachments/assets/7dc23cf6-97ae-4db6-abbb-1879d738ac5d)
+
+![image](https://github.com/user-attachments/assets/1cbdeaac-cbeb-4ff3-8b22-c27605222dd3)
+
+## Threagile
+
+Threagile, Agile (Çevik) yaklaşıma dayalı bir açık kaynak kodlu threat modeling (tehdit modelleme) aracıdır. Yazılım geliştirme sürecinde, uygulama mimarisi, veri akışı ve güvenlik açıklarını analiz etmeye yardımcı olur. Geliştiricilerin, güvenlik ekiplerinin ve DevOps mühendislerinin hızlı, tekrar eden ve işbirlikçi bir şekilde tehdit modellemesi yapmasını sağlar.
+
+![image](https://github.com/user-attachments/assets/96b9bb8c-23d4-43ca-8f58-efbc2c2c8b8d)
+
+![image](https://github.com/user-attachments/assets/d2a7166d-c3fd-44c1-ad68-6a3f8a2ea21c)
+
+![image](https://github.com/user-attachments/assets/ccd2bdde-afc0-4b25-9014-f5bbb4a2f3db)
+
+![image](https://github.com/user-attachments/assets/89d1f193-69a9-409d-9b71-73e4131c114a)
+
+![image](https://github.com/user-attachments/assets/f15e2c88-a864-4c47-a95c-d60ea1c9b69c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
