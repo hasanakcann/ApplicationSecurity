@@ -69,6 +69,22 @@
 - [Pipeline](#pipeline)
 - [Static Analysis](#static-analysis)
 - [Ansible](#ansible)
+- [Security Scanning and Testing](#security-scanning-and-testing)
+- [SAST](#sast)
+- [Fortify](#fortify)
+- [CodeQL](#codeql)
+- [DAST](#dast)
+- [OWASP ZAP](#owasp-zap)
+- [IAST](#iast)
+- [ASPM](#aspm)
+- [Arnica Security](#arnica-security)
+- [EPs](#eps)
+- [SBOM](#sbom)
+- [RASP](#rasp)
+- [Firewall](#firewall)
+- [WAF](#waf)
+- [Penetration Testing](#penetration-testing)
+- [Fuzz Testing](#fuzz-testing)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
@@ -1283,7 +1299,7 @@ Pipeline, modern yazılım geliştirme süreçlerinin vazgeçilmez bir parçası
 
 name: .NET Core Build and Deploy
 
-# Trigger the pipeline on push or pull request events to the 'main' branch
+Trigger the pipeline on push or pull request events to the 'main' branch
 on:
   push:
     branches:
@@ -1380,199 +1396,324 @@ Sonuç:
 
 Ansible, IT otomasyonu için güçlü ve basit bir araçtır. YAML tabanlı playbook’ları ile altyapı yönetimini, yapılandırma yönetimini ve uygulama dağıtımını otomatikleştirebilirsiniz. Özellikle agentless yapısı ve idempotentlik özellikleri, Ansible'ı tercih edilmesi gereken bir araç haline getirir.
 
+## Security Scanning and Testing
 
+Security scanning and testing (güvenlik tarama ve testi), yazılım geliştirme süreçlerinde kullanılan teknikler ve araçlar, uygulamanın ve sistemin güvenlik açıklarını tespit etmek için yapılan işlemleri kapsar. Bu tür testler, kötü niyetli saldırılara karşı yazılımın sağlam olup olmadığını belirlemeye yardımcı olur. İşte bu sürecin bazı ana bileşenleri:
 
+![image](https://github.com/user-attachments/assets/9a70ed57-e96a-432e-988b-7d12d1bdbe0d)
 
+Bu testler ve taramalar, yazılımın üretim ortamına alınmadan önce güvenlik hatalarının en aza indirgenmesine yardımcı olur.
 
+## SAST
 
+SAST (Static Application Security Testing), yani Statik Uygulama Güvenlik Testi, yazılımın kaynak kodu, ikili dosyaları veya bytecode'u üzerinde yapılan güvenlik testidir. Uygulamanın çalıştırılmasına gerek kalmadan güvenlik açıklarını tespit etmeye odaklanır.
 
+![image](https://github.com/user-attachments/assets/1fe440ec-6b93-4174-9a81-da9ca43e779a)
 
+![image](https://github.com/user-attachments/assets/e7294fa2-d3a2-4464-ac94-e3327b7ba994)
 
+![image](https://github.com/user-attachments/assets/e6c9f86a-7580-48e5-a739-2f1a5eefef09)
 
+![image](https://github.com/user-attachments/assets/97baf559-f3e2-47b1-a7ce-35ac392ccd1a)
 
+SAST, yazılım geliştirme sürecinin erken aşamalarında güvenliği sağlamak için kritik bir test yöntemidir. Özellikle DevSecOps ve CI/CD pipeline içinde otomatikleştirilmiş taramalarla kullanılır.
 
+## Fortify
 
+Fortify, yazılım güvenlik açıklarını tespit etmek ve düzeltmek için kullanılan bir Static Application Security Testing (SAST) aracıdır. Micro Focus Fortify tarafından geliştirilmiştir ve yazılım geliştirme sürecinde kod güvenliğini sağlamak amacıyla kullanılır.
 
+![image](https://github.com/user-attachments/assets/046537e3-0ee8-428e-bdcb-5b9ab0545cda)
 
+![image](https://github.com/user-attachments/assets/2d7a7665-5b6d-4fad-a0db-65cc06d299de)
 
+![image](https://github.com/user-attachments/assets/3af862a7-a70a-4688-b958-c5f0e93489e5)
 
+![image](https://github.com/user-attachments/assets/7865aba2-1bb7-4b3e-a61d-fee6432d09d8)
 
+Fortify, büyük ölçekli kurumsal yazılım projelerinde erken aşamada güvenlik açıklarını bulmak ve düzeltmek için güçlü bir çözümdür. Özellikle OWASP Top 10 gibi standartlarla uyumlu güvenlik analizleri yapmak isteyen şirketler tarafından tercih edilir.
 
+## CodeQL
 
+CodeQL, kaynak kodu sorgulayarak güvenlik açıklarını tespit eden bir statik analiz (SAST) aracıdır. GitHub tarafından geliştirilmiş olup, yazılım güvenlik açıklarını bulmak için veritabanı sorgularına dayalı bir analiz yöntemi kullanır.
 
+Özetle: CodeQL, kaynak kodunu veritabanına çevirir ve SQL benzeri sorgular kullanarak güvenlik açıklarını tespit eder.
 
+![image](https://github.com/user-attachments/assets/ae253310-ece3-4a16-9855-2526d9d33efb)
 
+![image](https://github.com/user-attachments/assets/6f5b9d01-4a73-45ae-8d12-a75abdd841e8)
 
+![image](https://github.com/user-attachments/assets/9eac2c4d-cb1e-46e9-9264-43d46d24e2a8)
 
+![image](https://github.com/user-attachments/assets/d8944019-5389-44f7-a6f0-1129fc20d558)
 
+CodeQL, özellikle GitHub tabanlı projeler için etkili bir güvenlik analiz aracıdır ve otomatik güvenlik taramaları yaparak yazılım geliştirme süreçlerinde güvenliği artırır. 🚀
 
+## DAST
 
+DAST (Dinamik Uygulama Güvenlik Testi), uygulamaları çalışır durumda test ederek güvenlik açıklarını tespit eden bir güvenlik test yöntemidir.
 
+Özetle: DAST, uygulama çalışırken test yapar ve saldırgan gibi hareket ederek güvenlik açıklarını tespit eder.
 
+![image](https://github.com/user-attachments/assets/ac278866-3877-406b-a4fa-6036b20a2f0c)
 
+![image](https://github.com/user-attachments/assets/6f42d773-d437-415d-abde-27848e89aeed)
 
+![image](https://github.com/user-attachments/assets/99e73608-6da6-4155-9b7f-6b4418d957a6)
 
+![image](https://github.com/user-attachments/assets/1a231590-c0a8-4150-bdd5-e055acf58296)
 
+![image](https://github.com/user-attachments/assets/3c34bedb-9ff7-4dfd-815b-ca0d8f261ecc)
 
+![image](https://github.com/user-attachments/assets/a3d9597c-a093-4561-8eb7-0dd5bab167dd)
 
+Sonuç:
 
+DAST, çalışan uygulamalar üzerinde güvenlik testleri yapan ve saldırgan davranışlarını simüle eden bir yöntemdir. Özellikle web uygulamaları ve API güvenliği için kritik bir rol oynar. 🚀
 
+## OWASP ZAP
 
+OWASP ZAP (Zed Attack Proxy), web uygulamalarındaki güvenlik açıklarını tespit etmek için kullanılan ücretsiz ve açık kaynaklı bir DAST (Dynamic Application Security Testing) aracıdır.
 
+Özetle: ZAP, penetration testing (sızma testi) yapmak için geliştirilmiş, saldırgan gibi hareket ederek web uygulamalarını tarayan bir güvenlik aracıdır.
 
+✅ Açık kaynak ve ücretsizdir.
 
+✅ SQL Injection, XSS, CSRF, Broken Authentication gibi güvenlik açıklarını bulur.
 
+✅ Proxy olarak çalışarak HTTP isteklerini yakalar ve değiştirerek test yapmanızı sağlar.
 
+✅ Otomatik ve manuel tarama yapabilir.
 
+✅ Windows, Linux ve macOS üzerinde çalışabilir.
 
+OWASP ZAP kurulumu yapılır.
 
+https://www.zaproxy.org/download/
 
+![image](https://github.com/user-attachments/assets/89b32f5d-687a-4664-ab39-a961acf26159)
 
+![image](https://github.com/user-attachments/assets/eb8e5200-1f8f-4a68-b6b5-2b94ba57d060)
 
+![image](https://github.com/user-attachments/assets/dd33c7bd-dbde-441a-a1cd-575bd7017b00)
 
+![image](https://github.com/user-attachments/assets/6de9c64f-8a93-4f60-a36e-41aed0473ff5)
 
+![image](https://github.com/user-attachments/assets/c0bd9e6d-372f-4cd0-9cf0-4600c64b341c)
 
+![image](https://github.com/user-attachments/assets/a5679125-dc16-47b7-b218-cd6fca306d37)
 
+## IAST
 
+IAST (Etkileşimli Uygulama Güvenlik Testi), SAST (Statik Analiz) ve DAST (Dinamik Analiz) tekniklerini birleştirerek çalışan uygulamalar üzerinde detaylı güvenlik testleri yapan bir güvenlik test yöntemidir.
 
+Özetle: IAST, uygulama çalışırken kodu analiz eder ve hem kod seviyesinde hem de çalışma zamanında güvenlik açıklarını tespit eder.
 
+![image](https://github.com/user-attachments/assets/1e0733ad-4a70-4650-8f52-9f7d6dc315ad)
 
+![image](https://github.com/user-attachments/assets/f50d925b-683b-4a8c-b7fe-edc0ba08d275)
 
+![image](https://github.com/user-attachments/assets/2d7b2a4f-801d-4685-bc3c-88cf62ea7030)
 
+![image](https://github.com/user-attachments/assets/fd9bbe01-a914-44ef-96dd-250a8007d8bf)
 
+![image](https://github.com/user-attachments/assets/387a69ed-2835-4664-b1a5-ee9154b6ea8b)
 
+![image](https://github.com/user-attachments/assets/de1e5a46-dd78-4eb4-b873-c93bddcc8021)
 
+![image](https://github.com/user-attachments/assets/a3ed1163-39dc-4bc9-8e91-4f27cc1bd3bc)
 
+## ASPM 
 
+ASPM (Application Security Posture Management), yazılım geliştirme sürecinde güvenliği sürekli olarak izleyen, değerlendiren ve yöneten bir güvenlik stratejisidir.
 
+Özetle: ASPM, uygulama güvenliğiyle ilgili tüm süreçleri merkezi bir noktadan yöneterek riskleri önceden tespit etmeye ve azaltmaya yardımcı olur.
 
+![image](https://github.com/user-attachments/assets/3ba02c48-700b-4775-a52f-0638b0ae6eef)
 
+![image](https://github.com/user-attachments/assets/f09d0a84-1ffd-4448-9672-0439ebb848a1)
 
+![image](https://github.com/user-attachments/assets/809d799c-ff84-4243-8421-d770525e4f1e)
 
+![image](https://github.com/user-attachments/assets/3cd0e433-1382-4036-9b17-19f03e32ee30)
 
+![image](https://github.com/user-attachments/assets/35717017-11e1-406d-a9db-a12737ae01ad)
 
+## Arnica Security
 
+Arnica, yazılım geliştirme süreçlerinde güvenlik açıklarını yönetmek ve riskleri azaltmak için kullanılan bir ASPM (Application Security Posture Management) platformudur.
 
+Özetle: Arnica, geliştiricilerin ve güvenlik ekiplerinin güvenlik açıklarını erken tespit etmesine ve hızlıca gidermesine yardımcı olur.
 
+![image](https://github.com/user-attachments/assets/6962cdaf-40a8-4236-9c26-5266a7d75744)
 
+![image](https://github.com/user-attachments/assets/ad2f2c14-62e0-4db4-a034-8cce132d92d1)
 
+![image](https://github.com/user-attachments/assets/7bcaf92c-0214-47ec-86c0-36c834044468)
 
+![image](https://github.com/user-attachments/assets/69e3dfad-ae23-4bf4-b766-87bf88abc6e2)
 
+![image](https://github.com/user-attachments/assets/ffcef887-8fbd-4343-8872-bc78f01f09f3)
 
+![image](https://github.com/user-attachments/assets/bd83b9fc-8948-43f5-a871-beaa77e99655)
 
+## EPs 
 
+EPs (Exposure Points) Puanı, güvenlik bağlamında genellikle risk yönetimi ve tehdit değerlendirmesi ile ilgili bir terimdir. EPs, bir sistemin, uygulamanın veya ağın güvenlik riskine maruz kaldığı seviyeyi ölçen bir puanlama sistemidir. Bu puanlar, potansiyel güvenlik açıklarının ne kadar kritik olduğunu belirlemeye yardımcı olur.
 
+![image](https://github.com/user-attachments/assets/f183a31b-c87a-47b5-8049-252bcef5ad8a)
 
+![image](https://github.com/user-attachments/assets/4be1b549-c61f-4561-9dc0-a7e283a1b8d0)
 
+![image](https://github.com/user-attachments/assets/36227e0d-fa03-44f8-81a4-44c626777fb3)
 
+Sonuç:
 
+EPs puanı, güvenlik açıklarını derecelendiren ve sistemin maruz kaldığı riski ölçen önemli bir araçtır. Güvenlik ekipleri, bu puanları kullanarak önceliklendirme yapar ve en yüksek risklere karşı önlemler alır. Bu sistem, güvenlik yönetimini daha etkin hale getirir ve tehditlerin zamanında tespit edilip çözülmesini sağlar.
 
+## SBOM 
 
+SBOM (Software Bill of Materials), bir yazılım uygulamasının içinde kullanılan tüm bileşenlerin ve bağımlılıkların listesidir. SBOM, yazılımın içindeki her bileşeni, kullanılan kütüphaneleri, lisansları, sürümleri ve güvenlik açıklarını içeren detaylı bir envanter sağlar. Bu envanter, yazılım güvenliği ve uyumluluğu için oldukça önemlidir.
 
+SBOM, yazılım geliştirme sürecinde kullanılan açık kaynak yazılımlarının ve bileşenlerin şeffaflığını sağlar. Bu belge, bir yazılımın içinde hangi açık kaynak veya üçüncü taraf bileşenlerin bulunduğunu ve bunların hangi sürümlerinin kullanıldığını belirtir.
 
+![image](https://github.com/user-attachments/assets/dbe0647f-8f1a-4b12-9208-7bc322253ee4)
 
+![image](https://github.com/user-attachments/assets/9b97d942-b085-41df-9632-9fe67dff707c)
 
+![image](https://github.com/user-attachments/assets/7fc9d918-01e0-4498-8291-9a5288655cc6)
 
+![image](https://github.com/user-attachments/assets/7595db9c-e348-48d2-8e1e-99686ba11431)
 
+![image](https://github.com/user-attachments/assets/8318bc64-dcbd-4a99-b813-7e417274240f)
 
+Sonuç:
 
+SBOM, yazılım geliştirme süreçlerinde kullanılan bileşenlerin şeffaflığını sağlayan ve güvenlik risklerini azaltmaya yardımcı olan önemli bir araçtır. Yazılım tedarik zincirindeki her bileşenin güvenliğini ve uyumluluğunu yönetmek için kullanılabilir. Özellikle güvenlik, lisans uyumluluğu ve tedarik zinciri yönetimi açısından büyük avantajlar sunar.
 
+## RASP 
 
+RASP (Runtime Application Self-Protection), bir uygulamanın çalıştığı ortamda güvenliği sağlamak için kullanılan bir teknolojidir. RASP, gerçek zamanlı olarak uygulama düzeyinde güvenlik sağlamak amacıyla, uygulamanın çalıştığı süreçte güvenlik tehditlerini tespit eder ve bu tehditlere karşı önlem alır.
 
+RASP, bir yazılımın çalışırken, içindeki güvenlik açıklarını tespit edip engelleyen bir güvenlik çözümüdür. Geleneksel güvenlik önlemleri, genellikle dışarıdan bir saldırıyı engellemeye odaklanırken, RASP uygulama içine entegre olmuş bir güvenlik katmanıdır ve bu sayede uygulamanın içindeki potansiyel tehditlere karşı daha hızlı ve etkili bir müdahale sağlar.
 
+![image](https://github.com/user-attachments/assets/13c28d0c-684c-4c13-b229-9ece08ee1a71)
 
+![image](https://github.com/user-attachments/assets/32cda84b-fbaa-433d-904d-705d23bab34e)
 
+![image](https://github.com/user-attachments/assets/26bc61d6-faa1-4d88-9850-1fd1f01c123d)
 
+![image](https://github.com/user-attachments/assets/c54042ce-870b-4de5-8bb9-aee8206875a7)
 
+![image](https://github.com/user-attachments/assets/32f95de0-e158-47d1-9871-54147ec1e474)
 
+Sonuç:
 
+RASP, uygulama güvenliğini artırmak için önemli bir teknolojidir. Uygulama içindeki zafiyetleri izler ve saldırıları engeller. Geleneksel dışa yönelik güvenlik önlemlerinin aksine, uygulamanın çalışma zamanında güvenlik sağlar. Bu özellik, özellikle web uygulamaları ve mobil uygulamalar gibi dış saldırılara açık yazılımlar için oldukça faydalıdır. RASP, gerçek zamanlı müdahale ile yazılım güvenliğini güçlendirirken, güvenlik açıklarını hızlıca tespit edip çözmeyi sağlar.
 
+## Firewall 
 
+Firewall (Güvenlik Duvarı), bilgisayar ağlarında, gelen ve giden trafiği izleyip kontrol ederek, istenmeyen erişimleri engelleyen ve ağ güvenliğini sağlayan bir donanım veya yazılım çözümüdür. Firewall, bir ağ ile internet veya başka bir ağ arasındaki veri trafiğini denetler ve yalnızca belirli, güvenilir bağlantılara izin verir.
 
+![image](https://github.com/user-attachments/assets/1eaed355-8431-4e1b-b521-7c3e62ad857c)
 
+![image](https://github.com/user-attachments/assets/1a296ffe-2879-431f-946a-6c08dd589eb8)
 
+![image](https://github.com/user-attachments/assets/c7e1106d-c16d-442c-be24-518be0a74ee7)
 
+Sonuç:
 
+Firewall, ağların dış tehditlere karşı korunmasını sağlayan temel bir güvenlik aracıdır. Şirketler ve bireyler için kritik öneme sahiptir. İyi yapılandırılmış bir firewall, sadece güvenliği artırmakla kalmaz, aynı zamanda ağ kaynaklarının yönetilmesini ve veri güvenliğini de sağlar. Ağ trafiğini izleyip kontrol etmek, dış tehditlerin önüne geçmek, güvenlik açıklarını engellemek ve veri kaybını önlemek için firewall kullanımı son derece önemlidir.
 
+Firewall yapılandırması, ağ güvenliği için kritik bir adımdır ve genellikle doğru yapılandırılmadığı takdirde ciddi güvenlik açıklarına yol açabilir. Firewall, ağın dış dünyadan gelen tehlikelere karşı korunmasını sağlayan bir cihaz veya yazılımdır. Yapılandırma işlemi, güvenlik duvarının doğru şekilde çalışmasını ve yalnızca izin verilen trafiğin geçişine izin vermesini sağlar.
 
+Aşağıda, bir firewall'ın temel yapılandırma adımlarını ve her bir adımda dikkat edilmesi gereken noktaları detaylı bir şekilde açıklayacağım.
 
+![image](https://github.com/user-attachments/assets/a815e6e3-8dcb-4945-8f9b-f03c4973f487)
 
+![image](https://github.com/user-attachments/assets/66039ec9-c715-4958-ab0d-4bae6436651b)
 
+![image](https://github.com/user-attachments/assets/bffe3a2c-b4ef-4091-b5ad-1c7e95f27b78)
 
+![image](https://github.com/user-attachments/assets/792f30df-996e-4be0-be64-04e6264f8cb2)
 
+![image](https://github.com/user-attachments/assets/926095b0-b2a7-4e26-abb5-1a33175fdef4)
 
+![image](https://github.com/user-attachments/assets/ed758e00-80b0-4b6b-9771-53538cbb857c)
 
+![image](https://github.com/user-attachments/assets/da692435-3291-490b-93fc-f6985db90dcd)
 
+![image](https://github.com/user-attachments/assets/352a8f4b-e7bc-4822-bb47-eb24abb76bee)
 
+![image](https://github.com/user-attachments/assets/b18cb0a8-0b3c-45d4-84e8-f42fc34bf833)
 
+![image](https://github.com/user-attachments/assets/4faed1bc-6575-4cf2-b22b-c06a78404e4b)
 
+Sonuç:
 
+Firewall yapılandırması, ağ güvenliğini sağlamak için kritik bir adımdır. Her adımda dikkatli ve planlı bir şekilde ilerlemek, ağın dış tehditlere karşı korunduğundan emin olmanızı sağlar. Güvenlik duvarınızın yalnızca trafiği kontrol etmenin ötesinde, ağın genel güvenliği için önemli bir bileşen olduğunu unutmamak gerekir.
 
+## WAF 
 
+WAF (Web Application Firewall), web uygulamalarına yönelik yapılan saldırılara karşı koruma sağlayan bir güvenlik aracıdır. Genellikle HTTP/HTTPS trafiğini analiz eder ve web uygulamalarına yapılan kötü niyetli istekleri engellemeye çalışır. Web uygulamaları, genellikle dış dünyadan gelen verilerle etkileşimde olduğu için, WAF'lar bu tür uygulamalarda meydana gelen potansiyel güvenlik açıklarını engellemek amacıyla kullanılır.
 
+WAF'ın Temel Amacı:
 
+WAF, web uygulamalarının güvenliğini artırarak, çeşitli web saldırılarına karşı koruma sağlar. WAF’lar, kullanıcıların web uygulamalarıyla etkileşimde bulunduklarında, gelen trafiği analiz eder ve şüpheli veya tehlikeli görünen istekleri engeller. Bu, SQL enjeksiyonları, XSS (Cross-Site Scripting), CSRF (Cross-Site Request Forgery), DDoS (Distributed Denial of Service) gibi yaygın saldırılara karşı koruma sağlar.
 
+![image](https://github.com/user-attachments/assets/0a6c38b1-6b66-45f7-ad25-a15880699710)
 
+![image](https://github.com/user-attachments/assets/8feac7cc-c06e-4f52-a367-45b4a621e50a)
 
+![image](https://github.com/user-attachments/assets/c47823bd-6b85-482e-810d-48dfbb303f01)
 
+![image](https://github.com/user-attachments/assets/518ce6b6-5a9a-4eb4-941e-7e2497838928)
 
+![image](https://github.com/user-attachments/assets/255edf1c-571c-435b-8150-93254d7dd333)
 
+![image](https://github.com/user-attachments/assets/7e265314-fcc9-4a95-877a-287684ad02a7)
 
+Sonuç:
 
+WAF, web uygulamalarını koruma altına almak için kritik bir güvenlik aracıdır. Hem uygulama içindeki veri hem de dışa gelen ve giden trafik üzerinde denetim sağlayarak, güvenlik açıklarını minimize eder ve web saldırılarından korunmayı sağlar. WAF kullanımı, modern web uygulamalarının güvenliğini sağlamak için vazgeçilmez bir çözümdür.
 
+## Penetration Testing
 
+Penetration Testing (Pen Test), bir bilgisayar sisteminin, ağının veya web uygulamasının güvenliğini test etmek amacıyla yapılan ve bu sistemlerdeki güvenlik açıklarını keşfetmeye yönelik planlı bir saldırıdır. Penetration testleri, siber güvenlik uzmanları tarafından yapılan, gerçek bir saldırganın kullandığı yöntemleri simüle ederek sistemin zayıf noktalarını bulmayı hedefleyen bir test türüdür.
 
+Penetration testing, genellikle bir uygulamanın, ağın ya da sistemin sızılabilirliğini belirlemek için yapılır. Bu testin amacı, sistemdeki güvenlik açıklarını tespit etmek ve bu açıkların kötü niyetli kişiler tarafından kullanılmasını engellemektir.
 
+![image](https://github.com/user-attachments/assets/12700a56-5350-4b16-861d-430386cddd2d)
 
+![image](https://github.com/user-attachments/assets/d5de0985-9913-4a4c-8b41-bdb0dbf6edbd)
 
+![image](https://github.com/user-attachments/assets/6bf2d946-e59e-490a-8cc6-92e84ab0dfa3)
 
+![image](https://github.com/user-attachments/assets/83abfec1-424a-4498-9490-3e9550d3e768)
 
+![image](https://github.com/user-attachments/assets/8ec585ff-df0b-4d41-a5bd-4f85be70731b)
 
+Sonuç:
 
+Penetration testing, organizasyonların güvenliğini artıran kritik bir uygulamadır. Sistemlerdeki zayıf noktaların erken aşamada tespit edilmesi, potansiyel saldırılara karşı güçlü bir savunma hattı oluşturur. Bu testin profesyonelce yapılması, sistemin uzun vadede daha güvenli olmasını sağlar.
 
+## Fuzz Testing
 
+Fuzz Testing veya Fuzzing, yazılım uygulamalarının güvenliğini test etmek için kullanılan otomatik bir test tekniğidir. Fuzz testing, hedef yazılımın veya sistemin, geçerli olmayan, beklenmeyen veya rastgele verilerle (fuzz) beslenmesini içerir. Bu test yöntemi, yazılımın olası güvenlik açıklarını, çökme noktalarını veya hatalı davranışları tespit etmek için kullanılır.
 
+Fuzz testing'in temel amacı, yazılımın beklenmedik girdilere nasıl tepki verdiğini görmek ve böylece yazılımda bulunan güvenlik açıklarını keşfetmektir. Bu test, özellikle yazılımda doğrulama veya hata kontrolü eksikliği olan bölümleri hedef alır.
 
+![image](https://github.com/user-attachments/assets/506041d2-0677-40a3-88dc-bf5b032da605)
 
+![image](https://github.com/user-attachments/assets/06099f67-8896-44cc-a807-6e39651303af)
 
+![image](https://github.com/user-attachments/assets/627d88a0-5394-45f3-a0c3-25a59995ad6d)
 
+![image](https://github.com/user-attachments/assets/226d4c2a-9ca7-4351-b374-d3fb461e60cd)
 
+![image](https://github.com/user-attachments/assets/e521e6b6-e107-4a0c-93f7-1e10169feb84)
 
+![image](https://github.com/user-attachments/assets/004617a9-3ac6-438f-aa20-e7701a211c5a)
 
+Sonuç:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Fuzz testing, yazılım güvenliğini test etmek için güçlü bir araçtır. Rastgele veya hedeflenmiş veriler kullanarak yazılımın güvenlik açıklarını keşfetmek, geliştiricilerin hataları erken tespit etmelerini ve yazılımın daha güvenli hale gelmesini sağlar. Fuzz testing'in etkin kullanımı, yazılımın olası hatalardan veya saldırılardan korunmasına yardımcı olabilir.
