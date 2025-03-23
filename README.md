@@ -1,5 +1,6 @@
 ## Dijital Dünyada Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
 
+- [Developing Security in the Software Development Life Cycle](#developing-security-in-the-software-development-life-cycle)
 - [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
 - [CIA (Confidentiality, Integrity, Availability)](#cia-confidentiality-integrity-availability)
 - [NIST (National Institute of Standards and Technology)](#nist-national-institute-of-standards-and-technology)
@@ -85,6 +86,28 @@
 - [WAF](#waf)
 - [Penetration Testing](#penetration-testing)
 - [Fuzz Testing](#fuzz-testing)
+
+## Developing Security in the Software Development Life Cycle
+
+Developing Security in the Software Development Life Cycle (SDLC), yazılım geliştirme sürecinde güvenlik önlemlerini entegre etme anlamına gelir. Bu süreç, yazılımın planlanmasından üretime kadar olan tüm aşamalarında güvenlik risklerini azaltmayı hedefler. SDLC'nin güvenlik odaklı bir versiyonu, yazılımın güvenlik açıklarını en başından itibaren ele alır ve bu riskleri minimize eder.
+
+![image](https://github.com/user-attachments/assets/e07f7d25-2b1d-426a-b7c9-af61b32416e2)
+
+![image](https://github.com/user-attachments/assets/fbd3cde9-24c6-4a9a-9b48-3db08c0b51f2)
+
+![image](https://github.com/user-attachments/assets/15c4f6f4-6736-4083-bca2-b6e537266c64)
+
+![image](https://github.com/user-attachments/assets/499185ab-6ef3-456e-b022-73cc93074f76)
+
+![image](https://github.com/user-attachments/assets/dcbffeb3-388c-4243-b7c2-8f50ddcdb225)
+
+![image](https://github.com/user-attachments/assets/d77f7a8e-3908-4d10-8e2b-ec49b77fc6c4)
+
+![image](https://github.com/user-attachments/assets/5c4e9a43-b8fe-4663-9ab8-7889e853e420)
+
+Sonuç:
+
+Yazılım geliştirme sürecinde güvenlik, yazılımın tüm yaşam döngüsüne entegre edilmelidir. DevSecOps (Geliştirme, Güvenlik ve Operasyonların Entegrasyonu) gibi uygulamalar, güvenliğin sadece bir aşamada değil, tüm geliştirme sürecinde aktif bir şekilde uygulanmasını sağlar. Bu şekilde, yazılımın güvenliği proaktif bir yaklaşımla sağlanmış olur ve güvenlik açıkları, yazılım piyasaya sürülmeden önce minimize edilir.
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
