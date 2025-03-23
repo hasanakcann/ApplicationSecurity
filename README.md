@@ -1,4 +1,4 @@
-## Dijital Dünyamızda Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
+## Dijital Dünyada Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
 
 - [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
 - [CIA (Confidentiality, Integrity, Availability)](#cia-confidentiality-integrity-availability)
@@ -58,6 +58,10 @@
 - [Attack Tree](#attack-tree)
 - [YAML](#yaml)
 - [Threagile](#threagile)
+- [Encryption - Hashing](#encryption---hashing)
+- [PKI](#pki)
+- [Salt](#salt)
+- [DevSecOps](#devsecops)
 
 ## OWASP Top 10 (Open Web Application Security Project Top 10)
 Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
@@ -995,6 +999,142 @@ Threagile, Agile (Çevik) yaklaşıma dayalı bir açık kaynak kodlu threat mod
 ![image](https://github.com/user-attachments/assets/89d1f193-69a9-409d-9b71-73e4131c114a)
 
 ![image](https://github.com/user-attachments/assets/f15e2c88-a864-4c47-a95c-d60ea1c9b69c)
+
+## Encryption - Hashing
+
+![image](https://github.com/user-attachments/assets/6ff629f9-18bb-426c-8b41-fef211cd2b20)
+
+![image](https://github.com/user-attachments/assets/e9ffb100-f551-4015-b2cd-1ffb55ad923f)
+
+![image](https://github.com/user-attachments/assets/72f2cfff-8735-4bc6-888a-c37158bd9a83)
+
+![image](https://github.com/user-attachments/assets/9250948e-c951-40bd-922f-4180fa18ca24)
+
+İkisinin bir arada kullanıldığı durumlar da vardır. Örneğin, bir sistemde şifreleme ile veri korunurken, kullanıcı parolaları hashlenmiş olarak saklanır.
+
+![image](https://github.com/user-attachments/assets/3286d343-f6b9-487d-87e6-6027243212be)
+
+![image](https://github.com/user-attachments/assets/51c790e0-3b38-4276-acde-2484ae3394de)
+
+using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+
+class Program
+{
+    private static readonly string Key = "0123456789ABCDEF"; // 16 byte (128 bit) anahtar
+    private static readonly string IV = "ABCDEF0123456789";  // 16 byte (128 bit) IV
+
+    public static void Main()
+    {
+        string originalText = "Merhaba, bu bir şifreleme testidir!";
+        Console.WriteLine($"Orijinal Metin: {originalText}");
+
+        string encryptedText = Encrypt(originalText);
+        Console.WriteLine($"Şifrelenmiş Metin: {encryptedText}");
+
+        string decryptedText = Decrypt(encryptedText);
+        Console.WriteLine($"Çözülen Metin: {decryptedText}");
+    }
+
+    public static string Encrypt(string plainText)
+    {
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            aes.IV = Encoding.UTF8.GetBytes(IV);
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    using (StreamWriter writer = new StreamWriter(cs))
+                    {
+                        writer.Write(plainText);
+                    }
+                }
+                return Convert.ToBase64String(ms.ToArray());
+            }
+        }
+    }
+
+    public static string Decrypt(string encryptedText)
+    {
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            aes.IV = Encoding.UTF8.GetBytes(IV);
+
+            using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(encryptedText)))
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateDecryptor(), CryptoStreamMode.Read))
+                {
+                    using (StreamReader reader = new StreamReader(cs))
+                    {
+                        return reader.ReadToEnd();
+                    }
+                }
+            }
+        }
+    }
+}
+
+![image](https://github.com/user-attachments/assets/d5791ed4-b6b0-4726-9ebb-622b7031e6d6)
+
+![image](https://github.com/user-attachments/assets/5b65ebe4-64e7-4541-bf7f-7bda87f3bd57)
+
+![image](https://github.com/user-attachments/assets/afc1baea-f51f-41c3-a56d-109edc0830b5)
+
+![image](https://github.com/user-attachments/assets/08258aaa-54a3-4da9-a347-48180f4dbb8f)
+
+![image](https://github.com/user-attachments/assets/f5edb045-f688-454c-bb73-908e38bda716)
+
+![image](https://github.com/user-attachments/assets/381c215f-b04e-4e29-8b65-693c0ab1939b)
+
+![image](https://github.com/user-attachments/assets/edc521c1-48f5-4e3d-8b6d-88aeef9f8937)
+
+![image](https://github.com/user-attachments/assets/c2a6bf42-e494-4b44-993b-6814ed25d01d)
+
+![image](https://github.com/user-attachments/assets/6c47274c-f002-45f8-bbbf-75c421bb90c5)
+
+## PKI
+
+PKI (Public Key Infrastructure - Açık Anahtar Altyapısı), dijital güvenliği sağlamak için kullanılan bir sistemdir. Şifreleme, kimlik doğrulama ve veri bütünlüğü gibi güvenlik işlemlerini yönetmek için açık anahtar (public key) ve özel anahtar (private key) kullanımına dayanır.
+
+![image](https://github.com/user-attachments/assets/4a6dd805-0c9d-44fc-ac09-0f6e32851d42)
+
+![image](https://github.com/user-attachments/assets/21b71c51-560c-4ba7-8369-ce1836eb7bc5)
+
+![image](https://github.com/user-attachments/assets/96ff508c-4802-4d2e-9def-354a28131e96)
+
+## Salt
+
+Salt, şifreleme veya hashleme işlemlerinde kullanılan rastgele bir değerdir. Ana amacı, aynı giriş verisinin (örneğin, bir şifrenin) her defasında farklı bir hash üretmesini sağlamaktır.
+
+![image](https://github.com/user-attachments/assets/2aa0a769-4bbb-4e5c-906b-263261f7e587)
+
+## DevSecOps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
