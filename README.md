@@ -1,32 +1,62 @@
-## Dijital Dünyada Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
+# Dijital Dünyada Uygulama Güvenliği Bir Seçenek Değil, Zorunluluktur!
+
+<details>
+  <summary>🛡️ Uygulama Güvenliği Temelleri</summary>
 
 - [Developing Security in the Software Development Life Cycle](#developing-security-in-the-software-development-life-cycle)
-- [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
 - [CIA (Confidentiality, Integrity, Availability)](#cia-confidentiality-integrity-availability)
+- [Defense in Depth](#defense-in-depth)
+- [Roles and Terms in Cyber Security](#roles-and-terms-in-cyber-security)
+- [Risk Rating - Basic Threat Modelling](#risk-rating---basic-threat-modelling)
+- [Security Controls](#security-controls)
+</details>
+
+<details>
+  <summary>📚 Güvenlik Standartları ve Çerçeveleri</summary>
+
+- [OWASP Top 10](#owasp-top-10-open-web-application-security-project-top-10)
 - [NIST (National Institute of Standards and Technology)](#nist-national-institute-of-standards-and-technology)
 - [SSDF (Secure Software Development Framework)](#ssdf-secure-software-development-framework)
 - [CSF (Cybersecurity Framework)](#csf-cybersecurity-framework)
 - [RMF (Risk Management Framework)](#rmf-risk-management-framework)
 - [CSA (Cloud Security Alliance)](#csa-cloud-security-alliance)
 - [CCM (Cloud Controls Matrix)](#ccm-cloud-controls-matrix)
-- [Defense in Depth](#defense-in-depth)
-- [Roles and Terms in Cyber Security](#roles-and-terms-in-cyber-security)
+</details>
+
+<details>
+  <summary>🧨 Güvenlik Açıkları ve Saldırı Yüzeyleri</summary>
+
 - [CVE (Common Vulnerabilities and Exposures)](#cve-common-vulnerabilities-and-exposures)
 - [EPiCIS (Exploit Prediction Scoring System)](#epicis-exploit-prediction-scoring-system)
 - [CWE (Common Weakness Enumeration)](#cwe-common-weakness-enumeration)
-- [API Security](#api-security)
-- [CSP (Content Security Policy)](#csp-content-security-policy)
-- [SSRF (Server Side Request Forgery)](#ssrf-server-side-request-forgery)
 - [Vulnerability Management](#vulnerability-management)
 - [SQL Injection](#sql-injection)
-- [Insecure Design](#insecure-design)
+- [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
+- [SSRF (Server Side Request Forgery)](#ssrf-server-side-request-forgery)
 - [Security Misconfiguration](#security-misconfiguration)
+- [Insecure Design](#insecure-design)
 - [Vulnerable and Outdated](#vulnerable-and-outdated)
 - [Identification and Authentication Failures](#identification-and-authentication-failures)
-- [MFA (Multi-Factor Authentication)](#mfa-multi-factor-authentication)
 - [Software and Data Integrity Failures](#software-and-data-integrity-failures)
 - [Security Logging and Monitoring Failures](#security-logging-and-monitoring-failures)
-- [XSS (Cross-Site Scripting)](#xss-cross-site-scripting)
+</details>
+
+<details>
+  <summary>🔐 Kimlik Doğrulama, Oturum ve Yetkilendirme</summary>
+
+- [JWT](#jwt)
+- [JWE](#jwe)
+- [OAuth](#oauth)
+- [Token](#token)
+- [OpenID - OpenID Connect](#openid---openid-connect)
+- [Session Management](#session-management)
+- [Web Session](#web-session)
+- [MFA (Multi-Factor Authentication)](#mfa-multi-factor-authentication)
+</details>
+
+<details>
+  <summary>🔗 Supply Chain Güvenliği</summary>
+
 - [Supply Chain Security](#supply-chain-security)
 - [Supply Chain Defenses](#supply-chain-defenses)
 - [SCA (Software Composition Analysis)](#sca-software-composition-analysis)
@@ -34,7 +64,14 @@
 - [SBOM (Software Bill of Materials)](#sbom-software-bill-of-materials)
 - [Dependency-Track ve CycloneDX](#dependency-track-ve-cyclonedx)
 - [CycloneDX](#cyclonedx)
+</details>
+
+<details>
+  <summary>☁️ Bulut ve Konteyner Güvenliği</summary>
+
 - [Cloud and Container Security](#cloud-and-container-security)
+- [Container Security](#container-security)
+- [Kubernetes](#kubernetes)
 - [AWS Well-Architected Framework](#aws-well-architected-framework)
 - [AWS Identity and Access Management](#aws-identity-and-access-management)
 - [AWS Detection Controls](#aws-detection-controls)
@@ -42,34 +79,25 @@
 - [AWS Data Protection](#aws-data-protection)
 - [AWS Incident Response](#aws-incident-response)
 - [AWS Application Security](#aws-application-security)
-- [Container Security](#container-security)
-- [CI/CD](#cicd)
 - [AWS - Azure - GCP](#aws---azure---gcp)
-- [Session Management](#session-management)
-- [Web Session](#web-session)
-- [JWT](#jwt)
-- [JWE](#jwe)
-- [OAuth](#oauth)
-- [Token](#token)
-- [OpenID - OpenID Connect](#openid---openid-connect)
-- [Risk Rating - Basic Threat Modelling](#risk-rating---basic-threat-modelling)
-- [Security Controls](#security-controls)
-- [Threat Modeling](#threat-modeling)
-- [Microsoft Threat Modeling](#microsoft-threat-modeling)
-- [Attack Tree](#attack-tree)
-- [YAML](#yaml)
-- [Threagile](#threagile)
-- [Encryption - Hashing](#encryption---hashing)
-- [PKI](#pki)
-- [Salt](#salt)
+</details>
+
+<details>
+  <summary>⚙️ DevSecOps ve CI/CD Süreçleri</summary>
+
 - [DevSecOps](#devsecops)
-- [Kubernetes](#kubernetes)
-- [Jenkins](#jenkins)
 - [DevSecOps Design](#devsecops-design)
-- [SonarQube](#sonarqube)
+- [CI/CD](#cicd)
 - [Pipeline](#pipeline)
+- [Jenkins](#jenkins)
+- [SonarQube](#sonarqube)
 - [Static Analysis](#static-analysis)
 - [Ansible](#ansible)
+</details>
+
+<details>
+  <summary>🧪 Güvenlik Testleri ve Tarama Araçları</summary>
+
 - [Security Scanning and Testing](#security-scanning-and-testing)
 - [SAST](#sast)
 - [Fortify](#fortify)
@@ -78,14 +106,44 @@
 - [OWASP ZAP](#owasp-zap)
 - [IAST](#iast)
 - [ASPM](#aspm)
+- [RASP](#rasp)
 - [Arnica Security](#arnica-security)
 - [EPs](#eps)
-- [SBOM](#sbom)
-- [RASP](#rasp)
+</details>
+
+<details>
+  <summary>🚨 Saldırı Tespit ve Önleme Sistemleri</summary>
+
 - [Firewall](#firewall)
 - [WAF](#waf)
 - [Penetration Testing](#penetration-testing)
 - [Fuzz Testing](#fuzz-testing)
+</details>
+
+<details>
+  <summary>📊 Tehdit Modelleme ve Güvenlik Analizi</summary>
+
+- [Threat Modeling](#threat-modeling)
+- [Microsoft Threat Modeling](#microsoft-threat-modeling)
+- [Attack Tree](#attack-tree)
+</details>
+
+<details>
+  <summary>📜 Politikalar, Protokoller ve Tanımlamalar</summary>
+
+- [API Security](#api-security)
+- [CSP (Content Security Policy)](#csp-content-security-policy)
+- [YAML](#yaml)
+- [Threagile](#threagile)
+</details>
+
+<details>
+  <summary>🔒 Şifreleme, Hashleme ve PKI</summary>
+
+- [Encryption - Hashing](#encryption---hashing)
+- [PKI](#pki)
+- [Salt](#salt)
+</details>
 
 ## Developing Security in the Software Development Life Cycle
 
@@ -109,11 +167,6 @@ Sonuç:
 
 Yazılım geliştirme sürecinde güvenlik, yazılımın tüm yaşam döngüsüne entegre edilmelidir. DevSecOps (Geliştirme, Güvenlik ve Operasyonların Entegrasyonu) gibi uygulamalar, güvenliğin sadece bir aşamada değil, tüm geliştirme sürecinde aktif bir şekilde uygulanmasını sağlar. Bu şekilde, yazılımın güvenliği proaktif bir yaklaşımla sağlanmış olur ve güvenlik açıkları, yazılım piyasaya sürülmeden önce minimize edilir.
 
-## OWASP Top 10 (Open Web Application Security Project Top 10)
-Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
-
-![image](https://github.com/user-attachments/assets/a1595f6e-1212-4be3-a2c6-972b36b0aa9a)
-
 ## CIA (Confidentiality, Integrity, Availability)
 Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 
@@ -124,6 +177,75 @@ Bilgi güvenliğinin temel taşlarını oluşturan üç ana prensiptir.
 ![image](https://github.com/user-attachments/assets/7ee18609-58fb-4b5d-a46a-faecf995c7a4)
 
 ![image](https://github.com/user-attachments/assets/7fb7b997-4d17-427f-b042-0391ab3fd70a)
+
+## Defense in Depth
+
+![image](https://github.com/user-attachments/assets/13be0a06-d3bb-4ba3-b603-f66b3efa963e)
+
+![image](https://github.com/user-attachments/assets/3c6f1351-01ef-409b-84b1-0021ba3f6385)
+
+![image](https://github.com/user-attachments/assets/7606f717-9861-4a46-b925-b4c6b1f5a158)
+
+![image](https://github.com/user-attachments/assets/ef1862fe-5dc7-4678-a054-38dcdec2f947)
+
+## Roles and Terms in Cyber Security
+
+![image](https://github.com/user-attachments/assets/4044af5b-89f8-45f4-a69b-3c5548c8b23e)
+
+![image](https://github.com/user-attachments/assets/50655c80-26d6-4308-9359-ea81471e4b92)
+
+![image](https://github.com/user-attachments/assets/ad35094f-25f3-402f-9696-1be337322de2)
+
+![image](https://github.com/user-attachments/assets/45212455-7d6f-4c6a-b11b-424e0320965c)
+
+![image](https://github.com/user-attachments/assets/dd65a8a3-9cc3-47c4-8835-94b563004633)
+
+![image](https://github.com/user-attachments/assets/270d057b-95dd-43c1-af4a-13369ecc848a)
+
+![image](https://github.com/user-attachments/assets/8e104355-c5f8-4132-99a1-c302e702cce1)
+
+![image](https://github.com/user-attachments/assets/f288c27b-c3fd-421e-ba8d-b8a4ae1cf34f)
+
+![image](https://github.com/user-attachments/assets/8431ebb5-0e70-41d5-b944-d1b111bda942)
+
+![image](https://github.com/user-attachments/assets/a0bc10d0-4ddd-4748-88ce-7a3d9f3f86f1)
+
+![image](https://github.com/user-attachments/assets/1dcd4524-458c-4348-9852-26b02080736b)
+
+![image](https://github.com/user-attachments/assets/960ea711-12d6-47eb-9e31-4d4ef0a98935)
+
+![image](https://github.com/user-attachments/assets/a309e920-6c8f-4263-ac37-e69105b61548)
+
+![image](https://github.com/user-attachments/assets/7e19720d-71bb-4467-b6be-2c41b58ad9fb)
+
+![image](https://github.com/user-attachments/assets/05337794-50be-4c29-927b-d89957948371)
+
+## Risk Rating - Basic Threat Modelling
+
+Risk Rating ve Basic Threat Modelling güvenlik yönetimi ve risk değerlendirmesi açısından önemli kavramlardır. 
+
+![image](https://github.com/user-attachments/assets/9839ebca-289e-46d2-8f8a-f29826f1f5d9)
+
+![image](https://github.com/user-attachments/assets/ce68ddf0-7583-40f7-92e8-a495fbf40404)
+
+Tehdit modelleme, genellikle güvenlik testleri, sızma testleri ve zafiyet değerlendirmeleriyle birlikte uygulanır ve sistemin potansiyel risklerini azaltmaya yönelik stratejiler oluşturur.
+
+## Security Controls
+
+Security controls (Güvenlik Kontrolleri), bir organizasyonun bilgi güvenliğini sağlamak, tehditlere karşı korunmak ve riskleri azaltmak amacıyla uyguladığı politikalar, prosedürler, araçlar ve teknolojilerdir. Bu kontroller, sistemlerin, ağların ve verilerin güvenliğini sağlamaya yönelik çeşitli önlemler almayı içerir. Güvenlik kontrolleri, organizasyonların güvenlik açıklarını azaltmasına, veri sızıntılarını engellemesine ve yetkisiz erişimi önlemesine yardımcı olur.
+
+Security controls genellikle şu başlıklar altında sınıflandırılır:
+
+![image](https://github.com/user-attachments/assets/53570c69-00eb-457e-983b-22bfef44ecad)
+
+![image](https://github.com/user-attachments/assets/06e3702c-d665-4790-a423-b240f8274aec)
+
+Güvenlik kontrolleri, organizasyonların siber güvenlik stratejilerini güçlendirmesine yardımcı olur ve potansiyel tehditlere karşı önceden hazırlıklı olmalarını sağlar.
+
+## OWASP Top 10 (Open Web Application Security Project Top 10)
+Web uygulamalarında en yaygın ve kritik güvenlik risklerini belirleyen bir rehberdir.
+
+![image](https://github.com/user-attachments/assets/a1595f6e-1212-4be3-a2c6-972b36b0aa9a)
 
 ## NIST (National Institute of Standards and Technology)
 
@@ -195,48 +317,6 @@ RMF'nin 7 Temel Adımı
 
 ![image](https://github.com/user-attachments/assets/2c4f7f9b-0612-46c9-8fc5-0620de9ed662)
 
-## Defense in Depth
-
-![image](https://github.com/user-attachments/assets/13be0a06-d3bb-4ba3-b603-f66b3efa963e)
-
-![image](https://github.com/user-attachments/assets/3c6f1351-01ef-409b-84b1-0021ba3f6385)
-
-![image](https://github.com/user-attachments/assets/7606f717-9861-4a46-b925-b4c6b1f5a158)
-
-![image](https://github.com/user-attachments/assets/ef1862fe-5dc7-4678-a054-38dcdec2f947)
-
-## Roles and Terms in Cyber Security
-
-![image](https://github.com/user-attachments/assets/4044af5b-89f8-45f4-a69b-3c5548c8b23e)
-
-![image](https://github.com/user-attachments/assets/50655c80-26d6-4308-9359-ea81471e4b92)
-
-![image](https://github.com/user-attachments/assets/ad35094f-25f3-402f-9696-1be337322de2)
-
-![image](https://github.com/user-attachments/assets/45212455-7d6f-4c6a-b11b-424e0320965c)
-
-![image](https://github.com/user-attachments/assets/dd65a8a3-9cc3-47c4-8835-94b563004633)
-
-![image](https://github.com/user-attachments/assets/270d057b-95dd-43c1-af4a-13369ecc848a)
-
-![image](https://github.com/user-attachments/assets/8e104355-c5f8-4132-99a1-c302e702cce1)
-
-![image](https://github.com/user-attachments/assets/f288c27b-c3fd-421e-ba8d-b8a4ae1cf34f)
-
-![image](https://github.com/user-attachments/assets/8431ebb5-0e70-41d5-b944-d1b111bda942)
-
-![image](https://github.com/user-attachments/assets/a0bc10d0-4ddd-4748-88ce-7a3d9f3f86f1)
-
-![image](https://github.com/user-attachments/assets/1dcd4524-458c-4348-9852-26b02080736b)
-
-![image](https://github.com/user-attachments/assets/960ea711-12d6-47eb-9e31-4d4ef0a98935)
-
-![image](https://github.com/user-attachments/assets/a309e920-6c8f-4263-ac37-e69105b61548)
-
-![image](https://github.com/user-attachments/assets/7e19720d-71bb-4467-b6be-2c41b58ad9fb)
-
-![image](https://github.com/user-attachments/assets/05337794-50be-4c29-927b-d89957948371)
-
 ## CVE (Common Vulnerabilities and Exposures)
 
 ![image](https://github.com/user-attachments/assets/4569e2e6-099f-4b56-aca7-f2b46f11b5d8)
@@ -266,72 +346,6 @@ Bu sistem, özellikle organizasyonların güvenlik önceliklerini belirlerken da
 ![image](https://github.com/user-attachments/assets/661dcaa1-81d3-4261-b58a-34644e9b83f1)
 
 Sonuç olarak, CWE yazılım güvenliğini iyileştirmek için yaygın olarak kullanılan bir referans kaynağıdır ve organizasyonların güvenlik açıklarına karşı daha etkili stratejiler geliştirmelerine yardımcı olur.
-
-## API Security 
-
-![image](https://github.com/user-attachments/assets/93c3ac8d-36fc-42fc-904a-d057e635d388)
-
-![image](https://github.com/user-attachments/assets/774c3336-d459-4ce1-a1e1-0e6d441a5e89)
-
-![image](https://github.com/user-attachments/assets/7ff03d76-7808-4b0e-ba03-e6f9f16fdde5)
-
-![image](https://github.com/user-attachments/assets/3664afe0-1f85-4458-a8b9-01b9fd70b807)
-
-API güvenliği, web uygulamaları ve hizmetler için kritik öneme sahiptir. 
-API'lerin doğru bir şekilde güvence altına alınması, verilerin güvenliğini ve uygulamaların bütünlüğünü korumak için gereklidir. 
-API güvenliğine yönelik doğru önlemleri almak, uygulama sahiplerinin güvenlik açıklarını en aza indirmelerine yardımcı olur ve kötüye kullanımı engeller.
-
-## CSP (Content Security Policy)
-
-Content Security Policy (CSP), web uygulamalarında güvenlik önlemleri sağlamak amacıyla kullanılan bir güvenlik standardıdır. 
-CSP, web sayfalarına eklenen içeriklerin nerelerden yükleneceğini kontrol eden bir politikadır ve potansiyel Cross-Site Scripting (XSS) ve data injection saldırılarını önlemeye yardımcı olur. 
-Bu, zararlı içeriklerin kullanıcıların tarayıcılarında çalışmasını engelleyerek, özellikle kötü niyetli JavaScript kodlarının çalıştırılmasını engellemeyi amaçlar.
-
-![image](https://github.com/user-attachments/assets/39154a3d-017a-45bf-bc49-c3d67f3a178c)
-
-CSP'nin Çalışma Prensibi:
-
-CSP, HTTP başlıkları (HTTP headers) aracılığıyla veya HTML sayfasına eklenen bir <meta> etiketiyle belirlenebilir. 
-Bu politika, tarayıcılara hangi kaynaklardan içerik yükleyebileceğini ve hangi tür içeriklerin engelleneceğini bildirir.
-
-CSP başlığı şu şekilde olabilir:
-
-![image](https://github.com/user-attachments/assets/044b651d-9fdf-4857-b570-159cc6ad2880)
-
-![image](https://github.com/user-attachments/assets/5b779357-e295-492c-84ea-604791ca7a61)
-
-![image](https://github.com/user-attachments/assets/c5271d81-10ce-4c62-829d-251460cf8d62)
-
-![image](https://github.com/user-attachments/assets/7ddd1a74-81ed-4205-98d7-4f7cfa864e45)
-
-![image](https://github.com/user-attachments/assets/48b30add-b211-4f8e-9658-8ec9637e7b20)
-
-Content Security Policy (CSP), web uygulamalarındaki güvenliği artırmak için etkili bir araçtır. 
-Web geliştiricileri, CSP'yi doğru şekilde yapılandırarak XSS ve veri enjeksiyon saldırılarına karşı önemli bir koruma sağlayabilirler. 
-Ancak, CSP'yi uygularken dikkatli bir planlama ve test süreci gereklidir, çünkü yanlış yapılandırmalar, sayfa işlevselliğini olumsuz etkileyebilir.
-
-## SSRF (Server Side Request Forgery)
-
-Server Side Request Forgery (SSRF), bir güvenlik açığı türüdür ve kötü niyetli bir saldırganın, 
-hedef sunucunun yerine başka bir sunucuya istek (request) göndermesini sağlar. 
-Bu saldırı türü, genellikle web uygulamalarında, dışa açık API'lere veya diğer internet servislerine yapılan isteklerin 
-doğrulama ve kontrol edilmeden doğrudan sunucudan yapılabilmesine olanak tanır.
-
-![image](https://github.com/user-attachments/assets/3f5b8e48-1d70-4e6c-b99d-b3bc9cb67b33)
-
-![image](https://github.com/user-attachments/assets/76562f4b-2608-4fa0-9b0d-76a8a6efc6c5)
-
-![image](https://github.com/user-attachments/assets/50105604-4d4e-42ef-97ef-a6bc22103b5c)
-
-![image](https://github.com/user-attachments/assets/9600b55d-f487-4b64-a34f-81431bc13b18)
-
-![image](https://github.com/user-attachments/assets/228edbfd-8ede-43a2-b6cb-e720bd5c2d95)
-
-![image](https://github.com/user-attachments/assets/cdfcf2d4-7d13-4db8-974a-067bf33ef746)
-
-SSRF, web uygulamaları için ciddi bir güvenlik açığı olabilir. Saldırganlar, uygulama üzerinden sunucuya istek göndererek, 
-iç ağdaki hassas verilere veya servislerine erişim sağlayabilirler. Bu tür saldırılara karşı korunmak için doğru güvenlik önlemleri, 
-girdi doğrulama ve ağ segmentasyonu gibi yöntemlerle uygulamalar güvence altına alınabilir.
 
 ## Vulnerability Management
 
@@ -399,99 +413,6 @@ Bu komutlar SQL dilinin temelini oluşturur. Hangi işlemi yapmak istediğinize 
 
 -> TCL ile işlemler yönetilir.
 
-## Insecure Design
-
-Insecure Design, bir yazılımın veya sistemin daha tasarım aşamasında güvenlik göz önünde bulundurulmadan geliştirilmesi anlamına gelir. 
-Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güvenlik önlemlerini istismar etmesine olanak tanır.
-
-![image](https://github.com/user-attachments/assets/dfff27b7-99dd-4268-ab7e-b109e155b20c)
-
-![image](https://github.com/user-attachments/assets/6431bec9-9526-4a68-beaf-a4508cbe7e7a)
-
-![image](https://github.com/user-attachments/assets/8b34365a-5833-4384-b048-15d45ca9b064)
-
-## Security Misconfiguration
-
-Sistemlerin, uygulamaların veya altyapının güvenlik açısından hatalı yapılandırılması nedeniyle oluşan güvenlik açıklarını ifade eder. 
-OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırılmış güvenlik ayarları nedeniyle saldırganların sistemlere yetkisiz erişim sağlamasına neden olabilir.
-
-![image](https://github.com/user-attachments/assets/c85748c9-3618-466d-9d84-b40564038f1b)
-
-![image](https://github.com/user-attachments/assets/57649632-766c-4262-ad2e-41853a33c458)
-
-![image](https://github.com/user-attachments/assets/91f8fefd-be04-4555-81d3-2a2b35c201e2)
-
-## Vulnerable and Outdated
-
-Vulnerable and Outdated Components, eski veya güvenlik açıkları barındıran yazılım bileşenlerinin (kütüphaneler, çerçeveler, bağımlılıklar, işletim sistemleri vb.) kullanılmasıyla ortaya çıkan bir güvenlik riskidir. 
-OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik zafiyetlerinden yararlanmasına neden olur.
-
-![image](https://github.com/user-attachments/assets/aa51eb6d-5506-4e6c-96da-d6815ec2744c)
-
-![image](https://github.com/user-attachments/assets/bc4be668-c579-4a06-a6e0-665781a386e9)
-
-![image](https://github.com/user-attachments/assets/d42e0f55-94df-4241-8caf-0ac8db206612)
-
-## Identification and Authentication Failures
-
-Identification and Authentication Failures, bir sistemin kullanıcıları tanımlama (identification) ve kimlik doğrulama (authentication) sürecinde zayıflıkları olduğu anlamına gelir.
-
-Bu tür hatalar, hassas verilere yetkisiz erişime yol açabilir ve saldırganların sistemleri atlatmasına neden olabilir.
-
-![image](https://github.com/user-attachments/assets/f2e78c8e-4e2a-410d-a2c9-75f8f8730c2f)
-
-![image](https://github.com/user-attachments/assets/58c82d84-7236-4cb7-8548-bacc0e6733e0)
-
-![image](https://github.com/user-attachments/assets/536bf514-f37e-4d94-aeb1-5ca3eb40ea20)
-
-## MFA (Multi-Factor Authentication)
-
-Multi-Factor Authentication (Çok Faktörlü Kimlik Doğrulama, MFA), bir kullanıcının kimliğini doğrulamak için birden fazla güvenlik katmanının kullanıldığı bir kimlik doğrulama yöntemidir.
-
-Bu, yalnızca kullanıcı adı ve şifreyle giriş yapmak yerine, ek bir doğrulama adımı ekleyerek güvenliği artırır.
-
-![image](https://github.com/user-attachments/assets/4d42736c-da4e-4f7e-a9e7-e68acda6412b)
-
-![image](https://github.com/user-attachments/assets/87319b70-b27f-42b7-bdcd-84730d065bf6)
-
-![image](https://github.com/user-attachments/assets/41d4cfe9-7d09-4a53-8ff0-e018beb0388e)
-
-![image](https://github.com/user-attachments/assets/81bc8d30-a9cd-4a7e-827d-4bfbbdc408e1)
-
-![image](https://github.com/user-attachments/assets/b35d76a6-ca13-49b4-9871-63014db417ed)
-
-## Software and Data Integrity Failures
-
-Software and Data Integrity Failures, bir uygulamanın güncellemeler, kod bütünlüğü ve hassas veriler üzerinde yeterli güvenlik kontrollerini sağlamaması nedeniyle meydana gelen güvenlik açıklarıdır.
-
-Bu tür hatalar, kodun veya verinin yetkisiz şekilde değiştirilmesine veya manipüle edilmesine izin verebilir, bu da zararlı yazılımların sisteme sızmasına veya verilerin değiştirilmesine yol açabilir.
-
-![image](https://github.com/user-attachments/assets/a7a87804-8700-4b21-860c-6ef3b8826f93)
-
-![image](https://github.com/user-attachments/assets/60202b68-94e7-404f-8421-bb8000ed66fa)
-
-![image](https://github.com/user-attachments/assets/89a860d5-557c-4f80-b3f9-fe5d378ca645)
-
-![image](https://github.com/user-attachments/assets/bf4d9040-8efc-4d16-a06a-5c03652c2b33)
-
-![image](https://github.com/user-attachments/assets/db868845-bef8-4673-b80e-459a2d8171c6)
-
-## Security Logging and Monitoring Failures
-
-Security Logging and Monitoring Failures, bir sistemin güvenlik olaylarını yeterince kaydetmemesi, analiz etmemesi veya saldırıları zamanında tespit edememesi nedeniyle oluşan güvenlik açıklarıdır.
-
-Eğer güvenlik günlükleri doğru tutulmaz veya izlenmezse, saldırganlar sisteminize sızabilir ve bunu uzun süre fark etmeyebilirsiniz. Bu da saldırganların izlerini gizlemesine ve daha fazla zarar vermesine yol açabilir.
-
-![image](https://github.com/user-attachments/assets/0ebfad42-430b-49e8-8c3a-4f57b46fc713)
-
-![image](https://github.com/user-attachments/assets/5362af56-1ce9-4efc-a199-2c85b3c8b891)
-
-![image](https://github.com/user-attachments/assets/d3fb848d-9496-4c71-87cc-2c4da2102a00)
-
-![image](https://github.com/user-attachments/assets/ea7aaff9-ff35-4e04-ae54-00acc99fbae9)
-
-![image](https://github.com/user-attachments/assets/6d5d33d1-cd3d-424e-959f-e6e177cc70d4)
-
 ## XSS (Cross-Site Scripting)
 
 XSS (Cross-Site Scripting), web uygulamalarında bir güvenlik açığı türüdür. Bu açık, saldırganların kötü amaçlı JavaScript kodlarını, güvenli olarak görünen web sayfalarına enjekte etmesine olanak tanır. Bu şekilde saldırganlar, web sitesi kullanıcılarının tarayıcılarında zararlı kod çalıştırabilirler.
@@ -524,293 +445,105 @@ XSS, genellikle kullanıcı tarafından sağlanan verilerin doğru şekilde doğ
 
 ![image](https://github.com/user-attachments/assets/656afb3a-519c-4d1a-be8b-2556783a35a2)
 
-## Supply Chain Security
+## SSRF (Server Side Request Forgery)
 
-Supply Chain Security (Tedarik Zinciri Güvenliği), bir ürünün veya hizmetin üretiminden son kullanıcıya ulaşana kadar geçen süreçte karşılaşabileceği tehditleri minimize etmek için alınan önlemleri ifade eder. Bu güvenlik önlemleri, fiziksel güvenlikten siber güvenliğe kadar geniş bir alanı kapsar.
+Server Side Request Forgery (SSRF), bir güvenlik açığı türüdür ve kötü niyetli bir saldırganın, 
+hedef sunucunun yerine başka bir sunucuya istek (request) göndermesini sağlar. 
+Bu saldırı türü, genellikle web uygulamalarında, dışa açık API'lere veya diğer internet servislerine yapılan isteklerin 
+doğrulama ve kontrol edilmeden doğrudan sunucudan yapılabilmesine olanak tanır.
 
-![image](https://github.com/user-attachments/assets/5155b617-8742-4f80-ba77-c351f916971c)
+![image](https://github.com/user-attachments/assets/3f5b8e48-1d70-4e6c-b99d-b3bc9cb67b33)
 
-![image](https://github.com/user-attachments/assets/2abc7b79-d06b-4c61-ab4a-8d471f9f484b)
+![image](https://github.com/user-attachments/assets/76562f4b-2608-4fa0-9b0d-76a8a6efc6c5)
 
-![image](https://github.com/user-attachments/assets/0a3c876b-abfb-497d-aba5-cca64cad0408)
+![image](https://github.com/user-attachments/assets/50105604-4d4e-42ef-97ef-a6bc22103b5c)
 
-## Supply Chain Defenses
+![image](https://github.com/user-attachments/assets/9600b55d-f487-4b64-a34f-81431bc13b18)
 
-Supply Chain Defenses, tedarik zincirindeki güvenlik tehditlerine karşı alınan önlemler ve uygulanan stratejiler bütünüdür.
+![image](https://github.com/user-attachments/assets/228edbfd-8ede-43a2-b6cb-e720bd5c2d95)
 
-![image](https://github.com/user-attachments/assets/dad2b589-8609-4071-8cb6-21bd2ac92dfe)
+![image](https://github.com/user-attachments/assets/cdfcf2d4-7d13-4db8-974a-067bf33ef746)
 
-![image](https://github.com/user-attachments/assets/375d2a59-08b0-4c46-9c5a-fca7669eb263)
+SSRF, web uygulamaları için ciddi bir güvenlik açığı olabilir. Saldırganlar, uygulama üzerinden sunucuya istek göndererek, 
+iç ağdaki hassas verilere veya servislerine erişim sağlayabilirler. Bu tür saldırılara karşı korunmak için doğru güvenlik önlemleri, 
+girdi doğrulama ve ağ segmentasyonu gibi yöntemlerle uygulamalar güvence altına alınabilir.
 
-## SCA (Software Composition Analysis)
+## Security Misconfiguration
 
-Software Composition Analysis (SCA), yazılımlarda kullanılan açık kaynak kodlu (open-source) ve üçüncü taraf bileşenlerin analiz edilerek güvenlik açıklarının, lisans uyumluluğunun ve olası risklerin belirlenmesini sağlayan bir süreçtir.
+Sistemlerin, uygulamaların veya altyapının güvenlik açısından hatalı yapılandırılması nedeniyle oluşan güvenlik açıklarını ifade eder. 
+OWASP Top 10 listesinde yer alan bu güvenlik açığı, yanlış yapılandırılmış güvenlik ayarları nedeniyle saldırganların sistemlere yetkisiz erişim sağlamasına neden olabilir.
 
-Günümüzde çoğu yazılım, farklı kütüphaneler, çerçeveler (frameworks) ve bağımlılıklar içerir. SCA araçları, bu bileşenleri analiz ederek bilinen güvenlik açıklarını (CVE - Common Vulnerabilities and Exposures), lisans ihlallerini ve güncellenmemiş bağımlılıkları tespit eder.
+![image](https://github.com/user-attachments/assets/c85748c9-3618-466d-9d84-b40564038f1b)
 
-![image](https://github.com/user-attachments/assets/745ad731-a96c-4315-a2fa-f0c77b60d890)
+![image](https://github.com/user-attachments/assets/57649632-766c-4262-ad2e-41853a33c458)
 
-![image](https://github.com/user-attachments/assets/b5d287ea-8f7a-423c-805a-af877999b6a6)
+![image](https://github.com/user-attachments/assets/91f8fefd-be04-4555-81d3-2a2b35c201e2)
 
-![image](https://github.com/user-attachments/assets/6726fae2-241f-4bb2-abc5-8f11ecf11db7)
+## Insecure Design
 
-![image](https://github.com/user-attachments/assets/67ff51ef-b382-4d1d-bdb1-ca290ff5c02d)
+Insecure Design, bir yazılımın veya sistemin daha tasarım aşamasında güvenlik göz önünde bulundurulmadan geliştirilmesi anlamına gelir. 
+Bu durum, saldırganların uygulamadaki mantıksal açıkları veya zayıf güvenlik önlemlerini istismar etmesine olanak tanır.
 
-## SLSA (Supply Chain Levels for Software Artifacts)
+![image](https://github.com/user-attachments/assets/dfff27b7-99dd-4268-ab7e-b109e155b20c)
 
-SLSA (Supply Chain Levels for Software Artifacts), yazılım tedarik zincirini daha güvenli hale getirmek için Google tarafından başlatılan ve OpenSSF (Open Source Security Foundation) tarafından desteklenen bir çerçevedir.
+![image](https://github.com/user-attachments/assets/6431bec9-9526-4a68-beaf-a4508cbe7e7a)
 
-SLSA, yazılım geliştirme süreçlerinde güvenliği artırmayı ve tedarik zinciri saldırılarını önlemeyi amaçlayan bir güvenlik standardıdır. SolarWinds ve Log4j gibi yazılım tedarik zinciri saldırıları sonrasında, yazılım bileşenlerinin güvenilir ve izlenebilir olmasını sağlamak için geliştirilmiştir.
+![image](https://github.com/user-attachments/assets/8b34365a-5833-4384-b048-15d45ca9b064)
 
-![image](https://github.com/user-attachments/assets/c60aaa39-2cbd-4f45-ab20-7e9ff0560723)
+## Vulnerable and Outdated
 
-![image](https://github.com/user-attachments/assets/3a1d011b-88e8-4634-bea6-a4861d4db454)
+Vulnerable and Outdated Components, eski veya güvenlik açıkları barındıran yazılım bileşenlerinin (kütüphaneler, çerçeveler, bağımlılıklar, işletim sistemleri vb.) kullanılmasıyla ortaya çıkan bir güvenlik riskidir. 
+OWASP Top 10 listesinde yer alan bu açık, saldırganların bilinen güvenlik zafiyetlerinden yararlanmasına neden olur.
 
-![image](https://github.com/user-attachments/assets/8969af46-6cbf-4405-b4e8-b105050f66e2)
+![image](https://github.com/user-attachments/assets/aa51eb6d-5506-4e6c-96da-d6815ec2744c)
 
-![image](https://github.com/user-attachments/assets/a23a1576-3893-4b5d-88bb-16a1a9b51793)
+![image](https://github.com/user-attachments/assets/bc4be668-c579-4a06-a6e0-665781a386e9)
 
-![image](https://github.com/user-attachments/assets/35c293b0-18f6-4c0f-914d-e970acbb1918)
+![image](https://github.com/user-attachments/assets/d42e0f55-94df-4241-8caf-0ac8db206612)
 
-![image](https://github.com/user-attachments/assets/5c9e17fb-5014-44bb-8dc1-fb9201ca212a)
+## Identification and Authentication Failures
 
-SLSA, yazılım tedarik zinciri saldırılarını önlemek için geliştirilen katmanlı bir güvenlik çerçevesidir. Kuruluşların yazılım geliştirme süreçlerini daha güvenli, izlenebilir ve şeffaf hale getirmelerine yardımcı olur. Özellikle açık kaynak ve kurumsal yazılım geliştirme süreçlerinde büyük bir öneme sahiptir.
+Identification and Authentication Failures, bir sistemin kullanıcıları tanımlama (identification) ve kimlik doğrulama (authentication) sürecinde zayıflıkları olduğu anlamına gelir.
 
-## SBOM (Software Bill of Materials)
+Bu tür hatalar, hassas verilere yetkisiz erişime yol açabilir ve saldırganların sistemleri atlatmasına neden olabilir.
 
-SBOM (Software Bill of Materials), bir yazılımın içinde yer alan tüm bileşenlerin, bağımlılıkların ve ilişkili meta verilerin detaylı bir listesidir.
+![image](https://github.com/user-attachments/assets/f2e78c8e-4e2a-410d-a2c9-75f8f8730c2f)
 
-SBOM, bir yazılımın hangi açık kaynak veya üçüncü taraf bileşenleri içerdiğini ve bunların sürüm bilgilerini, lisans türlerini ve güvenlik açıklarını tespit etmeye yardımcı olur.
+![image](https://github.com/user-attachments/assets/58c82d84-7236-4cb7-8548-bacc0e6733e0)
 
-![image](https://github.com/user-attachments/assets/c6fc8da9-c3fc-481e-909a-132add8081d6)
+![image](https://github.com/user-attachments/assets/536bf514-f37e-4d94-aeb1-5ca3eb40ea20)
 
-![image](https://github.com/user-attachments/assets/2ff59925-b3bf-443c-85ad-fed872aa2c0e)
+## Software and Data Integrity Failures
 
-![image](https://github.com/user-attachments/assets/f81fe828-b8b5-446d-9ee8-2e1f4f134f37)
+Software and Data Integrity Failures, bir uygulamanın güncellemeler, kod bütünlüğü ve hassas veriler üzerinde yeterli güvenlik kontrollerini sağlamaması nedeniyle meydana gelen güvenlik açıklarıdır.
 
-![image](https://github.com/user-attachments/assets/bfa5acf6-8fd7-4de3-99fb-b442834a9708)
+Bu tür hatalar, kodun veya verinin yetkisiz şekilde değiştirilmesine veya manipüle edilmesine izin verebilir, bu da zararlı yazılımların sisteme sızmasına veya verilerin değiştirilmesine yol açabilir.
 
-![image](https://github.com/user-attachments/assets/58af0ac5-0be1-4bc2-9c6b-170348b1842c)
+![image](https://github.com/user-attachments/assets/a7a87804-8700-4b21-860c-6ef3b8826f93)
 
-## Dependency-Track ve CycloneDX
+![image](https://github.com/user-attachments/assets/60202b68-94e7-404f-8421-bb8000ed66fa)
 
-Dependency-Track, yazılım bileşenlerini yönetmek ve güvenlik açıklarını izlemek için kullanılan açık kaynaklı bir yazılım güvenliği platformudur.
+![image](https://github.com/user-attachments/assets/89a860d5-557c-4f80-b3f9-fe5d378ca645)
 
-![image](https://github.com/user-attachments/assets/f115eb90-8a98-44da-a19c-811ae08112d6)
+![image](https://github.com/user-attachments/assets/bf4d9040-8efc-4d16-a06a-5c03652c2b33)
 
-Dependency-Track, OWASP (Open Web Application Security Project) tarafından geliştirilmiştir ve özellikle büyük ölçekli yazılım projelerinde güvenlik açıklarını yönetmek için kullanılır.
+![image](https://github.com/user-attachments/assets/db868845-bef8-4673-b80e-459a2d8171c6)
 
-![image](https://github.com/user-attachments/assets/1b4d5723-9d26-4cc9-8944-7c0560cb29cc)
+## Security Logging and Monitoring Failures
 
-![image](https://github.com/user-attachments/assets/15d4ac94-3701-499c-96b0-1a503b5d9089)
+Security Logging and Monitoring Failures, bir sistemin güvenlik olaylarını yeterince kaydetmemesi, analiz etmemesi veya saldırıları zamanında tespit edememesi nedeniyle oluşan güvenlik açıklarıdır.
 
-## CycloneDX
+Eğer güvenlik günlükleri doğru tutulmaz veya izlenmezse, saldırganlar sisteminize sızabilir ve bunu uzun süre fark etmeyebilirsiniz. Bu da saldırganların izlerini gizlemesine ve daha fazla zarar vermesine yol açabilir.
 
-CycloneDX, SBOM (Software Bill of Materials) oluşturmak için kullanılan bir açık standarttır. Dependency-Track ve birçok güvenlik aracı, CycloneDX formatını destekler.
+![image](https://github.com/user-attachments/assets/0ebfad42-430b-49e8-8c3a-4f57b46fc713)
 
-![image](https://github.com/user-attachments/assets/edfae067-bd2c-4f92-9faf-aad2c60e0ac6)
+![image](https://github.com/user-attachments/assets/5362af56-1ce9-4efc-a199-2c85b3c8b891)
 
-![image](https://github.com/user-attachments/assets/8050c34e-9060-479e-a588-41ee8b5f7c16)
+![image](https://github.com/user-attachments/assets/d3fb848d-9496-4c71-87cc-2c4da2102a00)
 
-![image](https://github.com/user-attachments/assets/95a585e3-15d7-4540-b9e3-d00634812e3f)
+![image](https://github.com/user-attachments/assets/ea7aaff9-ff35-4e04-ae54-00acc99fbae9)
 
-![image](https://github.com/user-attachments/assets/c4428ebc-dd2c-4216-a97b-96b22dd354b4)
-
-![image](https://github.com/user-attachments/assets/7921de42-5ef7-4d68-b570-3f0585003385)
-
-![image](https://github.com/user-attachments/assets/8463338a-c6d3-4a9e-8ccd-cbe797bf508c)
-
-## Cloud and Container Security 
-
-Cloud security, bulut ortamlarında verilerin, uygulamaların ve altyapının korunmasını sağlayan süreçler, teknolojiler ve politikaları kapsar. Bulut güvenliği, public (genel), private (özel) ve hybrid (karma) bulut ortamlarında verilerin gizliliğini, bütünlüğünü ve erişilebilirliğini sağlamayı hedefler.
-
-![image](https://github.com/user-attachments/assets/60920249-b171-4a30-b067-e8abe3ce1eb1)
-
-Container security, Docker, Kubernetes gibi container teknolojilerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan teknikler ve araçlardan oluşur. Konteyner güvenliği, uygulamaların izolasyonunu, ağ trafiğini, güvenlik açıklarını ve çalışma zamanındaki tehditleri yönetmeyi hedefler.
-
-![image](https://github.com/user-attachments/assets/7c4aab1f-0c23-4f6f-96e7-8e58e77586ba)
-
-![image](https://github.com/user-attachments/assets/436c5372-19f6-40e3-bc67-e6271672148d)
-
-## AWS Well-Architected Framework
-
-AWS Well-Architected Framework, AWS üzerinde güvenli, yüksek performanslı, dayanıklı ve verimli sistemler tasarlamak için en iyi uygulamaları ve prensipleri belirleyen bir kılavuzdur. AWS, bu framework'ü kullanarak sistem mimarilerinin güçlü ve sürdürülebilir olmasını sağlar.
-
-![image](https://github.com/user-attachments/assets/c16a53bb-a628-4879-8763-479fe0d49d14)
-
-![image](https://github.com/user-attachments/assets/cca16985-54c6-4721-88bb-e877d5faf589)
-
-Well-Architected Review:
-
-AWS, sistemlerin Well-Architected Framework prensiplerine uygun olup olmadığını değerlendirmek için Well-Architected Review adında bir inceleme süreci sunar. Bu inceleme sayesinde güvenlik açıkları, maliyet optimizasyonu fırsatları ve performans iyileştirmeleri belirlenebilir.
-
-## AWS Identity and Access Management
-
-AWS Identity and Access Management (IAM), AWS kaynaklarına güvenli erişimi yönetmek için kullanılan bir hizmettir. IAM, kimin (kimlik) hangi kaynaklara (S3, EC2, RDS, Lambda vb.) nasıl erişebileceğini belirlemeye yardımcı olur.
-
-![image](https://github.com/user-attachments/assets/ac3886f5-683b-477d-bc5b-e3b798e23799)
-
-![image](https://github.com/user-attachments/assets/d328b7e2-1b81-4f00-a9b1-4eca1ce87cab)
-
-![image](https://github.com/user-attachments/assets/5de478b0-0fa4-48a3-a478-544a7d94942f)
-
-## AWS Detection Controls
-
-AWS Detection Controls (Algılama Kontrolleri), AWS ortamında güvenlik tehditlerini tespit etmek ve izlemek için kullanılan araçlar, hizmetler ve mekanizmalardır. Bu kontroller, AWS Well-Architected Framework’ün Security Pillar (Güvenlik İlkesi) kapsamında kritik bir bileşendir ve güvenlik ihlallerini erken tespit edip yanıt vermeye yardımcı olur.
-
-![image](https://github.com/user-attachments/assets/3adf59c7-b3b8-4076-9bf3-0537fb0bbbc6)
-
-![image](https://github.com/user-attachments/assets/23d1d1f7-f51c-405a-9242-1fd1de618bde)
-
-![image](https://github.com/user-attachments/assets/96c3981d-9ca7-46d9-946d-ad177654a7d4)
-
-AWS Detection Controls, sisteminizdeki güvenlik tehditlerini proaktif olarak izleyip algılamaya yardımcı olur ve erken müdahale edilmesini sağlar. AWS ortamında güvenliği artırmak ve uyumluluğu sağlamak için bu araçları kullanmak önemlidir! 🚀
-
-## AWS Infrastructure
-
-AWS Infrastructure (Altyapısı), Amazon Web Services’in küresel çapta sunduğu veri merkezleri, ağ bağlantıları, güvenlik katmanları ve hizmetlerden oluşan fiziksel ve sanal yapıdır. AWS altyapısı, yüksek erişilebilirlik, ölçeklenebilirlik ve güvenlik sağlayacak şekilde tasarlanmıştır.
-
-![image](https://github.com/user-attachments/assets/bb6a3817-1977-44ac-addf-cff19813f5a2)
-
-![image](https://github.com/user-attachments/assets/263032b0-7602-4c39-be36-5c9df6997be2)
-
-![image](https://github.com/user-attachments/assets/96902f7b-208e-414d-8b5e-95b0a7db09d2)
-
-AWS Infrastructure (Altyapısı), dünya çapında güçlü bir veri merkezi ağı, yüksek performanslı sunucular, güvenli ağ bağlantıları ve ölçeklenebilir hizmetler sunarak modern uygulamaların güvenli, hızlı ve verimli bir şekilde çalışmasını sağlar. 🚀
-
-## AWS Data Protection
-
-AWS Data Protection (Veri Koruma), AWS üzerindeki verilerin güvenliğini sağlamak, yetkisiz erişimleri önlemek ve veri kaybına karşı önlem almak için kullanılan güvenlik mekanizmalarını ifade eder. Veri şifreleme, erişim kontrolleri, yedekleme ve izleme gibi birçok güvenlik hizmetini içerir.
-
-![image](https://github.com/user-attachments/assets/e99e0bac-1a05-4dc1-b6bb-a47444370296)
-
-![image](https://github.com/user-attachments/assets/fb653d67-e446-4749-9f3a-eef8a3d6c594)
-
-![image](https://github.com/user-attachments/assets/4a1d14f8-e530-4646-8bca-d30f844c4b89)
-
-![image](https://github.com/user-attachments/assets/de4ed677-6157-49b6-ac79-81c9f2e2b415)
-
-AWS Data Protection, verilerin şifrelenmesi, yetkisiz erişime karşı korunması, yedeklenmesi ve sürekli izlenmesi için AWS’in sunduğu güvenlik çözümlerini kapsar. Doğru araçları kullanarak güvenliği artırabilir ve uyumluluk gereksinimlerini karşılayabilirsiniz. 🚀
-
-## AWS Incident Response
-
-AWS Incident Response (Olay Müdahale), AWS ortamında meydana gelen güvenlik olaylarını tespit etme, müdahale etme ve olayın etkilerini azaltma sürecidir. Bu süreç, tehditlerin tespiti, analiz edilmesi, olayın etkisinin en aza indirilmesi ve gelecekte benzer olayların önlenmesi için uygulanan bir dizi en iyi uygulamayı içerir.
-
-![image](https://github.com/user-attachments/assets/7c1e33e0-5943-4f6d-8050-6fc0584a18be)
-
-![image](https://github.com/user-attachments/assets/a397c952-1702-40cd-861f-874f76dd2f4e)
-
-![image](https://github.com/user-attachments/assets/2348e622-10c6-4bcc-9dfc-f6381469e23a)
-
-![image](https://github.com/user-attachments/assets/103db8d5-5a2a-41d5-94a9-2966ddf2b342)
-
-![image](https://github.com/user-attachments/assets/7094b8a2-a30b-4b74-8196-5d960cf19b6c)
-
-![image](https://github.com/user-attachments/assets/fa947135-349a-43b8-9a51-2f40875b5f28)
-
-![image](https://github.com/user-attachments/assets/09b5060f-b61b-4d4c-9660-2ce25f0efbef)
-
-![image](https://github.com/user-attachments/assets/6dee7100-c6fc-4481-951a-bb29d0d40c9f)
-
-AWS Incident Response, bir güvenlik olayı meydana geldiğinde hızlı müdahale etmek ve hasarı en aza indirmek için uygulanması gereken süreçleri kapsar. Güçlü bir izleme ve uyarı mekanizması ile güvenlik tehditlerine karşı proaktif olunabilir. 🚀
-
-## AWS Application Security
-
-AWS Application Security, AWS üzerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan araçları, en iyi uygulamaları ve güvenlik hizmetlerini kapsar. Uygulama katmanındaki güvenlik açıklarını tespit etmek, yetkisiz erişimleri önlemek, verileri korumak ve saldırılara karşı savunma mekanizmaları oluşturmak için çeşitli AWS hizmetleri ve stratejileri kullanılır.
-
-![image](https://github.com/user-attachments/assets/a93d4714-fd26-4e9c-bb6b-18906faa8464)
-
-![image](https://github.com/user-attachments/assets/3e127b40-8f32-4785-bad0-13dca48f760a)
-
-![image](https://github.com/user-attachments/assets/198f8b89-7b8f-4596-b08f-501fc67cf3c7)
-
-![image](https://github.com/user-attachments/assets/e8f4fb75-cc2d-4498-ad50-14455f1533fd)
-
-![image](https://github.com/user-attachments/assets/fe2a31d9-57af-4ccc-9747-ac285f7dd8dd)
-
-![image](https://github.com/user-attachments/assets/f18402d8-cc6b-4524-a442-21be3f8260d1)
-
-![image](https://github.com/user-attachments/assets/031304a3-2018-47bb-a428-c3e55ccca8af)
-
-![image](https://github.com/user-attachments/assets/87739948-4031-4bf0-98a8-bce2daf5d99b)
-
-AWS Application Security, uygulamalarınızı hacker saldırılarından, yetkisiz erişimlerden, veri sızıntılarından ve DDoS saldırılarından korumak için kapsamlı güvenlik çözümleri sunar. IAM, WAF, KMS, API Gateway ve CloudTrail gibi AWS servisleri kullanılarak uygulamalarınızın güvenliği en üst seviyeye çıkarılabilir. 🚀
-
-## Container Security
-
-Container Security, konteyner tabanlı uygulamaların güvenliğini sağlamak için kullanılan yöntem, araç ve en iyi uygulamaların bütünüdür. Konteynerler, Docker, Kubernetes (K8s) ve AWS ECS/EKS gibi platformlar üzerinde çalışırken güvenlik açıkları oluşturabilir. Bu nedenle, görüntü güvenliği, çalışma zamanı koruması, ağ güvenliği ve erişim kontrolü gibi önlemler alınmalıdır.
-
-![image](https://github.com/user-attachments/assets/383ae4ac-6b32-4207-9801-74ffaee4b030)
-
-![image](https://github.com/user-attachments/assets/46a1ad8c-0157-480c-950a-4efec9d3a52c)
-
-![image](https://github.com/user-attachments/assets/141b90c2-f87b-4133-bc30-d627b77ccdb7)
-
-![image](https://github.com/user-attachments/assets/5d776d3f-91de-46e0-9b9e-db079b880d9a)
-
-![image](https://github.com/user-attachments/assets/dde94bda-a8e5-4fdd-8ff0-e019f96c001b)
-
-![image](https://github.com/user-attachments/assets/abd4a9c1-9e6e-48f3-ab0d-2ce3e0ac7486)
-
-![image](https://github.com/user-attachments/assets/9564b5ad-40c8-4581-91e2-11e434e92d78)
-
-![image](https://github.com/user-attachments/assets/7b77cf00-c4da-4599-b7ea-771e8cf095c5)
-
-AWS Container Security, Docker, Kubernetes ve AWS ECS/EKS gibi ortamları güvenli bir şekilde yönetmek için bir dizi en iyi uygulamayı ve hizmeti içerir. Image taraması, IAM politikaları, runtime güvenliği ve ağ güvenliği gibi önlemler alındığında, konteyner tabanlı uygulamalar saldırılara karşı daha dayanıklı hale gelir. 🔐🚀
-
-## CI/CD
-
-CI/CD (Continuous Integration & Continuous Deployment/Delivery), yazılım geliştirme sürecini otomatikleştirmek, hata oranını azaltmak ve hızlı bir şekilde yeni özellikleri canlıya almak için kullanılan modern bir yazılım geliştirme metodolojisidir.
-
-![image](https://github.com/user-attachments/assets/aad5a682-c803-497d-b488-aea9cff74edd)
-
-![image](https://github.com/user-attachments/assets/e3b3501e-8885-4105-a5a2-cd8f09f1c176)
-
-![image](https://github.com/user-attachments/assets/0b7654c4-2d1a-42de-8223-10a28cb24afc)
-
-![image](https://github.com/user-attachments/assets/0f547564-8099-421b-876d-9fd40ec0cd3f)
-
-![image](https://github.com/user-attachments/assets/33ecc9b3-a166-44da-b3b0-070edcd751aa)
-
-![image](https://github.com/user-attachments/assets/0fd23cc3-bf68-4afc-aeeb-3442919a5774)
-
-![image](https://github.com/user-attachments/assets/362e78a4-3c9a-4b9d-a503-af84f8f3751e)
-
-![image](https://github.com/user-attachments/assets/3fe5764d-c75c-4cc6-9667-3a6c7547885f)
-
-![image](https://github.com/user-attachments/assets/8171fb1e-52ef-4dcf-80e6-599d8ea4912b)
-
-## AWS - Azure - GCP
-
-AWS (Amazon Web Services), Azure ve GCP (Google Cloud Platform), bulut bilişim sağlayıcılarıdır ve her biri farklı hizmetler sunarak organizasyonların altyapılarını ve uygulamalarını bulut ortamına taşımasına olanak tanır. Bu sağlayıcılar, bulut tabanlı uygulamalar geliştirmek, verileri depolamak, analiz etmek ve güvenliğini sağlamak için çeşitli hizmetler sunmaktadır.
-
-![image](https://github.com/user-attachments/assets/92895261-7ce1-4f26-b3ab-307a92543703)
-
-![image](https://github.com/user-attachments/assets/2bbd0630-32bd-48f3-a8cb-aed1c75f22c6)
-
-![image](https://github.com/user-attachments/assets/8822d602-903d-4bda-99cc-6f9dd7692472)
-
-![image](https://github.com/user-attachments/assets/da57db4f-f45d-469c-963b-ad65069d545c)
-
-![image](https://github.com/user-attachments/assets/742a9492-4ca4-4231-b1e7-514c2433b3f9)
-
-## Session Management
-
-Session management, bir kullanıcının web uygulamasına giriş yaptıktan sonra, kullanıcı ile uygulama arasındaki etkileşimlerin yönetilmesi sürecidir. Bu, kullanıcının kimliğinin doğrulanmasından, her bir istek arasındaki durumu izlemeye kadar birçok işlemi kapsar. Session management, kullanıcının oturumunun açılması, sürdürülmesi ve kapatılması sırasında güvenliği sağlamayı amaçlar.
-
-![image](https://github.com/user-attachments/assets/dc1e5728-c76a-4863-9a3b-9b9781520381)
-
-Session management, uygulamaların güvenliğini sağlamak, kullanıcı verilerini korumak ve izinsiz erişimi engellemek için kritik öneme sahiptir. Özellikle kullanıcı kimlik doğrulaması, yetkilendirme, ve kullanıcı verilerinin korunması gibi konularda önemli rol oynar.
-
-## Web Session
-
-Web sessions, bir kullanıcının bir web uygulamasına erişim sağladığı süre boyunca, sunucu tarafından o kullanıcıya ait bilgilerin saklanması ve yönetilmesi sürecini ifade eder. Web uygulamaları, her kullanıcının giriş yaptıktan sonra etkileşimde bulunduğu sayfalar, veriler ve işlemleri takip etmek için bir oturum (session) kullanır.
-
-Web sessions, HTTP protokolünün stateless (durumsuz) doğasına karşılık gelir. Yani HTTP, her istek arasında kullanıcı durumunu saklamaz. Bu nedenle, web session'ları, kullanıcının etkileşimleri arasında durumu korumak için gereklidir.
-
-![image](https://github.com/user-attachments/assets/f9d27589-f75d-495f-9033-0486edcd946e)
-
-![image](https://github.com/user-attachments/assets/199eb017-5ce0-47df-8ba3-9458a43cfb4b)
+![image](https://github.com/user-attachments/assets/6d5d33d1-cd3d-424e-959f-e6e177cc70d4)
 
 ## JWT
 
@@ -932,233 +665,313 @@ Refresh Token:
 
 ![image](https://github.com/user-attachments/assets/ed07f925-2196-4e5b-ba97-3f7315d774a0)
 
-## Risk Rating - Basic Threat Modelling
+## Session Management
 
-Risk Rating ve Basic Threat Modelling güvenlik yönetimi ve risk değerlendirmesi açısından önemli kavramlardır. 
+Session management, bir kullanıcının web uygulamasına giriş yaptıktan sonra, kullanıcı ile uygulama arasındaki etkileşimlerin yönetilmesi sürecidir. Bu, kullanıcının kimliğinin doğrulanmasından, her bir istek arasındaki durumu izlemeye kadar birçok işlemi kapsar. Session management, kullanıcının oturumunun açılması, sürdürülmesi ve kapatılması sırasında güvenliği sağlamayı amaçlar.
 
-![image](https://github.com/user-attachments/assets/9839ebca-289e-46d2-8f8a-f29826f1f5d9)
+![image](https://github.com/user-attachments/assets/dc1e5728-c76a-4863-9a3b-9b9781520381)
 
-![image](https://github.com/user-attachments/assets/ce68ddf0-7583-40f7-92e8-a495fbf40404)
+Session management, uygulamaların güvenliğini sağlamak, kullanıcı verilerini korumak ve izinsiz erişimi engellemek için kritik öneme sahiptir. Özellikle kullanıcı kimlik doğrulaması, yetkilendirme, ve kullanıcı verilerinin korunması gibi konularda önemli rol oynar.
 
-Tehdit modelleme, genellikle güvenlik testleri, sızma testleri ve zafiyet değerlendirmeleriyle birlikte uygulanır ve sistemin potansiyel risklerini azaltmaya yönelik stratejiler oluşturur.
+## Web Session
 
-## Security Controls
+Web sessions, bir kullanıcının bir web uygulamasına erişim sağladığı süre boyunca, sunucu tarafından o kullanıcıya ait bilgilerin saklanması ve yönetilmesi sürecini ifade eder. Web uygulamaları, her kullanıcının giriş yaptıktan sonra etkileşimde bulunduğu sayfalar, veriler ve işlemleri takip etmek için bir oturum (session) kullanır.
 
-Security controls (Güvenlik Kontrolleri), bir organizasyonun bilgi güvenliğini sağlamak, tehditlere karşı korunmak ve riskleri azaltmak amacıyla uyguladığı politikalar, prosedürler, araçlar ve teknolojilerdir. Bu kontroller, sistemlerin, ağların ve verilerin güvenliğini sağlamaya yönelik çeşitli önlemler almayı içerir. Güvenlik kontrolleri, organizasyonların güvenlik açıklarını azaltmasına, veri sızıntılarını engellemesine ve yetkisiz erişimi önlemesine yardımcı olur.
+Web sessions, HTTP protokolünün stateless (durumsuz) doğasına karşılık gelir. Yani HTTP, her istek arasında kullanıcı durumunu saklamaz. Bu nedenle, web session'ları, kullanıcının etkileşimleri arasında durumu korumak için gereklidir.
 
-Security controls genellikle şu başlıklar altında sınıflandırılır:
+![image](https://github.com/user-attachments/assets/f9d27589-f75d-495f-9033-0486edcd946e)
 
-![image](https://github.com/user-attachments/assets/53570c69-00eb-457e-983b-22bfef44ecad)
+![image](https://github.com/user-attachments/assets/199eb017-5ce0-47df-8ba3-9458a43cfb4b)
 
-![image](https://github.com/user-attachments/assets/06e3702c-d665-4790-a423-b240f8274aec)
+## MFA (Multi-Factor Authentication)
 
-Güvenlik kontrolleri, organizasyonların siber güvenlik stratejilerini güçlendirmesine yardımcı olur ve potansiyel tehditlere karşı önceden hazırlıklı olmalarını sağlar.
+Multi-Factor Authentication (Çok Faktörlü Kimlik Doğrulama, MFA), bir kullanıcının kimliğini doğrulamak için birden fazla güvenlik katmanının kullanıldığı bir kimlik doğrulama yöntemidir.
 
-## Threat Modeling
+Bu, yalnızca kullanıcı adı ve şifreyle giriş yapmak yerine, ek bir doğrulama adımı ekleyerek güvenliği artırır.
 
-Threat modeling (Tehdit Modelleme), bir sistemin veya uygulamanın güvenliğini sağlamak amacıyla olası tehditleri ve zafiyetleri analiz etme sürecidir. Bu süreç, bir organizasyonun güvenlik açıklarını anlamasına, tehditleri tanımlamasına ve bu tehditlere karşı önleyici tedbirler geliştirmesine yardımcı olur. Threat modeling, güvenlik ihlallerini önceden belirlemeyi ve potansiyel risklere karşı çözüm üretmeyi amaçlar.
+![image](https://github.com/user-attachments/assets/4d42736c-da4e-4f7e-a9e7-e68acda6412b)
 
-![image](https://github.com/user-attachments/assets/e51735b3-0ab9-472d-bb30-b9c634de53e6)
+![image](https://github.com/user-attachments/assets/87319b70-b27f-42b7-bdcd-84730d065bf6)
 
-![image](https://github.com/user-attachments/assets/ad9f79b2-9fe3-4474-a306-14101e02a541)
+![image](https://github.com/user-attachments/assets/41d4cfe9-7d09-4a53-8ff0-e018beb0388e)
 
-![image](https://github.com/user-attachments/assets/1f48e8cb-0482-4e57-98c7-c8a9ff48249b)
+![image](https://github.com/user-attachments/assets/81bc8d30-a9cd-4a7e-827d-4bfbbdc408e1)
 
-Tehdit modelleme, güvenlik stratejilerinin temel bir parçasıdır ve organizasyonların saldırılara karşı daha güçlü ve dirençli olmasını sağlar.
+![image](https://github.com/user-attachments/assets/b35d76a6-ca13-49b4-9871-63014db417ed)
 
-## Microsoft Threat Modeling
+## Supply Chain Security
 
-Microsoft Threat Modeling veya Microsoft Threat Modeling Framework, Microsoft tarafından geliştirilen bir tehdit modelleme yaklaşımıdır. Yazılım geliştiricilere ve güvenlik uzmanlarına, sistemlerindeki potansiyel tehditleri belirleme, değerlendirme ve riskleri azaltma konusunda yardımcı olmak için tasarlanmıştır.
+Supply Chain Security (Tedarik Zinciri Güvenliği), bir ürünün veya hizmetin üretiminden son kullanıcıya ulaşana kadar geçen süreçte karşılaşabileceği tehditleri minimize etmek için alınan önlemleri ifade eder. Bu güvenlik önlemleri, fiziksel güvenlikten siber güvenliğe kadar geniş bir alanı kapsar.
 
-Microsoft Threat Modeling, özellikle STRIDE metodolojisini temel alarak tehditleri analiz eder ve bu tehditlere karşı uygun güvenlik önlemlerini belirlemeye odaklanır.
+![image](https://github.com/user-attachments/assets/5155b617-8742-4f80-ba77-c351f916971c)
 
-![image](https://github.com/user-attachments/assets/26a24756-64e7-4017-a73a-5b604a262d8b)
+![image](https://github.com/user-attachments/assets/2abc7b79-d06b-4c61-ab4a-8d471f9f484b)
 
-![image](https://github.com/user-attachments/assets/7d9032b7-3287-4306-9826-6349f7acb7b9)
+![image](https://github.com/user-attachments/assets/0a3c876b-abfb-497d-aba5-cca64cad0408)
 
-![image](https://github.com/user-attachments/assets/33cc5863-4857-4a34-a941-a84b472677e9)
+## Supply Chain Defenses
 
-Bu araç, özellikle Microsoft Azure, .NET uygulamaları ve diğer kurumsal sistemler için tehdit modellemesi yaparken kullanılır.
+Supply Chain Defenses, tedarik zincirindeki güvenlik tehditlerine karşı alınan önlemler ve uygulanan stratejiler bütünüdür.
 
-![image](https://github.com/user-attachments/assets/9937a0be-9a36-4222-bf29-fd94a144fbe8)
+![image](https://github.com/user-attachments/assets/dad2b589-8609-4071-8cb6-21bd2ac92dfe)
 
-![image](https://github.com/user-attachments/assets/b668256d-4a41-4bfb-9136-0924147abb0b)
+![image](https://github.com/user-attachments/assets/375d2a59-08b0-4c46-9c5a-fca7669eb263)
 
-Bu süreç, özellikle yazılım geliştiriciler, güvenlik uzmanları ve sistem mimarları için güvenlik risklerini yönetmek adına kritik bir adımdır.
+## SCA (Software Composition Analysis)
 
-## Attack Tree
+Software Composition Analysis (SCA), yazılımlarda kullanılan açık kaynak kodlu (open-source) ve üçüncü taraf bileşenlerin analiz edilerek güvenlik açıklarının, lisans uyumluluğunun ve olası risklerin belirlenmesini sağlayan bir süreçtir.
 
-Attack Tree (Saldırı Ağacı), bir güvenlik saldırısını anlamak ve modellemek için kullanılan hiyerarşik bir yapıdır. Bu ağaç, bir hedefe yönelik saldırıların ve zafiyetlerin nasıl gerçekleşebileceğini gösterir. Her dal, saldırının belirli bir adımını veya yöntemini temsil eder ve bu sayede saldırganın amacına nasıl ulaşacağı anlaşılır. Saldırı ağacı, özellikle güvenlik açıklarını keşfetmek, tehditleri tanımlamak ve savunma stratejileri geliştirmek için kullanılır.
+Günümüzde çoğu yazılım, farklı kütüphaneler, çerçeveler (frameworks) ve bağımlılıklar içerir. SCA araçları, bu bileşenleri analiz ederek bilinen güvenlik açıklarını (CVE - Common Vulnerabilities and Exposures), lisans ihlallerini ve güncellenmemiş bağımlılıkları tespit eder.
 
-![image](https://github.com/user-attachments/assets/a2f677d2-647f-4e2c-a44a-b79f506090f1)
+![image](https://github.com/user-attachments/assets/745ad731-a96c-4315-a2fa-f0c77b60d890)
 
-![image](https://github.com/user-attachments/assets/06a7ae9e-02fa-4a40-a4a6-15eb1b0c6dd5)
+![image](https://github.com/user-attachments/assets/b5d287ea-8f7a-423c-805a-af877999b6a6)
 
-                           [Web Uygulamasına Yetkisiz Erişim Sağlamak]
-                                       /             |            \
-                         [Kimlik Doğrulama Zafiyetleri]   [Veritabanı Erişimi]   [XSS ve SQL Injection]
-                             /    \                               |                   /       \
-           [Zayıf Parola]    [Çift Kimlik Doğrulama]       [Zayıf Veritabanı Güvenliği]    [SQL Injection] [XSS Exploit]
+![image](https://github.com/user-attachments/assets/6726fae2-241f-4bb2-abc5-8f11ecf11db7)
 
-![image](https://github.com/user-attachments/assets/4a279a21-186b-479b-a5e8-2315c7529083)
+![image](https://github.com/user-attachments/assets/67ff51ef-b382-4d1d-bdb1-ca290ff5c02d)
 
-![image](https://github.com/user-attachments/assets/d8c548d5-bf6c-4e55-be01-0ef84b5b6191)
+## SLSA (Supply Chain Levels for Software Artifacts)
 
-![image](https://github.com/user-attachments/assets/ead113e6-35e6-427e-97a5-250edf0dae91)
+SLSA (Supply Chain Levels for Software Artifacts), yazılım tedarik zincirini daha güvenli hale getirmek için Google tarafından başlatılan ve OpenSSF (Open Source Security Foundation) tarafından desteklenen bir çerçevedir.
 
-![image](https://github.com/user-attachments/assets/5dd99062-e142-4804-af46-c6b76755ae1e)
+SLSA, yazılım geliştirme süreçlerinde güvenliği artırmayı ve tedarik zinciri saldırılarını önlemeyi amaçlayan bir güvenlik standardıdır. SolarWinds ve Log4j gibi yazılım tedarik zinciri saldırıları sonrasında, yazılım bileşenlerinin güvenilir ve izlenebilir olmasını sağlamak için geliştirilmiştir.
 
-## YAML
+![image](https://github.com/user-attachments/assets/c60aaa39-2cbd-4f45-ab20-7e9ff0560723)
 
-YAML (YAML Ain't Markup Language), veri yapılarını insan tarafından okunabilir bir biçimde temsil eden bir dosya formatıdır. Genellikle yapılandırma dosyalarında (configuration files), veri değişiminde ve seri hale getirmede kullanılır. JSON ve XML gibi formatlara alternatif olarak geliştirilmiştir, ancak daha okunabilir ve daha az karmaşık bir yapıya sahiptir.
+![image](https://github.com/user-attachments/assets/3a1d011b-88e8-4634-bea6-a4861d4db454)
 
-YAML özellikle Docker, Kubernetes, Ansible, GitHub Actions, CI/CD, OpenAPI, Spring Boot, .NET Core gibi birçok modern teknoloji ve framework'te yapılandırma dosyası olarak kullanılır.
+![image](https://github.com/user-attachments/assets/8969af46-6cbf-4405-b4e8-b105050f66e2)
 
-![image](https://github.com/user-attachments/assets/cc8b49f3-a9fc-418a-abf4-2fbf9fbe201f)
+![image](https://github.com/user-attachments/assets/a23a1576-3893-4b5d-88bb-16a1a9b51793)
 
-![image](https://github.com/user-attachments/assets/c491e74e-86d7-4e1e-8ce8-e0505c87d824)
+![image](https://github.com/user-attachments/assets/35c293b0-18f6-4c0f-914d-e970acbb1918)
 
-![image](https://github.com/user-attachments/assets/6ca4b9f8-b285-4016-8252-252727b65c48)
+![image](https://github.com/user-attachments/assets/5c9e17fb-5014-44bb-8dc1-fb9201ca212a)
 
-![image](https://github.com/user-attachments/assets/3fc021e0-fd27-46f1-924a-05c12b3c5be6)
+SLSA, yazılım tedarik zinciri saldırılarını önlemek için geliştirilen katmanlı bir güvenlik çerçevesidir. Kuruluşların yazılım geliştirme süreçlerini daha güvenli, izlenebilir ve şeffaf hale getirmelerine yardımcı olur. Özellikle açık kaynak ve kurumsal yazılım geliştirme süreçlerinde büyük bir öneme sahiptir.
 
-![image](https://github.com/user-attachments/assets/eb0aab9a-116d-4df1-9f16-930238eb1d59)
+## SBOM (Software Bill of Materials)
 
-![image](https://github.com/user-attachments/assets/56794385-ccde-4ac1-abf1-c6a730787a74)
+SBOM (Software Bill of Materials), bir yazılım uygulamasının içinde kullanılan tüm bileşenlerin ve bağımlılıkların listesidir. SBOM, yazılımın içindeki her bileşeni, kullanılan kütüphaneleri, lisansları, sürümleri ve güvenlik açıklarını içeren detaylı bir envanter sağlar. Bu envanter, yazılım güvenliği ve uyumluluğu için oldukça önemlidir.
 
-![image](https://github.com/user-attachments/assets/5fa11b8a-f625-49b5-be1f-a35f259fbd70)
+SBOM, yazılım geliştirme sürecinde kullanılan açık kaynak yazılımlarının ve bileşenlerin şeffaflığını sağlar. Bu belge, bir yazılımın içinde hangi açık kaynak veya üçüncü taraf bileşenlerin bulunduğunu ve bunların hangi sürümlerinin kullanıldığını belirtir.
 
-![image](https://github.com/user-attachments/assets/7dc23cf6-97ae-4db6-abbb-1879d738ac5d)
+![image](https://github.com/user-attachments/assets/dbe0647f-8f1a-4b12-9208-7bc322253ee4)
 
-![image](https://github.com/user-attachments/assets/1cbdeaac-cbeb-4ff3-8b22-c27605222dd3)
+![image](https://github.com/user-attachments/assets/9b97d942-b085-41df-9632-9fe67dff707c)
 
-## Threagile
+![image](https://github.com/user-attachments/assets/7fc9d918-01e0-4498-8291-9a5288655cc6)
 
-Threagile, Agile (Çevik) yaklaşıma dayalı bir açık kaynak kodlu threat modeling (tehdit modelleme) aracıdır. Yazılım geliştirme sürecinde, uygulama mimarisi, veri akışı ve güvenlik açıklarını analiz etmeye yardımcı olur. Geliştiricilerin, güvenlik ekiplerinin ve DevOps mühendislerinin hızlı, tekrar eden ve işbirlikçi bir şekilde tehdit modellemesi yapmasını sağlar.
+![image](https://github.com/user-attachments/assets/7595db9c-e348-48d2-8e1e-99686ba11431)
 
-![image](https://github.com/user-attachments/assets/96b9bb8c-23d4-43ca-8f58-efbc2c2c8b8d)
+![image](https://github.com/user-attachments/assets/8318bc64-dcbd-4a99-b813-7e417274240f)
 
-![image](https://github.com/user-attachments/assets/d2a7166d-c3fd-44c1-ad68-6a3f8a2ea21c)
+Sonuç:
 
-![image](https://github.com/user-attachments/assets/ccd2bdde-afc0-4b25-9014-f5bbb4a2f3db)
+SBOM, yazılım geliştirme süreçlerinde kullanılan bileşenlerin şeffaflığını sağlayan ve güvenlik risklerini azaltmaya yardımcı olan önemli bir araçtır. Yazılım tedarik zincirindeki her bileşenin güvenliğini ve uyumluluğunu yönetmek için kullanılabilir. Özellikle güvenlik, lisans uyumluluğu ve tedarik zinciri yönetimi açısından büyük avantajlar sunar.
 
-![image](https://github.com/user-attachments/assets/89d1f193-69a9-409d-9b71-73e4131c114a)
+## Dependency-Track ve CycloneDX
 
-![image](https://github.com/user-attachments/assets/f15e2c88-a864-4c47-a95c-d60ea1c9b69c)
+Dependency-Track, yazılım bileşenlerini yönetmek ve güvenlik açıklarını izlemek için kullanılan açık kaynaklı bir yazılım güvenliği platformudur.
 
-## Encryption - Hashing
+![image](https://github.com/user-attachments/assets/f115eb90-8a98-44da-a19c-811ae08112d6)
 
-![image](https://github.com/user-attachments/assets/6ff629f9-18bb-426c-8b41-fef211cd2b20)
+Dependency-Track, OWASP (Open Web Application Security Project) tarafından geliştirilmiştir ve özellikle büyük ölçekli yazılım projelerinde güvenlik açıklarını yönetmek için kullanılır.
 
-![image](https://github.com/user-attachments/assets/e9ffb100-f551-4015-b2cd-1ffb55ad923f)
+![image](https://github.com/user-attachments/assets/1b4d5723-9d26-4cc9-8944-7c0560cb29cc)
 
-![image](https://github.com/user-attachments/assets/72f2cfff-8735-4bc6-888a-c37158bd9a83)
+![image](https://github.com/user-attachments/assets/15d4ac94-3701-499c-96b0-1a503b5d9089)
 
-![image](https://github.com/user-attachments/assets/9250948e-c951-40bd-922f-4180fa18ca24)
+## CycloneDX
 
-İkisinin bir arada kullanıldığı durumlar da vardır. Örneğin, bir sistemde şifreleme ile veri korunurken, kullanıcı parolaları hashlenmiş olarak saklanır.
+CycloneDX, SBOM (Software Bill of Materials) oluşturmak için kullanılan bir açık standarttır. Dependency-Track ve birçok güvenlik aracı, CycloneDX formatını destekler.
 
-![image](https://github.com/user-attachments/assets/3286d343-f6b9-487d-87e6-6027243212be)
+![image](https://github.com/user-attachments/assets/edfae067-bd2c-4f92-9faf-aad2c60e0ac6)
 
-![image](https://github.com/user-attachments/assets/51c790e0-3b38-4276-acde-2484ae3394de)
+![image](https://github.com/user-attachments/assets/8050c34e-9060-479e-a588-41ee8b5f7c16)
 
-using System;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
+![image](https://github.com/user-attachments/assets/95a585e3-15d7-4540-b9e3-d00634812e3f)
 
-class Program
-{
-    private static readonly string Key = "0123456789ABCDEF"; // 16 byte (128 bit) anahtar
-    private static readonly string IV = "ABCDEF0123456789";  // 16 byte (128 bit) IV
+![image](https://github.com/user-attachments/assets/c4428ebc-dd2c-4216-a97b-96b22dd354b4)
 
-    public static void Main()
-    {
-        string originalText = "Merhaba, bu bir şifreleme testidir!";
-        Console.WriteLine($"Orijinal Metin: {originalText}");
+![image](https://github.com/user-attachments/assets/7921de42-5ef7-4d68-b570-3f0585003385)
 
-        string encryptedText = Encrypt(originalText);
-        Console.WriteLine($"Şifrelenmiş Metin: {encryptedText}");
+![image](https://github.com/user-attachments/assets/8463338a-c6d3-4a9e-8ccd-cbe797bf508c)
 
-        string decryptedText = Decrypt(encryptedText);
-        Console.WriteLine($"Çözülen Metin: {decryptedText}");
-    }
+## Cloud and Container Security 
 
-    public static string Encrypt(string plainText)
-    {
-        using (Aes aes = Aes.Create())
-        {
-            aes.Key = Encoding.UTF8.GetBytes(Key);
-            aes.IV = Encoding.UTF8.GetBytes(IV);
+Cloud security, bulut ortamlarında verilerin, uygulamaların ve altyapının korunmasını sağlayan süreçler, teknolojiler ve politikaları kapsar. Bulut güvenliği, public (genel), private (özel) ve hybrid (karma) bulut ortamlarında verilerin gizliliğini, bütünlüğünü ve erişilebilirliğini sağlamayı hedefler.
 
-            using (MemoryStream ms = new MemoryStream())
-            {
-                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                {
-                    using (StreamWriter writer = new StreamWriter(cs))
-                    {
-                        writer.Write(plainText);
-                    }
-                }
-                return Convert.ToBase64String(ms.ToArray());
-            }
-        }
-    }
+![image](https://github.com/user-attachments/assets/60920249-b171-4a30-b067-e8abe3ce1eb1)
 
-    public static string Decrypt(string encryptedText)
-    {
-        using (Aes aes = Aes.Create())
-        {
-            aes.Key = Encoding.UTF8.GetBytes(Key);
-            aes.IV = Encoding.UTF8.GetBytes(IV);
+Container security, Docker, Kubernetes gibi container teknolojilerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan teknikler ve araçlardan oluşur. Konteyner güvenliği, uygulamaların izolasyonunu, ağ trafiğini, güvenlik açıklarını ve çalışma zamanındaki tehditleri yönetmeyi hedefler.
 
-            using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(encryptedText)))
-            {
-                using (CryptoStream cs = new CryptoStream(ms, aes.CreateDecryptor(), CryptoStreamMode.Read))
-                {
-                    using (StreamReader reader = new StreamReader(cs))
-                    {
-                        return reader.ReadToEnd();
-                    }
-                }
-            }
-        }
-    }
-}
+![image](https://github.com/user-attachments/assets/7c4aab1f-0c23-4f6f-96e7-8e58e77586ba)
 
-![image](https://github.com/user-attachments/assets/d5791ed4-b6b0-4726-9ebb-622b7031e6d6)
+![image](https://github.com/user-attachments/assets/436c5372-19f6-40e3-bc67-e6271672148d)
 
-![image](https://github.com/user-attachments/assets/5b65ebe4-64e7-4541-bf7f-7bda87f3bd57)
+## Container Security
 
-![image](https://github.com/user-attachments/assets/afc1baea-f51f-41c3-a56d-109edc0830b5)
+Container Security, konteyner tabanlı uygulamaların güvenliğini sağlamak için kullanılan yöntem, araç ve en iyi uygulamaların bütünüdür. Konteynerler, Docker, Kubernetes (K8s) ve AWS ECS/EKS gibi platformlar üzerinde çalışırken güvenlik açıkları oluşturabilir. Bu nedenle, görüntü güvenliği, çalışma zamanı koruması, ağ güvenliği ve erişim kontrolü gibi önlemler alınmalıdır.
 
-![image](https://github.com/user-attachments/assets/08258aaa-54a3-4da9-a347-48180f4dbb8f)
+![image](https://github.com/user-attachments/assets/383ae4ac-6b32-4207-9801-74ffaee4b030)
 
-![image](https://github.com/user-attachments/assets/f5edb045-f688-454c-bb73-908e38bda716)
+![image](https://github.com/user-attachments/assets/46a1ad8c-0157-480c-950a-4efec9d3a52c)
 
-![image](https://github.com/user-attachments/assets/381c215f-b04e-4e29-8b65-693c0ab1939b)
+![image](https://github.com/user-attachments/assets/141b90c2-f87b-4133-bc30-d627b77ccdb7)
 
-![image](https://github.com/user-attachments/assets/edc521c1-48f5-4e3d-8b6d-88aeef9f8937)
+![image](https://github.com/user-attachments/assets/5d776d3f-91de-46e0-9b9e-db079b880d9a)
 
-![image](https://github.com/user-attachments/assets/c2a6bf42-e494-4b44-993b-6814ed25d01d)
+![image](https://github.com/user-attachments/assets/dde94bda-a8e5-4fdd-8ff0-e019f96c001b)
 
-![image](https://github.com/user-attachments/assets/6c47274c-f002-45f8-bbbf-75c421bb90c5)
+![image](https://github.com/user-attachments/assets/abd4a9c1-9e6e-48f3-ab0d-2ce3e0ac7486)
 
-## PKI
+![image](https://github.com/user-attachments/assets/9564b5ad-40c8-4581-91e2-11e434e92d78)
 
-PKI (Public Key Infrastructure - Açık Anahtar Altyapısı), dijital güvenliği sağlamak için kullanılan bir sistemdir. Şifreleme, kimlik doğrulama ve veri bütünlüğü gibi güvenlik işlemlerini yönetmek için açık anahtar (public key) ve özel anahtar (private key) kullanımına dayanır.
+![image](https://github.com/user-attachments/assets/7b77cf00-c4da-4599-b7ea-771e8cf095c5)
 
-![image](https://github.com/user-attachments/assets/4a6dd805-0c9d-44fc-ac09-0f6e32851d42)
+AWS Container Security, Docker, Kubernetes ve AWS ECS/EKS gibi ortamları güvenli bir şekilde yönetmek için bir dizi en iyi uygulamayı ve hizmeti içerir. Image taraması, IAM politikaları, runtime güvenliği ve ağ güvenliği gibi önlemler alındığında, konteyner tabanlı uygulamalar saldırılara karşı daha dayanıklı hale gelir. 🔐🚀
 
-![image](https://github.com/user-attachments/assets/21b71c51-560c-4ba7-8369-ce1836eb7bc5)
+## Kubernetes
 
-![image](https://github.com/user-attachments/assets/96ff508c-4802-4d2e-9def-354a28131e96)
+Kubernetes (K8s), container (kapsayıcı) tabanlı uygulamaları otomatikleştirilmiş bir şekilde dağıtmak, yönetmek ve ölçeklendirmek için kullanılan açık kaynaklı bir container orkestrasyon platformudur.
 
-## Salt
+Google tarafından geliştirilen Kubernetes, Docker gibi container teknolojilerini yönetmek için tasarlanmıştır ve günümüzde büyük ölçekli dağıtımlarda endüstri standardı haline gelmiştir.
 
-Salt, şifreleme veya hashleme işlemlerinde kullanılan rastgele bir değerdir. Ana amacı, aynı giriş verisinin (örneğin, bir şifrenin) her defasında farklı bir hash üretmesini sağlamaktır.
+![image](https://github.com/user-attachments/assets/aaa5c831-1fd0-4e01-a410-ed7275a53800)
 
-![image](https://github.com/user-attachments/assets/2aa0a769-4bbb-4e5c-906b-263261f7e587)
+![image](https://github.com/user-attachments/assets/1b65dc8c-4a4a-4b86-9f15-3dc0304fc26b)
+
+![image](https://github.com/user-attachments/assets/6ed84ba2-2bbd-4fdb-86bc-d4ecf3e47d1d)
+
+![image](https://github.com/user-attachments/assets/95879441-4bac-40cd-814b-e136b8f057b7)
+
+![image](https://github.com/user-attachments/assets/d0a7ad79-9053-443d-a6f7-469f04db3c35)
+
+![image](https://github.com/user-attachments/assets/fb70bbd2-d211-4b40-ab01-feef99565ac4)
+
+![image](https://github.com/user-attachments/assets/71687a2e-3130-4495-844e-d5b18a8081b7)
+
+![image](https://github.com/user-attachments/assets/473bcaa4-72eb-4a48-8693-b85568ca9c9d)
+
+## AWS Well-Architected Framework
+
+AWS Well-Architected Framework, AWS üzerinde güvenli, yüksek performanslı, dayanıklı ve verimli sistemler tasarlamak için en iyi uygulamaları ve prensipleri belirleyen bir kılavuzdur. AWS, bu framework'ü kullanarak sistem mimarilerinin güçlü ve sürdürülebilir olmasını sağlar.
+
+![image](https://github.com/user-attachments/assets/c16a53bb-a628-4879-8763-479fe0d49d14)
+
+![image](https://github.com/user-attachments/assets/cca16985-54c6-4721-88bb-e877d5faf589)
+
+Well-Architected Review:
+
+AWS, sistemlerin Well-Architected Framework prensiplerine uygun olup olmadığını değerlendirmek için Well-Architected Review adında bir inceleme süreci sunar. Bu inceleme sayesinde güvenlik açıkları, maliyet optimizasyonu fırsatları ve performans iyileştirmeleri belirlenebilir.
+
+## AWS Identity and Access Management
+
+AWS Identity and Access Management (IAM), AWS kaynaklarına güvenli erişimi yönetmek için kullanılan bir hizmettir. IAM, kimin (kimlik) hangi kaynaklara (S3, EC2, RDS, Lambda vb.) nasıl erişebileceğini belirlemeye yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/ac3886f5-683b-477d-bc5b-e3b798e23799)
+
+![image](https://github.com/user-attachments/assets/d328b7e2-1b81-4f00-a9b1-4eca1ce87cab)
+
+![image](https://github.com/user-attachments/assets/5de478b0-0fa4-48a3-a478-544a7d94942f)
+
+## AWS Detection Controls
+
+AWS Detection Controls (Algılama Kontrolleri), AWS ortamında güvenlik tehditlerini tespit etmek ve izlemek için kullanılan araçlar, hizmetler ve mekanizmalardır. Bu kontroller, AWS Well-Architected Framework’ün Security Pillar (Güvenlik İlkesi) kapsamında kritik bir bileşendir ve güvenlik ihlallerini erken tespit edip yanıt vermeye yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/3adf59c7-b3b8-4076-9bf3-0537fb0bbbc6)
+
+![image](https://github.com/user-attachments/assets/23d1d1f7-f51c-405a-9242-1fd1de618bde)
+
+![image](https://github.com/user-attachments/assets/96c3981d-9ca7-46d9-946d-ad177654a7d4)
+
+AWS Detection Controls, sisteminizdeki güvenlik tehditlerini proaktif olarak izleyip algılamaya yardımcı olur ve erken müdahale edilmesini sağlar. AWS ortamında güvenliği artırmak ve uyumluluğu sağlamak için bu araçları kullanmak önemlidir! 🚀
+
+## AWS Infrastructure
+
+AWS Infrastructure (Altyapısı), Amazon Web Services’in küresel çapta sunduğu veri merkezleri, ağ bağlantıları, güvenlik katmanları ve hizmetlerden oluşan fiziksel ve sanal yapıdır. AWS altyapısı, yüksek erişilebilirlik, ölçeklenebilirlik ve güvenlik sağlayacak şekilde tasarlanmıştır.
+
+![image](https://github.com/user-attachments/assets/bb6a3817-1977-44ac-addf-cff19813f5a2)
+
+![image](https://github.com/user-attachments/assets/263032b0-7602-4c39-be36-5c9df6997be2)
+
+![image](https://github.com/user-attachments/assets/96902f7b-208e-414d-8b5e-95b0a7db09d2)
+
+AWS Infrastructure (Altyapısı), dünya çapında güçlü bir veri merkezi ağı, yüksek performanslı sunucular, güvenli ağ bağlantıları ve ölçeklenebilir hizmetler sunarak modern uygulamaların güvenli, hızlı ve verimli bir şekilde çalışmasını sağlar. 🚀
+
+## AWS Data Protection
+
+AWS Data Protection (Veri Koruma), AWS üzerindeki verilerin güvenliğini sağlamak, yetkisiz erişimleri önlemek ve veri kaybına karşı önlem almak için kullanılan güvenlik mekanizmalarını ifade eder. Veri şifreleme, erişim kontrolleri, yedekleme ve izleme gibi birçok güvenlik hizmetini içerir.
+
+![image](https://github.com/user-attachments/assets/e99e0bac-1a05-4dc1-b6bb-a47444370296)
+
+![image](https://github.com/user-attachments/assets/fb653d67-e446-4749-9f3a-eef8a3d6c594)
+
+![image](https://github.com/user-attachments/assets/4a1d14f8-e530-4646-8bca-d30f844c4b89)
+
+![image](https://github.com/user-attachments/assets/de4ed677-6157-49b6-ac79-81c9f2e2b415)
+
+AWS Data Protection, verilerin şifrelenmesi, yetkisiz erişime karşı korunması, yedeklenmesi ve sürekli izlenmesi için AWS’in sunduğu güvenlik çözümlerini kapsar. Doğru araçları kullanarak güvenliği artırabilir ve uyumluluk gereksinimlerini karşılayabilirsiniz. 🚀
+
+## AWS Incident Response
+
+AWS Incident Response (Olay Müdahale), AWS ortamında meydana gelen güvenlik olaylarını tespit etme, müdahale etme ve olayın etkilerini azaltma sürecidir. Bu süreç, tehditlerin tespiti, analiz edilmesi, olayın etkisinin en aza indirilmesi ve gelecekte benzer olayların önlenmesi için uygulanan bir dizi en iyi uygulamayı içerir.
+
+![image](https://github.com/user-attachments/assets/7c1e33e0-5943-4f6d-8050-6fc0584a18be)
+
+![image](https://github.com/user-attachments/assets/a397c952-1702-40cd-861f-874f76dd2f4e)
+
+![image](https://github.com/user-attachments/assets/2348e622-10c6-4bcc-9dfc-f6381469e23a)
+
+![image](https://github.com/user-attachments/assets/103db8d5-5a2a-41d5-94a9-2966ddf2b342)
+
+![image](https://github.com/user-attachments/assets/7094b8a2-a30b-4b74-8196-5d960cf19b6c)
+
+![image](https://github.com/user-attachments/assets/fa947135-349a-43b8-9a51-2f40875b5f28)
+
+![image](https://github.com/user-attachments/assets/09b5060f-b61b-4d4c-9660-2ce25f0efbef)
+
+![image](https://github.com/user-attachments/assets/6dee7100-c6fc-4481-951a-bb29d0d40c9f)
+
+AWS Incident Response, bir güvenlik olayı meydana geldiğinde hızlı müdahale etmek ve hasarı en aza indirmek için uygulanması gereken süreçleri kapsar. Güçlü bir izleme ve uyarı mekanizması ile güvenlik tehditlerine karşı proaktif olunabilir. 🚀
+
+## AWS Application Security
+
+AWS Application Security, AWS üzerinde çalışan uygulamaların güvenliğini sağlamak için kullanılan araçları, en iyi uygulamaları ve güvenlik hizmetlerini kapsar. Uygulama katmanındaki güvenlik açıklarını tespit etmek, yetkisiz erişimleri önlemek, verileri korumak ve saldırılara karşı savunma mekanizmaları oluşturmak için çeşitli AWS hizmetleri ve stratejileri kullanılır.
+
+![image](https://github.com/user-attachments/assets/a93d4714-fd26-4e9c-bb6b-18906faa8464)
+
+![image](https://github.com/user-attachments/assets/3e127b40-8f32-4785-bad0-13dca48f760a)
+
+![image](https://github.com/user-attachments/assets/198f8b89-7b8f-4596-b08f-501fc67cf3c7)
+
+![image](https://github.com/user-attachments/assets/e8f4fb75-cc2d-4498-ad50-14455f1533fd)
+
+![image](https://github.com/user-attachments/assets/fe2a31d9-57af-4ccc-9747-ac285f7dd8dd)
+
+![image](https://github.com/user-attachments/assets/f18402d8-cc6b-4524-a442-21be3f8260d1)
+
+![image](https://github.com/user-attachments/assets/031304a3-2018-47bb-a428-c3e55ccca8af)
+
+![image](https://github.com/user-attachments/assets/87739948-4031-4bf0-98a8-bce2daf5d99b)
+
+AWS Application Security, uygulamalarınızı hacker saldırılarından, yetkisiz erişimlerden, veri sızıntılarından ve DDoS saldırılarından korumak için kapsamlı güvenlik çözümleri sunar. IAM, WAF, KMS, API Gateway ve CloudTrail gibi AWS servisleri kullanılarak uygulamalarınızın güvenliği en üst seviyeye çıkarılabilir. 🚀
+
+## AWS - Azure - GCP
+
+AWS (Amazon Web Services), Azure ve GCP (Google Cloud Platform), bulut bilişim sağlayıcılarıdır ve her biri farklı hizmetler sunarak organizasyonların altyapılarını ve uygulamalarını bulut ortamına taşımasına olanak tanır. Bu sağlayıcılar, bulut tabanlı uygulamalar geliştirmek, verileri depolamak, analiz etmek ve güvenliğini sağlamak için çeşitli hizmetler sunmaktadır.
+
+![image](https://github.com/user-attachments/assets/92895261-7ce1-4f26-b3ab-307a92543703)
+
+![image](https://github.com/user-attachments/assets/2bbd0630-32bd-48f3-a8cb-aed1c75f22c6)
+
+![image](https://github.com/user-attachments/assets/8822d602-903d-4bda-99cc-6f9dd7692472)
+
+![image](https://github.com/user-attachments/assets/da57db4f-f45d-469c-963b-ad65069d545c)
+
+![image](https://github.com/user-attachments/assets/742a9492-4ca4-4231-b1e7-514c2433b3f9)
 
 ## DevSecOps
 
@@ -1187,50 +1000,6 @@ Bu yaklaşımlar sayesinde erken güvenlik açığı tespiti, daha güvenli kod 
 ![image](https://github.com/user-attachments/assets/695a1b6f-c6b9-4c5b-ba3d-56ebbe13b2a3)
 
 ![image](https://github.com/user-attachments/assets/ef3a5bfe-fa62-4479-a4bd-e1300aa1abc2)
-
-## Kubernetes
-
-Kubernetes (K8s), container (kapsayıcı) tabanlı uygulamaları otomatikleştirilmiş bir şekilde dağıtmak, yönetmek ve ölçeklendirmek için kullanılan açık kaynaklı bir container orkestrasyon platformudur.
-
-Google tarafından geliştirilen Kubernetes, Docker gibi container teknolojilerini yönetmek için tasarlanmıştır ve günümüzde büyük ölçekli dağıtımlarda endüstri standardı haline gelmiştir.
-
-![image](https://github.com/user-attachments/assets/aaa5c831-1fd0-4e01-a410-ed7275a53800)
-
-![image](https://github.com/user-attachments/assets/1b65dc8c-4a4a-4b86-9f15-3dc0304fc26b)
-
-![image](https://github.com/user-attachments/assets/6ed84ba2-2bbd-4fdb-86bc-d4ecf3e47d1d)
-
-![image](https://github.com/user-attachments/assets/95879441-4bac-40cd-814b-e136b8f057b7)
-
-![image](https://github.com/user-attachments/assets/d0a7ad79-9053-443d-a6f7-469f04db3c35)
-
-![image](https://github.com/user-attachments/assets/fb70bbd2-d211-4b40-ab01-feef99565ac4)
-
-![image](https://github.com/user-attachments/assets/71687a2e-3130-4495-844e-d5b18a8081b7)
-
-![image](https://github.com/user-attachments/assets/473bcaa4-72eb-4a48-8693-b85568ca9c9d)
-
-## Jenkins
-
-Jenkins, açık kaynaklı bir sürekli entegrasyon (CI) ve sürekli dağıtım (CD) (CI/CD) otomasyon aracıdır. Yazılım geliştirme süreçlerinde build (derleme), test ve deploy (yayınlama) işlemlerini otomatikleştirmek için kullanılır.
-
-Jenkins, Java ile geliştirilmiş ve modüler bir yapıya sahip olduğu için plugin (eklenti) desteği sayesinde farklı araçlarla kolayca entegre edilebilir.
-
-✅ Sürekli Entegrasyon (CI): Kod değişikliklerini otomatik olarak test eder ve entegre eder.
-
-✅ Sürekli Dağıtım (CD): Testleri geçen kodu otomatik olarak canlı ortama (Production) veya test ortamına dağıtır.
-
-![image](https://github.com/user-attachments/assets/da49e512-983c-4142-afcc-516a57cd8320)
-
-![image](https://github.com/user-attachments/assets/d926bd09-e06d-49f4-86b5-44f5bf5f6615)
-
-![image](https://github.com/user-attachments/assets/21a98ecc-7f07-4abe-aeb1-1adcd2b6b3e3)
-
-![image](https://github.com/user-attachments/assets/4c8e9831-4671-474e-9b8d-3b420869bda8)
-
-![image](https://github.com/user-attachments/assets/919306d9-5652-4809-85d5-2575227db068)
-
-![image](https://github.com/user-attachments/assets/03828390-e441-43d1-b315-947c7debe84f)
 
 ## DevSecOps Design
 
@@ -1286,19 +1055,27 @@ Bu yöntemle güvenlik politikaları, testler, erişim kontrolleri ve altyapı y
 
 🚀 Modern yazılım geliştirme süreçlerinde güvenliğin kod ile yönetilmesi büyük avantaj sağlar!
 
-## SonarQube
+## CI/CD
 
-SonarQube, yazılım uygulamalarında kod kalitesini ölçen ve iyileştiren bir araçtır. Bu araç, kodu analiz ederek çeşitli kalite metriklerini (kod karmaşıklığı, güvenlik açıkları, hatalar, kod tekrarları vb.) tespit eder ve geliştiricilere geri bildirim sağlar. SonarQube, yazılım geliştirme sürecinde sürekli entegrasyon (CI) ve sürekli teslim (CD) ortamlarında kullanılabilir.
+CI/CD (Continuous Integration & Continuous Deployment/Delivery), yazılım geliştirme sürecini otomatikleştirmek, hata oranını azaltmak ve hızlı bir şekilde yeni özellikleri canlıya almak için kullanılan modern bir yazılım geliştirme metodolojisidir.
 
-SonarQube, statik kod analizini (Static Analysis) yaparak yazılımın kalitesini artırmayı hedefler. Bu, özellikle büyük ve karmaşık projelerde kodun daha güvenli, verimli ve sürdürülebilir hale gelmesine yardımcı olur.
+![image](https://github.com/user-attachments/assets/aad5a682-c803-497d-b488-aea9cff74edd)
 
-![image](https://github.com/user-attachments/assets/abdffd8f-07e6-4e59-8a1a-fd6498237ae4)
+![image](https://github.com/user-attachments/assets/e3b3501e-8885-4105-a5a2-cd8f09f1c176)
 
-![image](https://github.com/user-attachments/assets/1068783d-5c83-4e6a-b472-95db7e9c62a3)
+![image](https://github.com/user-attachments/assets/0b7654c4-2d1a-42de-8223-10a28cb24afc)
 
-![image](https://github.com/user-attachments/assets/fdfa6e9d-3718-4ef8-8508-b1e1a59a4dc0)
+![image](https://github.com/user-attachments/assets/0f547564-8099-421b-876d-9fd40ec0cd3f)
 
-![image](https://github.com/user-attachments/assets/ee7eda8d-5539-4d4a-a3d4-f4b1925621dc)
+![image](https://github.com/user-attachments/assets/33ecc9b3-a166-44da-b3b0-070edcd751aa)
+
+![image](https://github.com/user-attachments/assets/0fd23cc3-bf68-4afc-aeeb-3442919a5774)
+
+![image](https://github.com/user-attachments/assets/362e78a4-3c9a-4b9d-a503-af84f8f3751e)
+
+![image](https://github.com/user-attachments/assets/3fe5764d-c75c-4cc6-9667-3a6c7547885f)
+
+![image](https://github.com/user-attachments/assets/8171fb1e-52ef-4dcf-80e6-599d8ea4912b)
 
 ## Pipeline
 
@@ -1372,6 +1149,42 @@ jobs:
 ![image](https://github.com/user-attachments/assets/86b6ba8b-25f9-41ef-94c9-a5ef664719c6)
 
 Bu örnek temel bir CI pipeline’ıdır. Daha karmaşık bir ortamda Docker konteyneri, Güvenlik taramaları, Kapsamlı testler ve deploy işlemleri gibi daha ileri düzey adımlar eklenebilir.
+
+## Jenkins
+
+Jenkins, açık kaynaklı bir sürekli entegrasyon (CI) ve sürekli dağıtım (CD) (CI/CD) otomasyon aracıdır. Yazılım geliştirme süreçlerinde build (derleme), test ve deploy (yayınlama) işlemlerini otomatikleştirmek için kullanılır.
+
+Jenkins, Java ile geliştirilmiş ve modüler bir yapıya sahip olduğu için plugin (eklenti) desteği sayesinde farklı araçlarla kolayca entegre edilebilir.
+
+✅ Sürekli Entegrasyon (CI): Kod değişikliklerini otomatik olarak test eder ve entegre eder.
+
+✅ Sürekli Dağıtım (CD): Testleri geçen kodu otomatik olarak canlı ortama (Production) veya test ortamına dağıtır.
+
+![image](https://github.com/user-attachments/assets/da49e512-983c-4142-afcc-516a57cd8320)
+
+![image](https://github.com/user-attachments/assets/d926bd09-e06d-49f4-86b5-44f5bf5f6615)
+
+![image](https://github.com/user-attachments/assets/21a98ecc-7f07-4abe-aeb1-1adcd2b6b3e3)
+
+![image](https://github.com/user-attachments/assets/4c8e9831-4671-474e-9b8d-3b420869bda8)
+
+![image](https://github.com/user-attachments/assets/919306d9-5652-4809-85d5-2575227db068)
+
+![image](https://github.com/user-attachments/assets/03828390-e441-43d1-b315-947c7debe84f)
+
+## SonarQube
+
+SonarQube, yazılım uygulamalarında kod kalitesini ölçen ve iyileştiren bir araçtır. Bu araç, kodu analiz ederek çeşitli kalite metriklerini (kod karmaşıklığı, güvenlik açıkları, hatalar, kod tekrarları vb.) tespit eder ve geliştiricilere geri bildirim sağlar. SonarQube, yazılım geliştirme sürecinde sürekli entegrasyon (CI) ve sürekli teslim (CD) ortamlarında kullanılabilir.
+
+SonarQube, statik kod analizini (Static Analysis) yaparak yazılımın kalitesini artırmayı hedefler. Bu, özellikle büyük ve karmaşık projelerde kodun daha güvenli, verimli ve sürdürülebilir hale gelmesine yardımcı olur.
+
+![image](https://github.com/user-attachments/assets/abdffd8f-07e6-4e59-8a1a-fd6498237ae4)
+
+![image](https://github.com/user-attachments/assets/1068783d-5c83-4e6a-b472-95db7e9c62a3)
+
+![image](https://github.com/user-attachments/assets/fdfa6e9d-3718-4ef8-8508-b1e1a59a4dc0)
+
+![image](https://github.com/user-attachments/assets/ee7eda8d-5539-4d4a-a3d4-f4b1925621dc)
 
 ## Static Analysis
 
@@ -1561,6 +1374,26 @@ ASPM (Application Security Posture Management), yazılım geliştirme sürecinde
 
 ![image](https://github.com/user-attachments/assets/35717017-11e1-406d-a9db-a12737ae01ad)
 
+## RASP 
+
+RASP (Runtime Application Self-Protection), bir uygulamanın çalıştığı ortamda güvenliği sağlamak için kullanılan bir teknolojidir. RASP, gerçek zamanlı olarak uygulama düzeyinde güvenlik sağlamak amacıyla, uygulamanın çalıştığı süreçte güvenlik tehditlerini tespit eder ve bu tehditlere karşı önlem alır.
+
+RASP, bir yazılımın çalışırken, içindeki güvenlik açıklarını tespit edip engelleyen bir güvenlik çözümüdür. Geleneksel güvenlik önlemleri, genellikle dışarıdan bir saldırıyı engellemeye odaklanırken, RASP uygulama içine entegre olmuş bir güvenlik katmanıdır ve bu sayede uygulamanın içindeki potansiyel tehditlere karşı daha hızlı ve etkili bir müdahale sağlar.
+
+![image](https://github.com/user-attachments/assets/13c28d0c-684c-4c13-b229-9ece08ee1a71)
+
+![image](https://github.com/user-attachments/assets/32cda84b-fbaa-433d-904d-705d23bab34e)
+
+![image](https://github.com/user-attachments/assets/26bc61d6-faa1-4d88-9850-1fd1f01c123d)
+
+![image](https://github.com/user-attachments/assets/c54042ce-870b-4de5-8bb9-aee8206875a7)
+
+![image](https://github.com/user-attachments/assets/32f95de0-e158-47d1-9871-54147ec1e474)
+
+Sonuç:
+
+RASP, uygulama güvenliğini artırmak için önemli bir teknolojidir. Uygulama içindeki zafiyetleri izler ve saldırıları engeller. Geleneksel dışa yönelik güvenlik önlemlerinin aksine, uygulamanın çalışma zamanında güvenlik sağlar. Bu özellik, özellikle web uygulamaları ve mobil uygulamalar gibi dış saldırılara açık yazılımlar için oldukça faydalıdır. RASP, gerçek zamanlı müdahale ile yazılım güvenliğini güçlendirirken, güvenlik açıklarını hızlıca tespit edip çözmeyi sağlar.
+
 ## Arnica Security
 
 Arnica, yazılım geliştirme süreçlerinde güvenlik açıklarını yönetmek ve riskleri azaltmak için kullanılan bir ASPM (Application Security Posture Management) platformudur.
@@ -1592,46 +1425,6 @@ EPs (Exposure Points) Puanı, güvenlik bağlamında genellikle risk yönetimi v
 Sonuç:
 
 EPs puanı, güvenlik açıklarını derecelendiren ve sistemin maruz kaldığı riski ölçen önemli bir araçtır. Güvenlik ekipleri, bu puanları kullanarak önceliklendirme yapar ve en yüksek risklere karşı önlemler alır. Bu sistem, güvenlik yönetimini daha etkin hale getirir ve tehditlerin zamanında tespit edilip çözülmesini sağlar.
-
-## SBOM 
-
-SBOM (Software Bill of Materials), bir yazılım uygulamasının içinde kullanılan tüm bileşenlerin ve bağımlılıkların listesidir. SBOM, yazılımın içindeki her bileşeni, kullanılan kütüphaneleri, lisansları, sürümleri ve güvenlik açıklarını içeren detaylı bir envanter sağlar. Bu envanter, yazılım güvenliği ve uyumluluğu için oldukça önemlidir.
-
-SBOM, yazılım geliştirme sürecinde kullanılan açık kaynak yazılımlarının ve bileşenlerin şeffaflığını sağlar. Bu belge, bir yazılımın içinde hangi açık kaynak veya üçüncü taraf bileşenlerin bulunduğunu ve bunların hangi sürümlerinin kullanıldığını belirtir.
-
-![image](https://github.com/user-attachments/assets/dbe0647f-8f1a-4b12-9208-7bc322253ee4)
-
-![image](https://github.com/user-attachments/assets/9b97d942-b085-41df-9632-9fe67dff707c)
-
-![image](https://github.com/user-attachments/assets/7fc9d918-01e0-4498-8291-9a5288655cc6)
-
-![image](https://github.com/user-attachments/assets/7595db9c-e348-48d2-8e1e-99686ba11431)
-
-![image](https://github.com/user-attachments/assets/8318bc64-dcbd-4a99-b813-7e417274240f)
-
-Sonuç:
-
-SBOM, yazılım geliştirme süreçlerinde kullanılan bileşenlerin şeffaflığını sağlayan ve güvenlik risklerini azaltmaya yardımcı olan önemli bir araçtır. Yazılım tedarik zincirindeki her bileşenin güvenliğini ve uyumluluğunu yönetmek için kullanılabilir. Özellikle güvenlik, lisans uyumluluğu ve tedarik zinciri yönetimi açısından büyük avantajlar sunar.
-
-## RASP 
-
-RASP (Runtime Application Self-Protection), bir uygulamanın çalıştığı ortamda güvenliği sağlamak için kullanılan bir teknolojidir. RASP, gerçek zamanlı olarak uygulama düzeyinde güvenlik sağlamak amacıyla, uygulamanın çalıştığı süreçte güvenlik tehditlerini tespit eder ve bu tehditlere karşı önlem alır.
-
-RASP, bir yazılımın çalışırken, içindeki güvenlik açıklarını tespit edip engelleyen bir güvenlik çözümüdür. Geleneksel güvenlik önlemleri, genellikle dışarıdan bir saldırıyı engellemeye odaklanırken, RASP uygulama içine entegre olmuş bir güvenlik katmanıdır ve bu sayede uygulamanın içindeki potansiyel tehditlere karşı daha hızlı ve etkili bir müdahale sağlar.
-
-![image](https://github.com/user-attachments/assets/13c28d0c-684c-4c13-b229-9ece08ee1a71)
-
-![image](https://github.com/user-attachments/assets/32cda84b-fbaa-433d-904d-705d23bab34e)
-
-![image](https://github.com/user-attachments/assets/26bc61d6-faa1-4d88-9850-1fd1f01c123d)
-
-![image](https://github.com/user-attachments/assets/c54042ce-870b-4de5-8bb9-aee8206875a7)
-
-![image](https://github.com/user-attachments/assets/32f95de0-e158-47d1-9871-54147ec1e474)
-
-Sonuç:
-
-RASP, uygulama güvenliğini artırmak için önemli bir teknolojidir. Uygulama içindeki zafiyetleri izler ve saldırıları engeller. Geleneksel dışa yönelik güvenlik önlemlerinin aksine, uygulamanın çalışma zamanında güvenlik sağlar. Bu özellik, özellikle web uygulamaları ve mobil uygulamalar gibi dış saldırılara açık yazılımlar için oldukça faydalıdır. RASP, gerçek zamanlı müdahale ile yazılım güvenliğini güçlendirirken, güvenlik açıklarını hızlıca tespit edip çözmeyi sağlar.
 
 ## Firewall 
 
@@ -1740,3 +1533,252 @@ Fuzz testing'in temel amacı, yazılımın beklenmedik girdilere nasıl tepki ve
 Sonuç:
 
 Fuzz testing, yazılım güvenliğini test etmek için güçlü bir araçtır. Rastgele veya hedeflenmiş veriler kullanarak yazılımın güvenlik açıklarını keşfetmek, geliştiricilerin hataları erken tespit etmelerini ve yazılımın daha güvenli hale gelmesini sağlar. Fuzz testing'in etkin kullanımı, yazılımın olası hatalardan veya saldırılardan korunmasına yardımcı olabilir.
+
+## Threat Modeling
+
+Threat modeling (Tehdit Modelleme), bir sistemin veya uygulamanın güvenliğini sağlamak amacıyla olası tehditleri ve zafiyetleri analiz etme sürecidir. Bu süreç, bir organizasyonun güvenlik açıklarını anlamasına, tehditleri tanımlamasına ve bu tehditlere karşı önleyici tedbirler geliştirmesine yardımcı olur. Threat modeling, güvenlik ihlallerini önceden belirlemeyi ve potansiyel risklere karşı çözüm üretmeyi amaçlar.
+
+![image](https://github.com/user-attachments/assets/e51735b3-0ab9-472d-bb30-b9c634de53e6)
+
+![image](https://github.com/user-attachments/assets/ad9f79b2-9fe3-4474-a306-14101e02a541)
+
+![image](https://github.com/user-attachments/assets/1f48e8cb-0482-4e57-98c7-c8a9ff48249b)
+
+Tehdit modelleme, güvenlik stratejilerinin temel bir parçasıdır ve organizasyonların saldırılara karşı daha güçlü ve dirençli olmasını sağlar.
+
+## Microsoft Threat Modeling
+
+Microsoft Threat Modeling veya Microsoft Threat Modeling Framework, Microsoft tarafından geliştirilen bir tehdit modelleme yaklaşımıdır. Yazılım geliştiricilere ve güvenlik uzmanlarına, sistemlerindeki potansiyel tehditleri belirleme, değerlendirme ve riskleri azaltma konusunda yardımcı olmak için tasarlanmıştır.
+
+Microsoft Threat Modeling, özellikle STRIDE metodolojisini temel alarak tehditleri analiz eder ve bu tehditlere karşı uygun güvenlik önlemlerini belirlemeye odaklanır.
+
+![image](https://github.com/user-attachments/assets/26a24756-64e7-4017-a73a-5b604a262d8b)
+
+![image](https://github.com/user-attachments/assets/7d9032b7-3287-4306-9826-6349f7acb7b9)
+
+![image](https://github.com/user-attachments/assets/33cc5863-4857-4a34-a941-a84b472677e9)
+
+Bu araç, özellikle Microsoft Azure, .NET uygulamaları ve diğer kurumsal sistemler için tehdit modellemesi yaparken kullanılır.
+
+![image](https://github.com/user-attachments/assets/9937a0be-9a36-4222-bf29-fd94a144fbe8)
+
+![image](https://github.com/user-attachments/assets/b668256d-4a41-4bfb-9136-0924147abb0b)
+
+Bu süreç, özellikle yazılım geliştiriciler, güvenlik uzmanları ve sistem mimarları için güvenlik risklerini yönetmek adına kritik bir adımdır.
+
+## Attack Tree
+
+Attack Tree (Saldırı Ağacı), bir güvenlik saldırısını anlamak ve modellemek için kullanılan hiyerarşik bir yapıdır. Bu ağaç, bir hedefe yönelik saldırıların ve zafiyetlerin nasıl gerçekleşebileceğini gösterir. Her dal, saldırının belirli bir adımını veya yöntemini temsil eder ve bu sayede saldırganın amacına nasıl ulaşacağı anlaşılır. Saldırı ağacı, özellikle güvenlik açıklarını keşfetmek, tehditleri tanımlamak ve savunma stratejileri geliştirmek için kullanılır.
+
+![image](https://github.com/user-attachments/assets/a2f677d2-647f-4e2c-a44a-b79f506090f1)
+
+![image](https://github.com/user-attachments/assets/06a7ae9e-02fa-4a40-a4a6-15eb1b0c6dd5)
+
+                           [Web Uygulamasına Yetkisiz Erişim Sağlamak]
+                                       /             |            \
+                         [Kimlik Doğrulama Zafiyetleri]   [Veritabanı Erişimi]   [XSS ve SQL Injection]
+                             /    \                               |                   /       \
+           [Zayıf Parola]    [Çift Kimlik Doğrulama]       [Zayıf Veritabanı Güvenliği]    [SQL Injection] [XSS Exploit]
+
+![image](https://github.com/user-attachments/assets/4a279a21-186b-479b-a5e8-2315c7529083)
+
+![image](https://github.com/user-attachments/assets/d8c548d5-bf6c-4e55-be01-0ef84b5b6191)
+
+![image](https://github.com/user-attachments/assets/ead113e6-35e6-427e-97a5-250edf0dae91)
+
+![image](https://github.com/user-attachments/assets/5dd99062-e142-4804-af46-c6b76755ae1e)
+
+## API Security 
+
+![image](https://github.com/user-attachments/assets/93c3ac8d-36fc-42fc-904a-d057e635d388)
+
+![image](https://github.com/user-attachments/assets/774c3336-d459-4ce1-a1e1-0e6d441a5e89)
+
+![image](https://github.com/user-attachments/assets/7ff03d76-7808-4b0e-ba03-e6f9f16fdde5)
+
+![image](https://github.com/user-attachments/assets/3664afe0-1f85-4458-a8b9-01b9fd70b807)
+
+API güvenliği, web uygulamaları ve hizmetler için kritik öneme sahiptir. 
+API'lerin doğru bir şekilde güvence altına alınması, verilerin güvenliğini ve uygulamaların bütünlüğünü korumak için gereklidir. 
+API güvenliğine yönelik doğru önlemleri almak, uygulama sahiplerinin güvenlik açıklarını en aza indirmelerine yardımcı olur ve kötüye kullanımı engeller.
+
+## CSP (Content Security Policy)
+
+Content Security Policy (CSP), web uygulamalarında güvenlik önlemleri sağlamak amacıyla kullanılan bir güvenlik standardıdır. 
+CSP, web sayfalarına eklenen içeriklerin nerelerden yükleneceğini kontrol eden bir politikadır ve potansiyel Cross-Site Scripting (XSS) ve data injection saldırılarını önlemeye yardımcı olur. 
+Bu, zararlı içeriklerin kullanıcıların tarayıcılarında çalışmasını engelleyerek, özellikle kötü niyetli JavaScript kodlarının çalıştırılmasını engellemeyi amaçlar.
+
+![image](https://github.com/user-attachments/assets/39154a3d-017a-45bf-bc49-c3d67f3a178c)
+
+CSP'nin Çalışma Prensibi:
+
+CSP, HTTP başlıkları (HTTP headers) aracılığıyla veya HTML sayfasına eklenen bir <meta> etiketiyle belirlenebilir. 
+Bu politika, tarayıcılara hangi kaynaklardan içerik yükleyebileceğini ve hangi tür içeriklerin engelleneceğini bildirir.
+
+CSP başlığı şu şekilde olabilir:
+
+![image](https://github.com/user-attachments/assets/044b651d-9fdf-4857-b570-159cc6ad2880)
+
+![image](https://github.com/user-attachments/assets/5b779357-e295-492c-84ea-604791ca7a61)
+
+![image](https://github.com/user-attachments/assets/c5271d81-10ce-4c62-829d-251460cf8d62)
+
+![image](https://github.com/user-attachments/assets/7ddd1a74-81ed-4205-98d7-4f7cfa864e45)
+
+![image](https://github.com/user-attachments/assets/48b30add-b211-4f8e-9658-8ec9637e7b20)
+
+Content Security Policy (CSP), web uygulamalarındaki güvenliği artırmak için etkili bir araçtır. 
+Web geliştiricileri, CSP'yi doğru şekilde yapılandırarak XSS ve veri enjeksiyon saldırılarına karşı önemli bir koruma sağlayabilirler. 
+Ancak, CSP'yi uygularken dikkatli bir planlama ve test süreci gereklidir, çünkü yanlış yapılandırmalar, sayfa işlevselliğini olumsuz etkileyebilir.
+
+## YAML
+
+YAML (YAML Ain't Markup Language), veri yapılarını insan tarafından okunabilir bir biçimde temsil eden bir dosya formatıdır. Genellikle yapılandırma dosyalarında (configuration files), veri değişiminde ve seri hale getirmede kullanılır. JSON ve XML gibi formatlara alternatif olarak geliştirilmiştir, ancak daha okunabilir ve daha az karmaşık bir yapıya sahiptir.
+
+YAML özellikle Docker, Kubernetes, Ansible, GitHub Actions, CI/CD, OpenAPI, Spring Boot, .NET Core gibi birçok modern teknoloji ve framework'te yapılandırma dosyası olarak kullanılır.
+
+![image](https://github.com/user-attachments/assets/cc8b49f3-a9fc-418a-abf4-2fbf9fbe201f)
+
+![image](https://github.com/user-attachments/assets/c491e74e-86d7-4e1e-8ce8-e0505c87d824)
+
+![image](https://github.com/user-attachments/assets/6ca4b9f8-b285-4016-8252-252727b65c48)
+
+![image](https://github.com/user-attachments/assets/3fc021e0-fd27-46f1-924a-05c12b3c5be6)
+
+![image](https://github.com/user-attachments/assets/eb0aab9a-116d-4df1-9f16-930238eb1d59)
+
+![image](https://github.com/user-attachments/assets/56794385-ccde-4ac1-abf1-c6a730787a74)
+
+![image](https://github.com/user-attachments/assets/5fa11b8a-f625-49b5-be1f-a35f259fbd70)
+
+![image](https://github.com/user-attachments/assets/7dc23cf6-97ae-4db6-abbb-1879d738ac5d)
+
+![image](https://github.com/user-attachments/assets/1cbdeaac-cbeb-4ff3-8b22-c27605222dd3)
+
+## Threagile
+
+Threagile, Agile (Çevik) yaklaşıma dayalı bir açık kaynak kodlu threat modeling (tehdit modelleme) aracıdır. Yazılım geliştirme sürecinde, uygulama mimarisi, veri akışı ve güvenlik açıklarını analiz etmeye yardımcı olur. Geliştiricilerin, güvenlik ekiplerinin ve DevOps mühendislerinin hızlı, tekrar eden ve işbirlikçi bir şekilde tehdit modellemesi yapmasını sağlar.
+
+![image](https://github.com/user-attachments/assets/96b9bb8c-23d4-43ca-8f58-efbc2c2c8b8d)
+
+![image](https://github.com/user-attachments/assets/d2a7166d-c3fd-44c1-ad68-6a3f8a2ea21c)
+
+![image](https://github.com/user-attachments/assets/ccd2bdde-afc0-4b25-9014-f5bbb4a2f3db)
+
+![image](https://github.com/user-attachments/assets/89d1f193-69a9-409d-9b71-73e4131c114a)
+
+![image](https://github.com/user-attachments/assets/f15e2c88-a864-4c47-a95c-d60ea1c9b69c)
+
+## Encryption - Hashing
+
+![image](https://github.com/user-attachments/assets/6ff629f9-18bb-426c-8b41-fef211cd2b20)
+
+![image](https://github.com/user-attachments/assets/e9ffb100-f551-4015-b2cd-1ffb55ad923f)
+
+![image](https://github.com/user-attachments/assets/72f2cfff-8735-4bc6-888a-c37158bd9a83)
+
+![image](https://github.com/user-attachments/assets/9250948e-c951-40bd-922f-4180fa18ca24)
+
+İkisinin bir arada kullanıldığı durumlar da vardır. Örneğin, bir sistemde şifreleme ile veri korunurken, kullanıcı parolaları hashlenmiş olarak saklanır.
+
+![image](https://github.com/user-attachments/assets/3286d343-f6b9-487d-87e6-6027243212be)
+
+![image](https://github.com/user-attachments/assets/51c790e0-3b38-4276-acde-2484ae3394de)
+
+using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+
+class Program
+{
+    private static readonly string Key = "0123456789ABCDEF"; // 16 byte (128 bit) anahtar
+    private static readonly string IV = "ABCDEF0123456789";  // 16 byte (128 bit) IV
+
+    public static void Main()
+    {
+        string originalText = "Merhaba, bu bir şifreleme testidir!";
+        Console.WriteLine($"Orijinal Metin: {originalText}");
+
+        string encryptedText = Encrypt(originalText);
+        Console.WriteLine($"Şifrelenmiş Metin: {encryptedText}");
+
+        string decryptedText = Decrypt(encryptedText);
+        Console.WriteLine($"Çözülen Metin: {decryptedText}");
+    }
+
+    public static string Encrypt(string plainText)
+    {
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            aes.IV = Encoding.UTF8.GetBytes(IV);
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    using (StreamWriter writer = new StreamWriter(cs))
+                    {
+                        writer.Write(plainText);
+                    }
+                }
+                return Convert.ToBase64String(ms.ToArray());
+            }
+        }
+    }
+
+    public static string Decrypt(string encryptedText)
+    {
+        using (Aes aes = Aes.Create())
+        {
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            aes.IV = Encoding.UTF8.GetBytes(IV);
+
+            using (MemoryStream ms = new MemoryStream(Convert.FromBase64String(encryptedText)))
+            {
+                using (CryptoStream cs = new CryptoStream(ms, aes.CreateDecryptor(), CryptoStreamMode.Read))
+                {
+                    using (StreamReader reader = new StreamReader(cs))
+                    {
+                        return reader.ReadToEnd();
+                    }
+                }
+            }
+        }
+    }
+}
+
+![image](https://github.com/user-attachments/assets/d5791ed4-b6b0-4726-9ebb-622b7031e6d6)
+
+![image](https://github.com/user-attachments/assets/5b65ebe4-64e7-4541-bf7f-7bda87f3bd57)
+
+![image](https://github.com/user-attachments/assets/afc1baea-f51f-41c3-a56d-109edc0830b5)
+
+![image](https://github.com/user-attachments/assets/08258aaa-54a3-4da9-a347-48180f4dbb8f)
+
+![image](https://github.com/user-attachments/assets/f5edb045-f688-454c-bb73-908e38bda716)
+
+![image](https://github.com/user-attachments/assets/381c215f-b04e-4e29-8b65-693c0ab1939b)
+
+![image](https://github.com/user-attachments/assets/edc521c1-48f5-4e3d-8b6d-88aeef9f8937)
+
+![image](https://github.com/user-attachments/assets/c2a6bf42-e494-4b44-993b-6814ed25d01d)
+
+![image](https://github.com/user-attachments/assets/6c47274c-f002-45f8-bbbf-75c421bb90c5)
+
+## PKI
+
+PKI (Public Key Infrastructure - Açık Anahtar Altyapısı), dijital güvenliği sağlamak için kullanılan bir sistemdir. Şifreleme, kimlik doğrulama ve veri bütünlüğü gibi güvenlik işlemlerini yönetmek için açık anahtar (public key) ve özel anahtar (private key) kullanımına dayanır.
+
+![image](https://github.com/user-attachments/assets/4a6dd805-0c9d-44fc-ac09-0f6e32851d42)
+
+![image](https://github.com/user-attachments/assets/21b71c51-560c-4ba7-8369-ce1836eb7bc5)
+
+![image](https://github.com/user-attachments/assets/96ff508c-4802-4d2e-9def-354a28131e96)
+
+## Salt
+
+Salt, şifreleme veya hashleme işlemlerinde kullanılan rastgele bir değerdir. Ana amacı, aynı giriş verisinin (örneğin, bir şifrenin) her defasında farklı bir hash üretmesini sağlamaktır.
+
+![image](https://github.com/user-attachments/assets/2aa0a769-4bbb-4e5c-906b-263261f7e587)
