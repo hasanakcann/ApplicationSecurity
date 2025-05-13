@@ -55,7 +55,7 @@
 </details>
 
 <details>
-  <summary>🔗 Supply Chain Güvenliği</summary>
+  <summary>🔗 Tedarik Zinciri Güvenliği</summary>
 
 - [Supply Chain Security](#supply-chain-security)
 - [Supply Chain Defenses](#supply-chain-defenses)
